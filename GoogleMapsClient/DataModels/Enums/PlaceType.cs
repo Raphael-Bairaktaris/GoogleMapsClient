@@ -1,4 +1,6 @@
-﻿namespace GoogleMapsClient
+﻿using Newtonsoft.Json;
+
+namespace GoogleMapsClient
 {
     /// <summary>
     /// Provides enumeration over the place types
@@ -11,12 +13,12 @@
         Accounting = 0,
 
         /// <summary>
-        /// Airport
+        /// Airport indicates an airport.
         /// </summary>
         Airport = 1,
 
         /// <summary>
-        /// Amusement Park
+        /// Amusement park
         /// </summary>
         AmusementPark = 2,
 
@@ -26,7 +28,7 @@
         Aquarium = 3,
 
         /// <summary>
-        /// Art Gallery
+        /// Art gallery
         /// </summary>
         ArtGallery = 4,
 
@@ -51,27 +53,27 @@
         Bar = 8,
 
         /// <summary>
-        /// Beauty Salon
+        /// Beauty salon
         /// </summary>
         BeautySalon = 9,
 
         /// <summary>
-        /// Bicycle Store
+        /// Bicycle store
         /// </summary>
         BicycleStore = 10,
 
         /// <summary>
-        /// Book Store
+        /// Book store
         /// </summary>
         BookStore = 11,
 
         /// <summary>
-        /// Bowling Alley
+        /// Bowling alley
         /// </summary>
         BowlingAlley = 12,
 
         /// <summary>
-        /// Bus Station
+        /// Bus Station indicates the location of a public bus stop
         /// </summary>
         BusStation = 13,
 
@@ -81,27 +83,27 @@
         Cafe = 14,
 
         /// <summary>
-        /// Camp Ground
+        /// Camp ground
         /// </summary>
         CampGround = 15,
 
         /// <summary>
-        /// Car Dealer
+        /// Car dealer
         /// </summary>
         CarDealer = 16,
 
         /// <summary>
-        /// Car Rental
+        /// Car rental
         /// </summary>
         CarRental = 17,
 
         /// <summary>
-        /// Car Repair
+        /// Car repair
         /// </summary>
         CarRepair = 18,
 
         /// <summary>
-        /// Car Wash
+        /// Car wash
         /// </summary>
         CarWash = 19,
 
@@ -121,17 +123,17 @@
         Church = 22,
 
         /// <summary>
-        /// City Hall
+        /// City hall
         /// </summary>
         CityHall = 23,
 
         /// <summary>
-        /// Clothing Store
+        /// Clothing store
         /// </summary>
         ClothingStore = 24,
 
         /// <summary>
-        /// Convenience Store
+        /// Convenience store
         /// </summary>
         ConvenienceStore = 25,
 
@@ -146,7 +148,7 @@
         Dentist = 27,
 
         /// <summary>
-        /// Department Store
+        /// Department store
         /// </summary>
         DepartmentStore = 28,
 
@@ -166,7 +168,7 @@
         Electrician = 31,
 
         /// <summary>
-        /// Electronics Store
+        /// Electronics store
         /// </summary>
         ElectronicsStore = 32,
 
@@ -176,27 +178,27 @@
         Embassy = 33,
 
         /// <summary>
-        /// Fire Station
+        /// Fire station
         /// </summary>
         FireStation = 34, 
 
         /// <summary>
-        /// Flower Shop
+        /// Flower shop
         /// </summary>
         Florist = 35,
 
         /// <summary>
-        /// Funeral Office
+        /// Funeral office
         /// </summary>
         FuneralHome = 36, 
 
         /// <summary>
-        /// Furniture Store
+        /// Furniture store
         /// </summary>
         FurnitureStore = 37,
 
         /// <summary>
-        /// Gas Station
+        /// Gas station
         /// </summary>
         GasStation = 38,
 
@@ -206,283 +208,283 @@
         Gym = 39,
 
         /// <summary>
-        /// Hair Care
+        /// Hair care
         /// </summary>
         HairCare = 40,
 
         /// <summary>
-        /// Hardware Store
+        /// Hardware store
         /// </summary>
         HardwareStore = 41,
 
         /// <summary>
-        /// Hindu Temple
+        /// Hindu temple
         /// </summary>
-        HinduTemple = 41,
+        HinduTemple = 42,
 
         /// <summary>
-        /// Home Goods Store
+        /// Home goods store
         /// </summary>
-        HomeGoodsStore = 42,
+        HomeGoodsStore = 43,
 
         /// <summary>
         /// Hospital
         /// </summary>
-        Hospital = 43,
+        Hospital = 44,
 
         /// <summary>
-        /// Insurance Agency
+        /// Insurance agency
         /// </summary>
-        InsuranceAgency = 44,
+        InsuranceAgency = 45,
 
         /// <summary>
-        /// Jewelry Store
+        /// Jewelry store
         /// </summary>
-        JewelryStore = 45,
+        JewelryStore = 46,
 
         /// <summary>
-        /// Laundry Store
+        /// Laundry store
         /// </summary>
-        Laundry = 46,
+        Laundry = 47,
 
         /// <summary>
         /// Lawyer
         /// </summary>
-        Lawyer = 47,
+        Lawyer = 48,
 
         /// <summary>
         /// Library
         /// </summary>
-        Library = 48,
+        Library = 49,
 
         /// <summary>
-        /// Light Rail Station
+        /// Light rail Station
         /// </summary>
-        LightRailStation = 49,
+        LightRailStation = 50,
 
         /// <summary>
         /// Liquor Store
         /// </summary>
-        LiquorStore = 50,
+        LiquorStore = 51,
 
         /// <summary>
-        /// Local Government Office
+        /// Local government office
         /// </summary>
-        LocalGovernmentOffice = 51,
+        LocalGovernmentOffice = 52,
 
         /// <summary>
         /// Locksmith
         /// </summary>
-        Locksmith =52,
+        Locksmith =53,
 
         /// <summary>
         /// Lodging
         /// </summary>
-        Lodging =53,
+        Lodging =54,
 
         /// <summary>
-        /// Meal Delivery
+        /// Meal delivery
         /// </summary>
-        MealDelivery = 54,
+        MealDelivery = 55,
 
         /// <summary>
-        /// Meal Takeaway
+        /// Meal takeaway
         /// </summary>
-        MealTakeaway = 55,
+        MealTakeaway = 56,
 
         /// <summary>
         /// Mosque
         /// </summary>
-        Mosque = 56,
+        Mosque = 57,
 
         /// <summary>
-        /// Movie Rental Shop
+        /// Movie rental shop
         /// </summary>
-        MovieRental = 57,
+        MovieRental = 58,
 
         /// <summary>
-        /// Movie Theater
+        /// Movie theater
         /// </summary>
-        MovieTheater = 58,
+        MovieTheater = 59,
 
         /// <summary>
-        /// Moving Company
+        /// Moving company
         /// </summary>
-        MovingCompany = 59,
+        MovingCompany = 60,
 
         /// <summary>
         /// Museum
         /// </summary>
-        Museum = 60,
+        Museum = 61,
 
         /// <summary>
-        /// Night Club
+        /// Night club
         /// </summary>
-        NightClub = 61,
+        NightClub = 62,
 
         /// <summary>
         /// Painter
         /// </summary>
-        Painter  = 62,
+        Painter  = 63,
 
         /// <summary>
         /// Park
         /// </summary>
-        Park = 63,
+        Park = 64,
 
         /// <summary>
-        /// Parking Space
+        /// Parking space indicates a parking lot or parking structure.
         /// </summary>
-        Parking = 64,
+        Parking = 65,
 
         /// <summary>
-        /// Pet Store
+        /// Pet store
         /// </summary>
-        PetStore = 65,
+        PetStore = 66,
 
         /// <summary>
         /// Pharmacy
         /// </summary>
-        Pharmacy = 66,
+        Pharmacy = 67,
 
         /// <summary>
         /// Physiotherapist
         /// </summary>
-        Physiotherapist = 67,
+        Physiotherapist = 68,
 
         /// <summary>
         /// Plumber
         /// </summary>
-        Plumber = 68,
+        Plumber = 69,
 
         /// <summary>
         /// Police
         /// </summary>
-        Police =69,
+        Police =70,
 
         /// <summary>
-        /// Post Office
+        /// Post office
         /// </summary>
-        PostOffice = 70,
+        PostOffice = 71,
 
         /// <summary>
-        /// Primary School
+        /// Primary school
         /// </summary>
-        PrimarySchool = 71,
+        PrimarySchool = 72,
 
         /// <summary>
-        /// Real Estate Agency
+        /// Real estate agency
         /// </summary>
-        RealEstateAgency = 72,
+        RealEstateAgency = 73,
 
         /// <summary>
         /// Restaurant
         /// </summary>
-        Restaurant = 73,
+        Restaurant = 74,
 
         /// <summary>
-        /// Roofing Contractor
+        /// Roofing contractor
         /// </summary>
-        RoofingContractor = 74,
+        RoofingContractor = 75,
 
         /// <summary>
-        /// Recreational Vehicle (RV) Park
+        /// Recreational Vehicle (RV) park
         /// </summary>
-        RvPark = 75,
+        RvPark = 76,
 
         /// <summary>
         /// School
         /// </summary>
-        School = 76,
+        School = 77,
 
         /// <summary>
-        /// Secondary School
+        /// Secondary school
         /// </summary>
-        SecondarySxhool = 77,
+        SecondarySchool = 78,
 
         /// <summary>
-        /// Shoe Store
+        /// Shoe store
         /// </summary>
-        ShoeStore = 78,
+        ShoeStore = 79,
 
         /// <summary>
-        /// Shopping Mall
+        /// Shopping mall
         /// </summary>
-        ShoppingMall = 79,
+        ShoppingMall = 80,
 
         /// <summary>
         /// Spa
         /// </summary>
-        Spa = 80,
+        Spa = 81,
 
         /// <summary>
         /// Stadium
         /// </summary>
-        Stadium = 81,
+        Stadium = 82,
 
         /// <summary>
         /// Storage
         /// </summary>
-        Storage = 82,
+        Storage = 83,
 
         /// <summary>
         /// Store
         /// </summary>
-        Store = 83,
+        Store = 84,
 
         /// <summary>
-        /// Subway Station
+        /// Subway station
         /// </summary>
-        SubwayStation = 84,
+        SubwayStation = 85,
 
         /// <summary>
         /// Supermarket
         ///  </summary>
-        Supermarket = 85,
+        Supermarket = 86,
 
         /// <summary>
         /// Synagogue
         /// </summary>
-        Synagogue = 86,
+        Synagogue = 87,
 
         /// <summary>
-        /// Taxi Stand
+        /// Taxi stand
         ///  </summary>
-        TaxiStand = 87,
+        TaxiStand = 88,
 
         /// <summary>
-        /// Tourist Attraction
+        /// Tourist attraction
         /// </summary>
-        TouristAttraction = 88,
+        TouristAttraction = 89,
 
         /// <summary>
-        /// Train Station
+        /// Train station indicates the location of a public train stop.
         /// </summary>
-        TrainStation = 89,
+        TrainStation = 90,
 
         /// <summary>
-        /// Transit Station
+        /// Transit station indicates the location of a public transit stop.
         /// </summary>
-        TransitStation = 90,
+        TransitStation = 91,
 
         /// <summary>
-        /// Travel Agency
+        /// Travel agency
         /// </summary>
-        TravelAgency = 91,
+        TravelAgency = 92,
 
         /// <summary>
         /// University
         /// </summary>
-        University = 92,
+        University = 93,
 
         /// <summary>
-        /// Veterinary Care
+        /// Veterinary care
         /// </summary>
-        VeterinaryCare = 93,
+        VeterinaryCare = 94,
         
         /// <summary>
         /// Zoo
         /// </summary>
-        Zoo = 94
+        Zoo = 95
     }
 }

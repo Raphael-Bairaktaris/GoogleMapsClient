@@ -4,9 +4,107 @@
         <name>GoogleMapsClient</name>
     </assembly>
     <members>
+        <member name="T:Benchmarks.PlaceAutocompleteMatchedSubstringResponseModel">
+            <summary>
+            Represents an auto complete matched substring 
+            </summary>
+        </member>
+        <member name="P:Benchmarks.PlaceAutocompleteMatchedSubstringResponseModel.Length">
+            <summary>
+            Length of the matched substring in the prediction result text.
+            </summary>
+        </member>
+        <member name="P:Benchmarks.PlaceAutocompleteMatchedSubstringResponseModel.Offset">
+            <summary>
+            Start location of the matched substring in the prediction result text.
+            </summary>
+        </member>
+        <member name="M:Benchmarks.PlaceAutocompleteMatchedSubstringResponseModel.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="T:Benchmarks.PlaceAutocompleteStructuredFormatResponseModel">
+            <summary>
+            Represents a place auto complete structured format 
+            </summary>
+        </member>
+        <member name="F:Benchmarks.PlaceAutocompleteStructuredFormatResponseModel.mMainText">
+            <summary>
+            The member of the <see cref="P:Benchmarks.PlaceAutocompleteStructuredFormatResponseModel.MainText"/> property
+            </summary>
+        </member>
+        <member name="F:Benchmarks.PlaceAutocompleteStructuredFormatResponseModel.mMainTextMatchedSubstrings">
+            <summary>
+            The member of the <see cref="P:Benchmarks.PlaceAutocompleteStructuredFormatResponseModel.MainTextMatchedSubstrings"/> property
+            </summary>
+        </member>
+        <member name="F:Benchmarks.PlaceAutocompleteStructuredFormatResponseModel.mSecondaryText">
+            <summary>
+            The member of the <see cref="P:Benchmarks.PlaceAutocompleteStructuredFormatResponseModel.SecondaryText"/> property
+            </summary>
+        </member>
+        <member name="F:Benchmarks.PlaceAutocompleteStructuredFormatResponseModel.mSecondaryTextMatchedSubstrings">
+            <summary>
+            The member of the <see cref="P:Benchmarks.PlaceAutocompleteStructuredFormatResponseModel.SecondaryTextMatchedSubstrings"/> property
+            </summary>
+        </member>
+        <member name="P:Benchmarks.PlaceAutocompleteStructuredFormatResponseModel.MainText">
+            <summary>
+            Contains the main text of a prediction, usually the name of the place.
+            </summary>
+        </member>
+        <member name="P:Benchmarks.PlaceAutocompleteStructuredFormatResponseModel.MainTextMatchedSubstrings">
+            <summary>
+            Contains an array with offset value and length. These describe the location of the entered
+            term in the prediction result text, so that the term can be highlighted if desired.
+            </summary>
+        </member>
+        <member name="P:Benchmarks.PlaceAutocompleteStructuredFormatResponseModel.SecondaryText">
+            <summary>
+            Contains the secondary text of a prediction, usually the location of the place.
+            </summary>
+        </member>
+        <member name="P:Benchmarks.PlaceAutocompleteStructuredFormatResponseModel.SecondaryTextMatchedSubstrings">
+            <summary>
+            Contains an array with offset value and length. These describe the location of 
+            the entered term in the prediction result text, so that the term can be highlighted 
+            if desired.
+            </summary>
+        </member>
+        <member name="M:Benchmarks.PlaceAutocompleteStructuredFormatResponseModel.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
         <member name="T:GoogleMapsClient.PlaceAutocompletePredictionResponseModel">
             <summary>
             Represents a place autocomple prediction response
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceAutocompletePredictionResponseModel.mDescription">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceAutocompletePredictionResponseModel.Description"/> property
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceAutocompletePredictionResponseModel.mTerms">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceAutocompletePredictionResponseModel.Terms"/> property
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceAutocompletePredictionResponseModel.mMatchedSubstrings">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceAutocompletePredictionResponseModel.MatchedSubstrings"/> property
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceAutocompletePredictionResponseModel.mTypes">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceAutocompletePredictionResponseModel.Types"/> property
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceAutocompletePredictionResponseModel.mStructuredFormat">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceAutocompletePredictionResponseModel.StructuredFormat"/> property
             </summary>
         </member>
         <member name="P:GoogleMapsClient.PlaceAutocompletePredictionResponseModel.Description">
@@ -16,10 +114,1298 @@
             address.
             </summary>
         </member>
+        <member name="P:GoogleMapsClient.PlaceAutocompletePredictionResponseModel.MatchedSubstrings">
+            <summary>
+            A list of substrings that describe the location of the entered term in the prediction result text, so
+            that the term can be highlighted if desired.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceAutocompletePredictionResponseModel.StructuredFormat">
+            <summary>
+            Provides pre-formatted text that can be shown in your autocomplete results. This content is meant to be
+            read as-is. Do not programmatically parse the formatted address.
+            /// </summary>
+            <remarks>
+            See https://developers.google.com/maps/documentation/places/web-service/autocomplete#PlaceAutocompleteStructuredFormat
+            </remarks>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceAutocompletePredictionResponseModel.Terms">
+            <summary>
+            Contains an array of terms identifying each section of the returned description (a section of the description is 
+            generally terminated with a comma). Each entry in the array has a value field, containing the text of the term, 
+            and an offset field, defining the start position of this term in the description, measured in Unicode characters.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceAutocompletePredictionResponseModel.DistanceMeters">
+            <summary>
+            The straight-line distance in meters from the origin. This field is only returned for requests made with an origin.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceAutocompletePredictionResponseModel.PlaceId">
+            <summary>
+            A textual identifier that uniquely identifies a place. To retrieve information about the place, pass this identifier 
+            in the placeId field of a Places API request.
+            </summary>
+            <remarks>
+            See https://developers.google.com/maps/documentation/places/web-service/place-id.
+            </remarks>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceAutocompletePredictionResponseModel.Types">
+            <summary>
+            Contains an array of types that apply to this place.
+            </summary>
+            <remarks>
+            See https://developers.google.com/maps/documentation/places/web-service/supported_types.
+            </remarks>
+        </member>
         <member name="M:GoogleMapsClient.PlaceAutocompletePredictionResponseModel.#ctor">
             <summary>
             Default constructor
             </summary>
+        </member>
+        <member name="T:GoogleMapsClient.PlaceAutocompleteTermReponseModel">
+            <summary>
+            Represents a place autocomplete term
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceAutocompleteTermReponseModel.mValue">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceAutocompleteTermReponseModel.Value"/> property
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceAutocompleteTermReponseModel.Offset">
+            <summary>
+            Defines the start position of this term in the description, measured in Unicode characters.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceAutocompleteTermReponseModel.Value">
+            <summary>
+            The text of the term.
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.PlaceAutocompleteTermReponseModel.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="T:GoogleMapsClient.AddressType">
+            <summary>
+            Provides enumeration over the address types
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.AdminstrativeAreaLevel1">
+            <summary>
+            Adminstrative area level 1 indicates a first-order civil entity
+            below the country level.
+            </summary>
+            <example>
+            Within the United States, these administrative levels are states.
+            Not all nations exhibit these administrative levels. 
+            </example>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.AdminstrativeAreaLevel2">
+            <summary>
+            Adminstrative area level 2 indicates a second-order civil entity 
+            below the country level. Within the United States, these administrative 
+            levels are counties. Not all nations exhibit these administrative levels.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.AdminstrativeAreaLevel3">
+            <summary>
+            Administrative area level 3 indicates a third-order civil entity below the 
+            country level. This type indicates a minor civil division. Not all nations 
+            exhibit these administrative levels.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.AdminstrativeAreaLevel4">
+            <summary>
+            Administrative area level 4 indicates a fourth-order civil entity below the 
+            country level. This type indicates a minor civil division. Not all nations 
+            exhibit these administrative levels.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.AdminstrativeAreaLevel5">
+            <summary>
+            Adminstrative area level 5 indicates a fifth-order civil entity below the country level. 
+            This type indicates a minor civil division. Not all nations exhibit these administrative levels.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.AdminstrativeAreaLevel6">
+            <summary>
+            Administrative area level 6 indicates a sixth-order civil entity below the country level.
+            This type indicates a minor civil division. Not all nations exhibit these administrative levels.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.AdminstrativeAreaLevel7">
+            <summary>
+            administrative_area_level_7 indicates a seventh-order civil entity below the country level. 
+            This type indicates a minor civil division. Not all nations exhibit these administrative levels.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.Archipelago">
+            <summary>
+            Archipelago
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.ColloquialArea">
+            <summary>
+            Colloquial area indicates a commonly-used alternative name for the entity.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.Continent">
+            <summary>
+            Continent
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.Country">
+            <summary>
+            Country indicates a political entity. Usually, this type indicates a polygon of some civil administration.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.Establishment">
+            <summary>
+            Establishment typically indicates a place that has not yet been categorized.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.Finance">
+            <summary>
+            Finance
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.Floor">
+            <summary>
+            Floor
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.Food">
+            <summary>
+            Food
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.GeneralContractor">
+            <summary>
+            General contractor
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.Geocode">
+            <summary>
+            Geocode
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.Health">
+            <summary>
+            Health
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.Intersection">
+            <summary>
+            Intersection indicates a major intersection, usually of two major roads.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.Landmark">
+            <summary>
+            Landmark indicates a nearby place that is used as a reference, to aid navigation.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.Locality">
+            <summary>
+            Locality indicates an incorporated city or town political entity.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.NaturalFeature">
+            <summary>
+            Natural feature indicates a prominent natural feature.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.Neighbourhood">
+            <summary>
+            Neighbourhood indicates a named neighborhood.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.PlaceOfWorship">
+            <summary>
+            Place of worship
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.PlusCode">
+            <summary>
+            Plus code indicates an encoded location reference, derived from latitude and longitude.
+            Plus codes can be used as a replacement for street addresses in places where they do not exist.
+            </summary>
+            <remarks>See https://maps.google.com/pluscodes/</remarks>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.PointOfInterset">
+            <summary>
+            Point of interest indicates a named point of interest.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.Political">
+            <summary>
+            Political indicates a political entity. Usually, this type indicates a polygon of some civil administration.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.PostBox">
+            <summary>
+            Post box indicates a specific postal box.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.PostalCode">
+            <summary>
+            Postal code indicates a postal code as used to address postal mail within the country.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.PostalCodePrefix">
+            <summary>
+            Postal code prefix
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.PostalCodeSuffix">
+            <summary>
+            Postal code suffix
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.PostalTowm">
+            <summary>
+            Postal town indicates a grouping of geographic areas.
+            </summary>
+            <example>
+            Such as locality and sublocality, used for mailing addresses in some countries.
+            </example>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.Premise">
+            <summary>
+            Premise indicates a named location, usually a building or collection of buildings with a common name.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.Room">
+            <summary>
+            Room
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.Route">
+            <summary>
+            Route indicates a named route.
+            </summary>
+            <example>
+            Such as "US 101"
+            </example>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.StreetAddress">
+            <summary>
+            Street address indicates a precise street address.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.StreetNumber">
+            <summary>
+            Street number indicates the precise street number.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.Sublocality">
+            <summary>
+            Sublocality
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.SublocalityLevel1">
+            <summary>
+            Sublocality level 1 indicates a first-order civil entity below a locality.
+            Larger numbers indicate a smaller geographic area.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.SublocalityLevel2">
+            <summary>
+            Sublocality level 2
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.SublocalityLevel3">
+            <summary>
+            Sublocality level 3
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.SublocalityLevel4">
+            <summary>
+            Sublocality level 4
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.SublocalityLevel5">
+            <summary>
+            Sublocality level 5
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.Subpremise">
+            <summary>
+            Subpremise indicates a first-order entity below a named location, 
+            usually a singular building within a collection of buildings with a common name.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.AddressType.TownSquare">
+            <summary>
+            Town square
+            </summary>
+        </member>
+        <member name="T:GoogleMapsClient.CollectionType">
+            <summary>
+            Provides enumeration over the collection types
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.CollectionType.Geocode">
+            <summary>
+            Geocode instructs the Place Autocomplete service to return only geocoding results,
+            rather than business results. Generally, you use this request to disambiguate results
+            where the location specified may be indeterminate.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.CollectionType.Address">
+            <summary>
+            Address instructs the Place Autocomplete service to return only geocoding results with a precise address.
+            Generally, you use this request when you know the user will be looking for a fully specified address.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.CollectionType.Establishment">
+            <summary>
+            Establishment instructs the Place Autocomplete service to return only geocoding results with a precise address.
+            Generally, you use this request when you know the user will be looking for a fully specified address.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.CollectionType.Regions">
+            <summary>
+            The (regions) type collection instructs the Places service to return any result matching the following types:
+            <list type="bullet|number|table">
+            <item>
+                <description>locality</description>
+            </item>
+            
+            <item>
+                <description>sublocality</description>
+            </item>
+            </list>
+            </summary>
+            
+        </member>
+        <member name="F:GoogleMapsClient.CollectionType.Cities">
+            <summary>
+            Na rwthsw ton pap
+            </summary>
+        </member>
+        <member name="T:GoogleMapsClient.PlaceType">
+            <summary>
+            Provides enumeration over the place types
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Accounting">
+            <summary>
+            Accounting office
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Airport">
+            <summary>
+            Airport indicates an airport.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.AmusementPark">
+            <summary>
+            Amusement park
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Aquarium">
+            <summary>
+            Aquarium
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.ArtGallery">
+            <summary>
+            Art gallery
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Atm">
+            <summary>
+            Atm
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Bakery">
+            <summary>
+            Bakery
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Bank">
+            <summary>
+            Bank
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Bar">
+            <summary>
+            Bar
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.BeautySalon">
+            <summary>
+            Beauty salon
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.BicycleStore">
+            <summary>
+            Bicycle store
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.BookStore">
+            <summary>
+            Book store
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.BowlingAlley">
+            <summary>
+            Bowling alley
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.BusStation">
+            <summary>
+            Bus Station indicates the location of a public bus stop
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Cafe">
+            <summary>
+            Cafe
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.CampGround">
+            <summary>
+            Camp ground
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.CarDealer">
+            <summary>
+            Car dealer
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.CarRental">
+            <summary>
+            Car rental
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.CarRepair">
+            <summary>
+            Car repair
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.CarWash">
+            <summary>
+            Car wash
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Casino">
+            <summary>
+            Casino
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Cemetery">
+            <summary>
+            Cemetery
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Church">
+            <summary>
+            Church
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.CityHall">
+            <summary>
+            City hall
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.ClothingStore">
+            <summary>
+            Clothing store
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.ConvenienceStore">
+            <summary>
+            Convenience store
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Courthouse">
+            <summary>
+            Courthouse
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Dentist">
+            <summary>
+            Dentist
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.DepartmentStore">
+            <summary>
+            Department store
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Doctor">
+            <summary>
+            Doctor
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.DrugStore">
+            <summary>    
+            Drugstore
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Electrician">
+            <summary>
+            Electrician
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.ElectronicsStore">
+            <summary>
+            Electronics store
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Embassy">
+            <summary>
+            Embassy
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.FireStation">
+            <summary>
+            Fire station
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Florist">
+            <summary>
+            Flower shop
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.FuneralHome">
+            <summary>
+            Funeral office
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.FurnitureStore">
+            <summary>
+            Furniture store
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.GasStation">
+            <summary>
+            Gas station
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Gym">
+            <summary>
+            Gym
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.HairCare">
+            <summary>
+            Hair care
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.HardwareStore">
+            <summary>
+            Hardware store
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.HinduTemple">
+            <summary>
+            Hindu temple
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.HomeGoodsStore">
+            <summary>
+            Home goods store
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Hospital">
+            <summary>
+            Hospital
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.InsuranceAgency">
+            <summary>
+            Insurance agency
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.JewelryStore">
+            <summary>
+            Jewelry store
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Laundry">
+            <summary>
+            Laundry store
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Lawyer">
+            <summary>
+            Lawyer
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Library">
+            <summary>
+            Library
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.LightRailStation">
+            <summary>
+            Light rail Station
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.LiquorStore">
+            <summary>
+            Liquor Store
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.LocalGovernmentOffice">
+            <summary>
+            Local government office
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Locksmith">
+            <summary>
+            Locksmith
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Lodging">
+            <summary>
+            Lodging
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.MealDelivery">
+            <summary>
+            Meal delivery
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.MealTakeaway">
+            <summary>
+            Meal takeaway
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Mosque">
+            <summary>
+            Mosque
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.MovieRental">
+            <summary>
+            Movie rental shop
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.MovieTheater">
+            <summary>
+            Movie theater
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.MovingCompany">
+            <summary>
+            Moving company
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Museum">
+            <summary>
+            Museum
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.NightClub">
+            <summary>
+            Night club
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Painter">
+            <summary>
+            Painter
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Park">
+            <summary>
+            Park
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Parking">
+            <summary>
+            Parking space indicates a parking lot or parking structure.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.PetStore">
+            <summary>
+            Pet store
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Pharmacy">
+            <summary>
+            Pharmacy
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Physiotherapist">
+            <summary>
+            Physiotherapist
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Plumber">
+            <summary>
+            Plumber
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Police">
+            <summary>
+            Police
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.PostOffice">
+            <summary>
+            Post office
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.PrimarySchool">
+            <summary>
+            Primary school
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.RealEstateAgency">
+            <summary>
+            Real estate agency
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Restaurant">
+            <summary>
+            Restaurant
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.RoofingContractor">
+            <summary>
+            Roofing contractor
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.RvPark">
+            <summary>
+            Recreational Vehicle (RV) park
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.School">
+            <summary>
+            School
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.SecondarySchool">
+            <summary>
+            Secondary school
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.ShoeStore">
+            <summary>
+            Shoe store
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.ShoppingMall">
+            <summary>
+            Shopping mall
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Spa">
+            <summary>
+            Spa
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Stadium">
+            <summary>
+            Stadium
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Storage">
+            <summary>
+            Storage
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Store">
+            <summary>
+            Store
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.SubwayStation">
+            <summary>
+            Subway station
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Supermarket">
+            <summary>
+            Supermarket
+             </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Synagogue">
+            <summary>
+            Synagogue
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.TaxiStand">
+            <summary>
+            Taxi stand
+             </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.TouristAttraction">
+            <summary>
+            Tourist attraction
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.TrainStation">
+            <summary>
+            Train station indicates the location of a public train stop.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.TransitStation">
+            <summary>
+            Transit station indicates the location of a public transit stop.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.TravelAgency">
+            <summary>
+            Travel agency
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.University">
+            <summary>
+            University
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.VeterinaryCare">
+            <summary>
+            Veterinary care
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceType.Zoo">
+            <summary>
+            Zoo
+            </summary>
+        </member>
+        <member name="T:GoogleMapsClient.SupportedLanguage">
+            <summary>
+            Provides enumeration over supported languages
+            </summary> 
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.AF">
+            <summary>
+            Afrikaans
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.SQ">
+            <summary>
+            Albanian
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.AM">
+            <summary>
+            Amharic
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.AR">
+            <summary>
+            Arabic
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.HY">
+            <summary>
+            Armenian
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.AZ">
+            <summary>
+            Azerbaijani
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.EU">
+            <summary>
+            Basque
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.BE">
+            <summary>
+            Belarusian
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.BN">
+            <summary>
+            Bengali
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.BS">
+            <summary>
+            Bosnian
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.BG">
+            <summary>
+            Bulgarian
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.MY">
+            <summary>
+            Burmese
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.CA">
+            <summary>
+            Catalan
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.ZH">
+            <summary>
+            Chinese
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.ZHCN">
+            <summary>
+            Chinese simplified
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.ZHHK">
+            <summary>
+            Chinese Hong Kong
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.ZHTW">
+            <summary>
+            Chines traditional
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.HR">
+            <summary>
+            Croatian
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.CS">
+            <summary>
+            Czech
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.DA">
+            <summary>
+            Danish
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.NL">
+            <summary>
+            Dutch
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.EN">
+            <summary>
+            English
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.ENAU">
+            <summary>
+            English Australian
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.ENGB">
+            <summary>
+            English Great Britain
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.ET">
+            <summary>
+            Estonian
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.FA">
+            <summary>
+            Farsi
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.FI">
+            <summary>
+            Finnish
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.FIL">
+            <summary>
+            Filipino
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.FR">
+            <summary>
+            French
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.FRCA">
+            <summary>
+            French Canada
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.GL">
+            <summary>
+            Galician
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.KA">
+            <summary>
+            Georgian
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.DE">
+            <summary>
+            Germany
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.EL">
+            <summary>
+            Greek
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.GU">
+            <summary>
+            Gujarati
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.IW">
+            <summary>
+            Hebrew
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.HI">
+            <summary>
+            Hindi
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.HU">
+            <summary>
+            Hungarian
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.IS">
+            <summary>
+            Icelandic
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.ID">
+            <summary>
+            Indonesian
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.IT">
+            <summary>
+            Italian
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.JA">
+            <summary>
+            Japanese
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.KN">
+            <summary>
+            Kannada
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.KK">
+            <summary>
+            Kazakh
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.KM">
+            <summary>
+            Khmer
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.KO">
+            <summary>
+            Korean
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.KY">
+            <summary>
+            Kyrgyz
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.LO">
+            <summary>
+            Lao
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.LV">
+            <summary>
+            Latvian
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.LT">
+            <summary>
+            Lithuanian
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.MK">
+            <summary>
+            Macedonian
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.MS">
+            <summary>
+            Malay
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.ML">
+            <summary>
+            Malayalam
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.MR">
+            <summary>
+            Marathi
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.MN">
+            <summary>
+            Mongolian
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.NE">
+            <summary>
+            Nepali
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.NO">
+            <summary>
+            Norwegian
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.PL">
+            <summary>
+            Polish
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.PT">
+            <summary>
+            Portuguese
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.PTBR">
+            <summary>
+            Portuguese Brazil
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.PTPT">
+            <summary>
+            Portuguese Portugal
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.PA">
+            <summary>
+            Punjabi
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.RO">
+            <summary>
+            Romanian
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.RU">
+            <summary>
+            Russian
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.SR">
+            <summary>
+            Serbian
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.SI">
+            <summary>
+            Sinhalese
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.SK">
+            <summary>
+            Slovak
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.SL">
+            <summary>
+            Slovenian
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.ES">
+            <summary>
+            Spanish
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.ES419">
+            <summary>
+            Spanish Latin America
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.SW">
+            <summary>
+            Swahili
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.SV">
+            <summary>
+            Sweedish
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.TA">
+            <summary>
+            Tamil
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.TE">
+            <summary>
+            Telugu
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.TH">
+            <summary>
+            Thai
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.TR">
+            <summary>
+            Turkish
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.UK">
+            <summary>
+            Ukranian
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.UR">
+            <summary>
+            Urdu
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.UZ">
+            <summary>
+            Uzbek
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.VI">
+            <summary>
+            Vietnamese
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.SupportedLanguage.ZU">
+            <summary>
+            Zulu
+            </summary>
+        </member>
+        <member name="T:GoogleMapsClient.GoogleMapsClientConstants">
+            <summary>
+            Constants related to the Google maps client
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.GoogleMapsClientConstants.PlaceTypeToStringMapper">
+            <summary>
+            Maps the <see cref="T:GoogleMapsClient.PlaceType"/>s to their related <see cref="T:System.String"/>s
+            </summary>
+        </member>
+        <member name="T:GoogleMapsClient.PlaceTypeToStringJsonConverter">
+            <summary>
+            The <see cref="T:Newtonsoft.Json.JsonConverter`1"/> that converts a <see cref="T:GoogleMapsClient.PlaceType"/> to <see cref="T:System.String"/>
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.PlaceTypeToStringJsonConverter.#ctor">
+            <summary>
+            Defualt constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.PlaceTypeToStringJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,GoogleMapsClient.PlaceType,System.Boolean,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:GoogleMapsClient.PlaceTypeToStringJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter,GoogleMapsClient.PlaceType,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
         </member>
     </members>
 </doc>

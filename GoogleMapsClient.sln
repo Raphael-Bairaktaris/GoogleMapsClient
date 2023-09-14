@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoogleMapsClient", "GoogleM
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1E57ECF3-F66E-4937-9914-F735FE7CC395}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestRange", "TestRange\TestRange.csproj", "{30B15EAA-578D-4CD1-A83A-BFD3E0AF158A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,10 @@ Global
 		{401186B4-4FBA-47E4-867F-60CCDD893765}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{401186B4-4FBA-47E4-867F-60CCDD893765}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{401186B4-4FBA-47E4-867F-60CCDD893765}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30B15EAA-578D-4CD1-A83A-BFD3E0AF158A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30B15EAA-578D-4CD1-A83A-BFD3E0AF158A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30B15EAA-578D-4CD1-A83A-BFD3E0AF158A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30B15EAA-578D-4CD1-A83A-BFD3E0AF158A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

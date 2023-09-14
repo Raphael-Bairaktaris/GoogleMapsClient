@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Benchmarks;
+using Newtonsoft.Json;
 using System.Diagnostics.CodeAnalysis;
 
 namespace GoogleMapsClient
@@ -20,6 +21,21 @@ namespace GoogleMapsClient
         /// </summary>
         private IEnumerable<PlaceAutocompleteTermReponseModel>? mTerms;
 
+        /// <summary>
+        /// The member of the <see cref="MatchedSubstrings"/> property
+        /// </summary>
+        private IEnumerable<PlaceAutocompleteMatchedSubstringResponseModel>? mMatchedSubstrings;
+
+        /// <summary>
+        /// The member of the <see cref="Types"/> property
+        /// </summary>
+        private IEnumerable<PlaceType>? mTypes;
+
+        /// <summary>
+        /// The member of the <see cref="StructuredFormat"/> property
+        /// </summary>
+        private string? mStructuredFormat;
+
         #endregion
 
         #region Public Properties
@@ -36,6 +52,35 @@ namespace GoogleMapsClient
             get => mDescription ?? string.Empty;
 
             set => mDescription = value;    
+        }
+
+        /// <summary>
+        /// A list of substrings that describe the location of the entered term in the prediction result text, so
+        /// that the term can be highlighted if desired.
+        /// </summary>
+        [AllowNull]
+        [JsonProperty("matched_substrings")]
+        public IEnumerable<PlaceAutocompleteMatchedSubstringResponseModel> MatchedSubstrings 
+        { 
+            get => mMatchedSubstrings ?? Enumerable.Empty<PlaceAutocompleteMatchedSubstringResponseModel>();
+            
+            set => mMatchedSubstrings = value;
+        }
+
+        /// <summary>
+        /// Provides pre-formatted text that can be shown in your autocomplete results. This content is meant to be
+        /// read as-is. Do not programmatically parse the formatted address.
+        /// /// </summary>
+        /// <remarks>
+        /// See https://developers.google.com/maps/documentation/places/web-service/autocomplete#PlaceAutocompleteStructuredFormat
+        /// </remarks>
+        [AllowNull]
+        [JsonProperty("structured_format")]
+        public string StructuredFormat
+        {
+            get => mStructuredFormat ?? string.Empty;
+            
+            set => mStructuredFormat = value;
         }
 
         /// <summary>
@@ -67,22 +112,23 @@ namespace GoogleMapsClient
         /// </remarks>
         [JsonProperty("place_id")]
         public string? PlaceId { get; set; }
-        /*
-       /// <summary>
-       /// Contains an array of types that apply to this place.
-       /// </summary>
-       /// <remarks>
-       /// See https://developers.google.com/maps/documentation/places/web-service/supported_types
-       /// </remarks>
-       [AllowNull]
-       [JsonProperty("types")]
-       public string Types 
-       {
-           get; 
 
-           set; 
-       }
-        */
+        /// <summary>
+        /// Contains an array of types that apply to this place.
+        /// </summary>
+        /// <remarks>
+        /// See https://developers.google.com/maps/documentation/places/web-service/supported_types.
+        /// </remarks>
+        [AllowNull]
+        [JsonProperty("types")]
+        [JsonConverter(typeof(PlaceTypeToStringJsonConverter))]
+        public IEnumerable<PlaceType> Types
+        {
+            get => mTypes ?? Enumerable.Empty<PlaceType>();
+
+            set => mTypes = value;
+        }
+
         #endregion
 
         #region Constructors
@@ -93,10 +139,6 @@ namespace GoogleMapsClient
         public PlaceAutocompletePredictionResponseModel()
         {
         }
-
-        #endregion
-
-        #region Public Methods
 
         #endregion
     }
