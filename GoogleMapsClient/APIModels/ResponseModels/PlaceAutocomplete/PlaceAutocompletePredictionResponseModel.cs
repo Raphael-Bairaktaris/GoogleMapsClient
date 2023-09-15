@@ -70,7 +70,7 @@ namespace GoogleMapsClient
         /// <summary>
         /// Provides pre-formatted text that can be shown in your autocomplete results. This content is meant to be
         /// read as-is. Do not programmatically parse the formatted address.
-        /// /// </summary>
+        /// </summary>
         /// <remarks>
         /// See https://developers.google.com/maps/documentation/places/web-service/autocomplete#PlaceAutocompleteStructuredFormat
         /// </remarks>

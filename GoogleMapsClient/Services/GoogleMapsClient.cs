@@ -6,16 +6,27 @@ using System.Threading.Tasks;
 
 namespace GoogleMapsClient
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class GoogleMapsClient
     {
         #region Public Properties
 
+        /// <summary>
+        /// 
+        /// </summary>
         public string APIKey { get; }
 
         #endregion
 
         #region Constructors
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="apiKey"></param>
+        /// <exception cref="ArgumentNullException"></exception>
         public GoogleMapsClient(string apiKey)
         {
             APIKey = apiKey ?? throw new ArgumentNullException(nameof(apiKey));
