@@ -9,7 +9,7 @@ namespace GoogleMapsClient
     /// <summary>
     /// Provides enumeration of atmosphere category
     /// </summary>
-    public enum AtmosphereCategory
+    public enum AtmosphereCategoryType
     {
         /// <summary>
         /// Curbside pickup

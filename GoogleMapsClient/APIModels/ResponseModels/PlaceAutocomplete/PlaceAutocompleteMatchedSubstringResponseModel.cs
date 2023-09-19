@@ -7,7 +7,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace Benchmarks
+namespace GoogleMapsClient
 {
     /// <summary>
     /// Represents an auto complete matched substring 

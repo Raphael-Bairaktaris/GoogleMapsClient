@@ -9,7 +9,7 @@ namespace GoogleMapsClient
     /// <summary>
     /// Provides enumeration of the basic categories
     /// </summary>
-    public enum BasicCategory
+    public enum BasicCategoryType
     {
         /// <summary>
         /// Address components

@@ -1,5 +1,4 @@
-﻿using Benchmarks;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System.Diagnostics.CodeAnalysis;
 
 namespace GoogleMapsClient

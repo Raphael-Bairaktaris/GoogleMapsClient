@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Diagnostics.CodeAnalysis;
 
-namespace Benchmarks
+namespace GoogleMapsClient
 {
     /// <summary>
     /// Represents a place auto complete structured format 

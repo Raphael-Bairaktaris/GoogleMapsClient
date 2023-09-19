@@ -9,7 +9,7 @@ namespace GoogleMapsClient
     /// <summary>
     /// Provides enumeration of contact category
     /// </summary>
-    public enum ContactCategory
+    public enum ContactCategoryType
     {
         /// <summary>
         /// Current opening hours
