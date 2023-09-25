@@ -255,16 +255,16 @@ namespace GoogleMapsClient
         }.ToImmutableDictionary();
 
         /// <summary>
-        /// Maps the <see cref="StatusCodesType"/> to ther related <see cref="string"/>
+        /// Maps the <see cref="StatusCodeType"/> to ther related <see cref="string"/>
         /// </summary>
-        public static IReadOnlyDictionary<StatusCodesType, string> StatusCodesTypeToStringMapper { get; } = new Dictionary<StatusCodesType, string>()
+        public static IReadOnlyDictionary<StatusCodeType, string> StatusCodeTypeToStringMapper { get; } = new Dictionary<StatusCodeType, string>()
         {
-            { StatusCodesType.Ok, "OK" },
-            { StatusCodesType.ZeroResults, "ZERO_RESULTS" },
-            { StatusCodesType.InvalidRequest, "INVALID_REQUEST" },
-            { StatusCodesType.OverQueryLimit, "OVER_QUERY_LIMIT" },
-            { StatusCodesType.RequestDenied, "REQUEST_DENIED" },
-            { StatusCodesType.UnknownError, "UNKNOWN_ERROR" },
+            { StatusCodeType.OK, "OK" },
+            { StatusCodeType.ZeroResults, "ZERO_RESULTS" },
+            { StatusCodeType.InvalidRequest, "INVALID_REQUEST" },
+            { StatusCodeType.OverQueryLimit, "OVER_QUERY_LIMIT" },
+            { StatusCodeType.RequestDenied, "REQUEST_DENIED" },
+            { StatusCodeType.UnknownError, "UNKNOWN_ERROR" },
         }.ToImmutableDictionary();
     }
 }

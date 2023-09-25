@@ -39,5 +39,12 @@ namespace GoogleMapsClient
         }
 
         #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Latitude: {Lat}, Longitude: {Lng}";
+
+        #endregion
     }
 }

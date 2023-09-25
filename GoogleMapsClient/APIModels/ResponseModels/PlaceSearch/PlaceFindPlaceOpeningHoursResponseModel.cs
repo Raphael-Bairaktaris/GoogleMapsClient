@@ -33,7 +33,7 @@ namespace GoogleMapsClient
         /// <summary>
         /// The member of the <see cref="WeekdayText"/> property
         /// </summary>
-        private string? mWeekdayText;
+        private IEnumerable<string>? mWeekdayText;
 
         #endregion
 
@@ -88,9 +88,9 @@ namespace GoogleMapsClient
         /// </summary>
         [AllowNull]
         [JsonProperty("weekday_text")]
-        public string WeekdayText 
+        public IEnumerable<string> WeekdayText 
         { 
-            get => mWeekdayText ?? string.Empty;
+            get => mWeekdayText ?? Enumerable.Empty<string>();
             set => mWeekdayText = value;
         }
 
@@ -104,6 +104,13 @@ namespace GoogleMapsClient
         {
             
         }
+
+        #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => WeekdayText.AggregateString();
 
         #endregion
     }

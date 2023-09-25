@@ -9,12 +9,12 @@ namespace GoogleMapsClient
     /// <summary>
     /// Provides enumeration of status code type
     /// </summary>
-    public enum StatusCodesType
+    public enum StatusCodeType
     {
         /// <summary>
         /// Indicating the API request was succesful
         /// </summary>
-        Ok = 0,
+        OK = 0,
 
         /// <summary>
         /// Indicating that the search was succesful but returned no results.

@@ -70,7 +70,8 @@ namespace GoogleMapsClient
         /// since since midnight, January 1, 1970 UTC.
         /// </summary>
         [JsonProperty("time")]
-        public int Time { get; set; }
+        [JsonConverter(typeof(DateTimeOffsetToUnixTimeStampJsonConverter))]
+        public DateTimeOffset Time { get; set; }
 
         /// <summary>
         /// The URL to the user's Google Maps Local Guides profile, if available.
@@ -144,6 +145,14 @@ namespace GoogleMapsClient
         {
             
         }
+
+        #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => AuthorName + " - " + Rating;
+
         #endregion
     }
 }

@@ -65,7 +65,7 @@ namespace GoogleMapsClient
         /// <summary>
         /// The member of the <see cref="IconBackgroundColor"/> property
         /// </summary>
-        private string? mIconBackgroudColor;
+        private string? mIconBackgroundColor;
 
         /// <summary>
         /// The member of the <see cref="InternationalPhoneNumber"/> property
@@ -266,8 +266,8 @@ namespace GoogleMapsClient
         [JsonProperty("icon_background_color")]
         public string IconBackgroundColor
         {
-            get => mIconBackgroudColor ?? string.Empty;
-            set => mIconBackgroudColor = value;
+            get => mIconBackgroundColor ?? string.Empty;
+            set => mIconBackgroundColor = value;
         }
 
         /// <summary>
@@ -482,7 +482,7 @@ namespace GoogleMapsClient
         /// </remarks>
         [AllowNull]
         [JsonProperty("types")]
-        [JsonConverter(typeof(AddressTypeToStringJsonConverter))]
+        [JsonConverter(typeof(AddressTypeEnumerableToStringJsonConverter))]
         public IEnumerable<AddressType> Types
         {
             get => mTypes ?? Enumerable.Empty<AddressType>();

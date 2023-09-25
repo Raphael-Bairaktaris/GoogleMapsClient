@@ -23,17 +23,12 @@ namespace GoogleMapsClient
         /// <summary>
         /// The member of the <see cref="HtmlAtributions"/> property
         /// </summary>
-        private string? mHtmlAttributions;
+        private IEnumerable<string>? mHtmlAttributions;
 
         /// <summary>
         /// The member of the <see cref="Result"/> property
         /// </summary>
         private PlaceFindPlaceAttributesResponseModel? mResult;
-
-        /// <summary>
-        /// The member of the <see cref="Status"/> property
-        /// </summary>
-        private PlaceFindPlaceAttributesResponseModel? mStatus;
 
         #endregion
 
@@ -45,9 +40,9 @@ namespace GoogleMapsClient
         /// </summary>
         [AllowNull]
         [JsonProperty("html_attributions")]
-        public string HtmlAtributions 
+        public IEnumerable<string> HtmlAtributions 
         {
-            get => mHtmlAttributions ?? string.Empty;
+            get => mHtmlAttributions ?? Enumerable.Empty<string>();
             set => mHtmlAttributions = value;
         }
 
@@ -67,14 +62,9 @@ namespace GoogleMapsClient
         /// Contains the status of the request, and may contain debugging 
         /// information to help you track down why the request failed.
         /// </summary>
-        [AllowNull]
         [JsonProperty("status")]
-        public PlaceFindPlaceAttributesResponseModel Status 
-        {
-            get => mResult ??= new PlaceFindPlaceAttributesResponseModel();
-
-            set => mResult = value;
-        }
+        [JsonConverter(typeof(StatusCodeTypeToStringJsonConverter))]
+        public StatusCodeType Status { get; set; }
 
         /// <summary>
         /// When the service returns additional information about the request specification,

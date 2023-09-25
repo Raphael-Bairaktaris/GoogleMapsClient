@@ -1,11 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GoogleMapsClient
 {
@@ -28,13 +21,15 @@ namespace GoogleMapsClient
         /// in the range 0000–2359. The time will be reported in the place’s time zone.
         /// </summary>
         [JsonProperty("time")]
+        [JsonConverter(typeof(TimeOnlyToStringJsonConveter))]
         public TimeOnly Time { get; set; }
 
         /// <summary>
         /// A date expressed in RFC3339 format in the local timezone for the place, for example 2010-12-31.
         /// </summary>
         [JsonProperty("date")]
-        public DateOnly Date { get; set; }
+        [JsonConverter(typeof(DateOnlyToStringJsonConverter))]
+        public DateOnly? Date { get; set; }
         
         /// <summary>
         /// True if a given period was truncated due to a seven-day cutoff, where the period starts
@@ -42,7 +37,7 @@ namespace GoogleMapsClient
         /// This property indicates that the period for open or close can extend past this seven-day cutoff.
         /// </summary>
         [JsonProperty("truncated")]
-        public bool Truncated { get; set; }
+        public bool? Truncated { get; set; }
 
         #endregion
 

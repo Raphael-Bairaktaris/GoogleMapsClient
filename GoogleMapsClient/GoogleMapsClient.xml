@@ -93,6 +93,40 @@
             Represents a place detail 
             </summary>
         </member>
+        <member name="P:GoogleMapsClient.PlaceDetailAPIArgs.PlaceId">
+            <summary>
+            A textual identifier that uniquely identifies a place, returned from a Place Search.
+            </summary>
+            <remarks>
+            https://developers.google.com/maps/documentation/places/web-service/place-id
+            </remarks>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceDetailAPIArgs.Basic">
+            <summary>
+            The Basic category includes the following fields: address_components, adr_address,
+            business_status, formatted_address, geometry, icon, icon_mask_base_uri, icon_background_color,
+            name, permanently_closed (deprecated), photo, place_id, plus_code, type, url, utc_offset, 
+            vicinity, wheelchair_accessible_entrance.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceDetailAPIArgs.Contact">
+            <summary>
+            The Contact category includes the following fields: current_opening_hours, formatted_phone_number,
+            international_phone_number, opening_hours, secondary_opening_hours, website
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceDetailAPIArgs.Atmosphere">
+            <summary>
+            The Atmosphere category includes the following fields: curbside_pickup, delivery, dine_in, 
+            editorial_summary, price_level, rating, reservable, reviews, serves_beer, serves_breakfast, serves_brunch,
+            serves_dinner, serves_lunch, serves_vegetarian_food, serves_wine, takeout, user_ratings_total.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceDetailAPIArgs.Language">
+            <summary>
+            List of supported languages
+            </summary>
+        </member>
         <member name="M:GoogleMapsClient.PlaceDetailAPIArgs.#ctor">
             <summary>
             Default constructor
@@ -258,6 +292,72 @@
             Default constructor
             </summary>
         </member>
+        <member name="T:GoogleMapsClient.PlaceAutocompleteResponseModel">
+            <summary>
+            Represents an autocomplete response
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceAutocompleteResponseModel.mPredictions">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceAutocompleteResponseModel.Predictions"/> property
+            </summary>
+            <remarks>
+            https://developers.google.com/maps/documentation/places/web-service/autocomplete#PlaceAutocompletePrediction
+            </remarks>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceAutocompleteResponseModel.mErrorMessage">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceAutocompleteResponseModel.ErrorMessage"/> property
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceAutocompleteResponseModel.mInfoMessages">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceAutocompleteResponseModel.InfoMessages"/> property
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceAutocompleteResponseModel.Predictions">
+            <summary>
+            Contains an array of predictions
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceAutocompleteResponseModel.Status">
+            <summary>
+            Contains the status of the request, and may contain debugging information to 
+            help you track down why the request failed.
+            </summary>
+            <remarks>
+            https://developers.google.com/maps/documentation/places/web-service/autocomplete#PlacesAutocompleteStatus
+            </remarks>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceAutocompleteResponseModel.ErrorMessage">
+            <summary>
+            When the service returns a status code other than OK, there may be an additional error_message 
+            field within the response object. This field contains more detailed information about thereasons behind 
+            the given status code. This field is not always returned, and its content is subject to change.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceAutocompleteResponseModel.InfoMessages">
+            <summary>
+            When the service returns additional information about the request specification, there may be an 
+            additional info_messages field within the response object. This field is only returned for successful 
+            requests. It may not always be returned, and its content is subject to change.
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.PlaceAutocompleteResponseModel.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="T:GoogleMapsClient.PlaceAutoCompleteStatusResponseModel">
+            <summary>
+            Status coedes returned by the service
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.PlaceAutoCompleteStatusResponseModel.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
         <member name="T:GoogleMapsClient.PlaceAutocompleteStructuredFormatResponseModel">
             <summary>
             Represents a place auto complete structured format 
@@ -336,6 +436,56 @@
             Default constructor
             </summary>
         </member>
+        <member name="T:GoogleMapsClient.PlaceDetailResponseModel">
+            <summary>
+            Represents a place detail response
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceDetailResponseModel.mInfoMessages">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceDetailResponseModel.InfoMessages"/> property
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceDetailResponseModel.mHtmlAttributions">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceDetailResponseModel.HtmlAtributions"/> property
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceDetailResponseModel.mResult">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceDetailResponseModel.Result"/> property
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceDetailResponseModel.HtmlAtributions">
+            <summary>
+            May contain a set of attributions about this listing which must be 
+            displayed to the user (some listings may not have attribution).
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceDetailResponseModel.Result">
+            <summary>
+            Contains detailed information about the place requested.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceDetailResponseModel.Status">
+            <summary>
+            Contains the status of the request, and may contain debugging 
+            information to help you track down why the request failed.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceDetailResponseModel.InfoMessages">
+            <summary>
+            When the service returns additional information about the request specification,
+            there may be an additional info_messages field within the response object. This field
+            is only returned for successful requests. It may not always be returned, and its content 
+            is subject to change.
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.PlaceDetailResponseModel.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
         <member name="T:GoogleMapsClient.PlaceFindAddressComponentResponseModel">
             <summary>
             Represents a place find address component respone
@@ -390,6 +540,11 @@
             The member of the <see cref="P:GoogleMapsClient.PlaceFindBoundsResponseModel.Northeast"/> property
             </summary>
         </member>
+        <member name="F:GoogleMapsClient.PlaceFindBoundsResponseModel.mSouthwest">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindBoundsResponseModel.Southwest"/> property
+            </summary>
+        </member>
         <member name="P:GoogleMapsClient.PlaceFindBoundsResponseModel.Northeast">
             <remarks>
             https://developers.google.com/maps/documentation/places/web-service/search-find-place#LatLngLiteral
@@ -442,6 +597,16 @@
             An object describing the location.
             </summary>
         </member>
+        <member name="F:GoogleMapsClient.PlaceFindGeomertryResponseModel.mLocation">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindGeomertryResponseModel.Location"/> property
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceFindGeomertryResponseModel.mViewport">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindGeomertryResponseModel.Viewport"/> property
+            </summary>
+        </member>
         <member name="P:GoogleMapsClient.PlaceFindGeomertryResponseModel.Location">
             <remarks>
             https://developers.google.com/maps/documentation/places/web-service/search-find-place#LatLngLiteral
@@ -477,95 +642,110 @@
             Default Constructor
             </summary>
         </member>
-        <member name="T:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel">
+        <member name="M:GoogleMapsClient.PlaceFindLatLngLiteralResponseModel.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="T:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel">
             <summary>
-            Represents a places find place from text
+            Attributes describing a place. Not all attributes will be available for all place types.
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.mAddressComponent">
+        <member name="F:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.mAddressComponent">
             <summary>
-            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.AddressComponent"/> property
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.AddressComponent"/> property
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.mADRAddress">
+        <member name="F:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.mADRAddress">
             <summary>
-            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.ADRAddress"/> property
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.ADRAddress"/> property
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.mBusinessStatus">
+        <member name="F:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.mBusinessStatus">
             <summary>
-            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.BusinessStatus"/> property
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.BusinessStatus"/> property
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.mEditorialSummary">
+        <member name="F:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.mCurrentOpeningHours">
             <summary>
-            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.EditorialSummary"/> property
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.CurrentOpeningHours"/> property
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.mFormattedAddress">
+        <member name="F:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.mEditorialSummary">
             <summary>
-            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.FormattedAddress"/> property
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.EditorialSummary"/> property
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.mFormattedPhoneNumber">
+        <member name="F:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.mFormattedAddress">
             <summary>
-            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.FormattedPhoneNumber"/> property
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.FormattedAddress"/> property
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.mIcon">
+        <member name="F:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.mFormattedPhoneNumber">
             <summary>
-            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.Icon"/> property
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.FormattedPhoneNumber"/> property
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.mIconBackgroudColor">
+        <member name="F:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.mGeometry">
             <summary>
-            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.IconBackgroundColor"/> property
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.Geometry"/> property
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.mInternationalPhoneNumber">
+        <member name="F:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.mIcon">
             <summary>
-            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.InternationalPhoneNumber"/> property
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.Icon"/> property
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.mName">
+        <member name="F:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.mIconBackgroundColor">
             <summary>
-            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.Name"/> property
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.IconBackgroundColor"/> property
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.mPlaceId">
+        <member name="F:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.mInternationalPhoneNumber">
             <summary>
-            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.PlaceId"/> property
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.InternationalPhoneNumber"/> property
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.mPlusCode">
+        <member name="F:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.mName">
             <summary>
-            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.PlusCode"/> property
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.Name"/> property
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.mReviews">
+        <member name="F:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.mOpeningHours">
             <summary>
-            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.Reviews"/> property
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.OpeningHours"/> property
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.mVicinity">
+        <member name="F:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.mPlaceId">
             <summary>
-            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.Vicinity"/> property
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.PlaceId"/> property
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.mTypes">
+        <member name="F:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.mPlusCode">
             <summary>
-            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.Types"/> property
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.PlusCode"/> property
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.Candidates">
+        <member name="F:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.mReviews">
             <summary>
-            Contains an array of place candidates
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.Reviews"/> property
             </summary>
-            <remarks>
-            https://developers.google.com/maps/documentation/places/web-service/search-find-place#AddressComponent
-            </remarks>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.AddressComponent">
+        <member name="F:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.mSecondaryOpeningHours">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.SecondaryOpeningHours"/> property
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.mVicinity">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.Vicinity"/> property
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.mTypes">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.Types"/> property
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.AddressComponent">
             <summary>
             An array containing the separate components applicable to this address.
             </summary>
@@ -573,7 +753,7 @@
             https://developers.google.com/maps/documentation/places/web-service/search-find-place#AddressComponent
             </remarks>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.ADRAddress">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.ADRAddress">
             <summary>
             Represents place address in the adr microformat
             </summary>
@@ -581,19 +761,19 @@
             http://microformats.org/wiki/adr
             </remarks>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.BusinessStatus">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.BusinessStatus">
              <summary>
              Indicates the operational status of the place, 
              if it is a business. If no data exists, business_status is not returned.
             The allowed values include: OPERATIONAL, CLOSED_TEMPORARILY, and CLOSED_PERMANENTLY
              </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.CurbsidePickup">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.CurbsidePickup">
             <summary>
             Specifies if the business supports curbside pickup.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.CurrentOpeningHours">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.CurrentOpeningHours">
             <summary>
             Contains the hours of operation for the next seven days (including today). 
             The time period starts at midnight on the date of the request and ends at 
@@ -604,17 +784,17 @@
             https://developers.google.com/maps/documentation/places/web-service/search-find-place#PlaceOpeningHours
             </remarks>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.Delivery">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.Delivery">
             <summary>
             Specifies if the business supports delivery.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.DineIn">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.DineIn">
             <summary>
             Specifies if the business supports indoor or outdoor seaing options.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.EditorialSummary">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.EditorialSummary">
             <summary>
             Contains a summary of the place. A summary is comprised of a textual overview, 
             and also includes the language code for these if applicable. Summary text must 
@@ -624,13 +804,13 @@
             https://developers.google.com/maps/documentation/places/web-service/search-find-place#PlaceEditorialSummary
             </remarks>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.FormattedAddress">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.FormattedAddress">
             <summary>
             A string containing the human-readable address of this place. 
             Often this address is equilevant of the postal address.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.FormattedPhoneNumber">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.FormattedPhoneNumber">
              <summary>
              Contains the place's phone number in it's local format.
              </summary>
@@ -638,7 +818,7 @@
              https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers
             </remarks>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.Geometry">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.Geometry">
             <summary>
             Contains the location and viewport for the location
             </summary>
@@ -646,23 +826,23 @@
             https://developers.google.com/maps/documentation/places/web-service/search-find-place#Geometry
             </remarks>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.Icon">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.Icon">
              <summary>
             Contains the URL of a suggested icon which may be displayed to the user when
             indicating this result on a map.
              </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.IconBackgroundColor">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.IconBackgroundColor">
             <summary>
             Contains the default HEX color colde for the place's category.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.IconMaskBaseUri">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.IconMaskBaseUri">
             <summary>
             Contains the URL of a recommended icon, minus the .svg or .png file type extension.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.InternationalPhoneNumber">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.InternationalPhoneNumber">
              <summary>
             Contains the place's phone number in international format. International format includes
             the country code, and is prefixed with the plus, +, sign.
@@ -672,13 +852,13 @@
              Australia office is +61 2 9374 4000.
              </example>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.Name">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.Name">
              <summary>
              Contains the human-readable name for the returned result. For establishment results,
             this is usually the canonicalized business name
              </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.OpeningHours">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.OpeningHours">
             <summary>
             Contains the regular hours of operation
             </summary>
@@ -686,7 +866,7 @@
             https://developers.google.com/maps/documentation/places/web-service/search-find-place#PlaceOpeningHours
             </remarks>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.Photo">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.Photo">
             <summary>
             An array of photo objects, each containing a reference to an image. 
             A request may return up to ten photos.
@@ -695,7 +875,7 @@
             https://developers.google.com/maps/documentation/places/web-service/search-find-place#PlacePhoto
             </remarks>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.PlaceId">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.PlaceId">
             <summary>
             A textual identifier that uniquely identifies a place. To retrieve information
             about the place, pass this identifier in the place_id field of a Places API request.
@@ -704,7 +884,7 @@
             https://developers.google.com/maps/documentation/places/web-service/place-id
             </remarks>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.PlusCode">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.PlusCode">
             <summary>
             An encoded location reference, derived from latitude and longitude coordinates, 
             that represents an area: 1/8000th of a degree by 1/8000th of a degree 
@@ -717,7 +897,7 @@
             https://developers.google.com/maps/documentation/places/web-service/search-find-place#PlusCode
             </remarks>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.PriceLevel">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.PriceLevel">
             <summary>
             The price level of the place, on a scale of 0 to 4. The exact amount indicated by a specific value 
             will vary from region to region. Price levels are interpreted as follows:
@@ -737,17 +917,17 @@
             </list>
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.Rating">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.Rating">
             <summary>
             Contains the place's rating from 1.0 to 5.0 based on user reviews.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.Reservable">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.Reservable">
             <summary>
             Specifies if the place supports reservations.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.Reviews">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.Reviews">
              <summary>
              An array of up to five reviews. By default the reviews are sorted in order of relevance.
              </summary>
@@ -755,7 +935,7 @@
              https://developers.google.com/maps/documentation/places/web-service/search-find-place#PlaceReview
             </remarks>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.SecondaryOpeningHours">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.SecondaryOpeningHours">
             <summary>
             Contains an array of entries for the next seven days including information
             about secondary hours of business. Secondary hours are different from a
@@ -768,47 +948,47 @@
             https://developers.google.com/maps/documentation/places/web-service/search-find-place#PlaceOpeningHours
             </remarks>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.ServesBeer">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.ServesBeer">
             <summary>
             Specifies if the place serves beer.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.ServesBreakfast">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.ServesBreakfast">
             <summary>
             Specifies if the place serves breakfast.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.ServesBrunch">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.ServesBrunch">
             <summary>
             Specifies if the place serves brunch.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.ServesDinner">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.ServesDinner">
             <summary>
             Specifies if the place serves dinner.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.ServesLunch">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.ServesLunch">
              <summary>
             Specifies if the place serves lunch. 
              </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.ServesVegetarianFood">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.ServesVegetarianFood">
             <summary>
             Specifies if the place serves vegetarian food.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.ServesWine">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.ServesWine">
             <summary>
             Specifies if the place serves wine.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.Takeout">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.Takeout">
             <summary>
             Specifies if the business supports takeout.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.Types">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.Types">
             <summary>
             Contains an array of feature types describing the given result.
             </summary>
@@ -816,19 +996,19 @@
             https://developers.google.com/maps/documentation/places/web-service/supported_types#table2
             </remarks>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.Url">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.Url">
             <summary>
             Contains the URL of the official Google page for this place. This will be the Google-owned page
             that contains the best available information about the place. Applications must link to or embed 
             this page on any screen that shows detailed results about the place to the user.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.UserRatingTotal">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.UserRatingTotal">
             <summary>
             The total numver  of reviews, with or without text, for this place.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.UTCOffset">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.UTCOffset">
             <summary>
             Contains the number of minutes this place’s current timezone is offset from UTC.
             </summary>
@@ -838,19 +1018,79 @@
             time this would be -480 (-8 hours from UTC).
             </example>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.Vicinity">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.Vicinity">
             <summary>
             
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.Website">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.Website">
             <summary>
             The authoriative website for this [;ace, such ass a business's homepage.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.WheelchairAccessibleEntrance">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.WheelchairAccessibleEntrance">
             <summary>
             Specifies if the place has an entrance that is wheelchair accessible
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="T:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel">
+            <summary>
+            Represents a places find place from text
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.mCandidates">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.Candidates"/> property
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.mErrorMessage">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.ErrorMessage"/> property
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.mInfoMessages">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.InfoMessages"/> property
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.mStatus">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.Status"/> property
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.Candidates">
+            <summary>
+            Contains an array of place candidates
+            </summary>
+            <remarks>
+            https://developers.google.com/maps/documentation/places/web-service/search-find-place#AddressComponent
+            </remarks>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.Status">
+            <summary>
+            Contains the status of the request, and may contain debugging information to help you track down why the request failed.
+            </summary>
+            <remarks>
+            https://developers.google.com/maps/documentation/places/web-service/search-find-place#PlacesSearchStatus
+            </remarks>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.ErrorMessage">
+            <summary>
+            When the service returns a status code other than OK, there may be an additional error_message field within the response
+            object. This field contains more detailed information about thereasons behind the given status code. 
+            This field is not always returned, and its content is subject to change.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.InfoMessages">
+            <summary>
+            When the service returns additional information about the request specification, there may be an additional info_messages
+            field within the response object. This field is only returned for successful requests. It may not always be returned, 
+            and its content is subject to change.
             </summary>
         </member>
         <member name="M:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel.#ctor">
@@ -943,6 +1183,16 @@
             The members of the <see cref="P:GoogleMapsClient.PlaceFindPlaceOpeningHoursResponseModel.SpecialDays"/> property
             </summary>
         </member>
+        <member name="F:GoogleMapsClient.PlaceFindPlaceOpeningHoursResponseModel.mType">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceOpeningHoursResponseModel.Type"/> property
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceFindPlaceOpeningHoursResponseModel.mWeekdayText">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceOpeningHoursResponseModel.WeekdayText"/> property
+            </summary>
+        </member>
         <member name="P:GoogleMapsClient.PlaceFindPlaceOpeningHoursResponseModel.OpenNow">
             <summary>
             A boolean value indicating if the place is open at the current time.
@@ -964,9 +1214,127 @@
             https://developers.google.com/maps/documentation/places/web-service/search-find-place#PlaceSpecialDay
             </remarks>
         </member>
+        <member name="P:GoogleMapsClient.PlaceFindPlaceOpeningHoursResponseModel.Type">
+            <summary>
+            A type string used to identify the type of secondary hours.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindPlaceOpeningHoursResponseModel.WeekdayText">
+            <summary>
+            An array of strings describing in human-readable text the hours of the place.
+            </summary>
+        </member>
         <member name="M:GoogleMapsClient.PlaceFindPlaceOpeningHoursResponseModel.#ctor">
             <summary>
             Default Constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.PlaceFindPlaceOpeningHoursResponseModel.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="T:GoogleMapsClient.PlaceFindPlaceReviewResponseModel">
+            <summary>
+            Represents a place review response
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceFindPlaceReviewResponseModel.mAuthorName">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceReviewResponseModel.AuthorName"/> property
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceFindPlaceReviewResponseModel.mRelativeTimeDescription">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceReviewResponseModel.RelativeTimeDescpription"/> property
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceFindPlaceReviewResponseModel.mText">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceReviewResponseModel.Text"/> property
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindPlaceReviewResponseModel.AuthorName">
+            <summary>
+            The name of the user who submitted the review. 
+            Anonymous reviews are attributed to "A Google user".
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindPlaceReviewResponseModel.Rating">
+            <summary>
+            The user's overall rating for this place. This is a whole number ranging from 1 to 5.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindPlaceReviewResponseModel.RelativeTimeDescpription">
+            <summary>
+            The time that the review was submitted in text, relative to the current time.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindPlaceReviewResponseModel.Time">
+            <summary>
+            The time that the review was submitted, measured in the number of seconds 
+            since since midnight, January 1, 1970 UTC.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindPlaceReviewResponseModel.AuthorUrl">
+            <summary>
+            The URL to the user's Google Maps Local Guides profile, if available.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindPlaceReviewResponseModel.Language">
+            <summary>
+            An IETF language code indicating the language of the returned review.This field 
+            contains the main language tag only, and not the secondary tag indicating country or region.
+            </summary>
+            <example>
+            For example, all the English reviews are tagged as 'en', and not 'en-AU' or 'en-UK' 
+            and so on.This field is empty if there is only a rating with no review text.
+            </example>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindPlaceReviewResponseModel.OriginalLanguage">
+            <summary>
+            An IETF language code indicating the original language of the review. If the review 
+            has been translated, then original_language != language.This field contains the main 
+            language tag only, and not the secondary tag indicating country or region.
+            </summary>
+            <example>
+            For example, all the English reviews are tagged as 'en', and not 'en-AU' or 'en-UK' 
+            and so on.This field is empty if there is only a rating with no review text.
+            </example>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindPlaceReviewResponseModel.ProfilePhotoUrl">
+            <summary>
+            The URL to the user's photo, if available
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindPlaceReviewResponseModel.Text">
+            <summary>
+            The user's review. When reviewing a location with Google Places, text reviews are considered
+            optional. Therefore, this field may be empty. Note that this field may include simple HTML markup.
+            </summary>
+            <example>
+            For example, the entity reference &amp; may represent an ampersand character.
+            </example>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindPlaceReviewResponseModel.Translated">
+            <summary>
+            A boolean value indicating if the review was translated from the original language it was written in. 
+            If a review has been translated, corresponding to a value of true, Google recommends that you indicate 
+            this to your users.
+            </summary>
+            <example>
+            For example, you can add the following string, “Translated by Google”, to the review.
+            </example>
+        </member>
+        <member name="M:GoogleMapsClient.PlaceFindPlaceReviewResponseModel.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.PlaceFindPlaceReviewResponseModel.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="T:GoogleMapsClient.PlaceFindPlaceSearchStatusResponseModel">
+            <summary>
+            Represents a place status response
             </summary>
         </member>
         <member name="T:GoogleMapsClient.PlaceFindPlaceSpecialDayResponseModel">
@@ -990,6 +1358,41 @@
             </summary>
         </member>
         <member name="M:GoogleMapsClient.PlaceFindPlaceSpecialDayResponseModel.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="T:GoogleMapsClient.PlaceFindPlusCodeResponseModel">
+            <summary>
+            An encoded location reference, derived from latitude and longitude coordinates, that represents an area, 
+            1/8000th of a degree by 1/8000th of a degree (about 14m x 14m at the equator) or smaller. Plus codes 
+            can be used as a replacement for street addresses in places where they do not exist (where buildings 
+            are not numbered or streets are not named).
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceFindPlusCodeResponseModel.mGlobalCode">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlusCodeResponseModel.GlobalCode"/> property
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceFindPlusCodeResponseModel.mCompoundCode">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindPlusCodeResponseModel.CompoundCode"/> property
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindPlusCodeResponseModel.GlobalCode">
+            <summary>
+            The global_code is a 4 character area code and 6 character or longer local code (849VCWC8+R9).
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindPlusCodeResponseModel.CompoundCode">
+            <summary>
+            The compound_code is a 6 character or longer local code with an explicit location 
+            (CWC8+R9, Mountain View, CA, USA). Some APIs may return an empty string if the compound_code
+            is not available.
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.PlaceFindPlusCodeResponseModel.#ctor">
             <summary>
             Default Constructor
             </summary>
@@ -1248,182 +1651,182 @@
             Town square
             </summary>
         </member>
-        <member name="T:GoogleMapsClient.AtmosphereCategory">
+        <member name="T:GoogleMapsClient.AtmosphereCategoryType">
             <summary>
             Provides enumeration of atmosphere category
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.AtmosphereCategory.CurbsidePickup">
+        <member name="F:GoogleMapsClient.AtmosphereCategoryType.CurbsidePickup">
             <summary>
             Curbside pickup
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.AtmosphereCategory.Delivery">
+        <member name="F:GoogleMapsClient.AtmosphereCategoryType.Delivery">
             <summary>
             Delivery
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.AtmosphereCategory.DineIn">
+        <member name="F:GoogleMapsClient.AtmosphereCategoryType.DineIn">
             <summary>
             Dine in
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.AtmosphereCategory.EditorialSummary">
+        <member name="F:GoogleMapsClient.AtmosphereCategoryType.EditorialSummary">
             <summary>
             Editorial summary
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.AtmosphereCategory.PriceLevel">
+        <member name="F:GoogleMapsClient.AtmosphereCategoryType.PriceLevel">
             <summary>
             Price level
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.AtmosphereCategory.Rating">
+        <member name="F:GoogleMapsClient.AtmosphereCategoryType.Rating">
             <summary>
             Rating
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.AtmosphereCategory.Reservable">
+        <member name="F:GoogleMapsClient.AtmosphereCategoryType.Reservable">
             <summary>
             Reserveable
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.AtmosphereCategory.Reviews">
+        <member name="F:GoogleMapsClient.AtmosphereCategoryType.Reviews">
             <summary>
             Reviews
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.AtmosphereCategory.ServesBeer">
+        <member name="F:GoogleMapsClient.AtmosphereCategoryType.ServesBeer">
             <summary>
             Serves beer
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.AtmosphereCategory.ServesBreakfast">
+        <member name="F:GoogleMapsClient.AtmosphereCategoryType.ServesBreakfast">
             <summary>
             Serves breakfast
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.AtmosphereCategory.ServesBrunch">
+        <member name="F:GoogleMapsClient.AtmosphereCategoryType.ServesBrunch">
             <summary>
             Serves brunch
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.AtmosphereCategory.ServesDinner">
+        <member name="F:GoogleMapsClient.AtmosphereCategoryType.ServesDinner">
             <summary>
             Serves dinner
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.AtmosphereCategory.ServesLunch">
+        <member name="F:GoogleMapsClient.AtmosphereCategoryType.ServesLunch">
             <summary>
             Serves lunch
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.AtmosphereCategory.ServesVegetarianFood">
+        <member name="F:GoogleMapsClient.AtmosphereCategoryType.ServesVegetarianFood">
             <summary>
             Serves vegetarian food
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.AtmosphereCategory.ServesWine">
+        <member name="F:GoogleMapsClient.AtmosphereCategoryType.ServesWine">
             <summary>
             Serves wine
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.AtmosphereCategory.Takeout">
+        <member name="F:GoogleMapsClient.AtmosphereCategoryType.Takeout">
             <summary>
             Takeout
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.AtmosphereCategory.UserRatingsTotal">
+        <member name="F:GoogleMapsClient.AtmosphereCategoryType.UserRatingsTotal">
             <summary>
             User ratings total
             </summary>
         </member>
-        <member name="T:GoogleMapsClient.BasicCategory">
+        <member name="T:GoogleMapsClient.BasicCategoryType">
             <summary>
             Provides enumeration of the basic categories
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.BasicCategory.AddressComponents">
+        <member name="F:GoogleMapsClient.BasicCategoryType.AddressComponents">
             <summary>
             Address components
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.BasicCategory.ADRAddress">
+        <member name="F:GoogleMapsClient.BasicCategoryType.ADRAddress">
             <summary>
             Adr address
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.BasicCategory.BusinessStatus">
+        <member name="F:GoogleMapsClient.BasicCategoryType.BusinessStatus">
             <summary>
             Business status
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.BasicCategory.FormattedAddress">
+        <member name="F:GoogleMapsClient.BasicCategoryType.FormattedAddress">
             <summary>
             Formatted address
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.BasicCategory.Geometry">
+        <member name="F:GoogleMapsClient.BasicCategoryType.Geometry">
             <summary>
             Geometry
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.BasicCategory.Icon">
+        <member name="F:GoogleMapsClient.BasicCategoryType.Icon">
             <summary>
             Icon
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.BasicCategory.IconMaskBaseUri">
+        <member name="F:GoogleMapsClient.BasicCategoryType.IconMaskBaseUri">
             <summary>
             Icon mask base uri
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.BasicCategory.IconBackgroudColor">
+        <member name="F:GoogleMapsClient.BasicCategoryType.IconBackgroudColor">
             <summary>
             Icon background color
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.BasicCategory.Name">
+        <member name="F:GoogleMapsClient.BasicCategoryType.Name">
             <summary>
             Name
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.BasicCategory.Photo">
+        <member name="F:GoogleMapsClient.BasicCategoryType.Photo">
             <summary>
             Photo
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.BasicCategory.PlaceId">
+        <member name="F:GoogleMapsClient.BasicCategoryType.PlaceId">
             <summary>
             Place id
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.BasicCategory.PlusCode">
+        <member name="F:GoogleMapsClient.BasicCategoryType.PlusCode">
             <summary>
             Plus code
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.BasicCategory.Type">
+        <member name="F:GoogleMapsClient.BasicCategoryType.Type">
             <summary>
             Type
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.BasicCategory.Url">
+        <member name="F:GoogleMapsClient.BasicCategoryType.Url">
             <summary>
             Url
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.BasicCategory.UtcOffset">
+        <member name="F:GoogleMapsClient.BasicCategoryType.UtcOffset">
             <summary>
             Utc offset
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.BasicCategory.Vicinity">
+        <member name="F:GoogleMapsClient.BasicCategoryType.Vicinity">
             <summary>
             Vicinity
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.BasicCategory.WheelchairAccessibleEntrance">
+        <member name="F:GoogleMapsClient.BasicCategoryType.WheelchairAccessibleEntrance">
             <summary>
             Wheelchair accessible entrance
             </summary>
@@ -1492,39 +1895,99 @@
             </list>
             </summary>
         </member>
-        <member name="T:GoogleMapsClient.ContactCategory">
+        <member name="T:GoogleMapsClient.ContactCategoryType">
             <summary>
             Provides enumeration of contact category
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.ContactCategory.CurrentOpeningHours">
+        <member name="F:GoogleMapsClient.ContactCategoryType.CurrentOpeningHours">
             <summary>
             Current opening hours
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.ContactCategory.FormattedPhoneNumber">
+        <member name="F:GoogleMapsClient.ContactCategoryType.FormattedPhoneNumber">
             <summary>
             Formatted phone number
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.ContactCategory.InternationalPhoneNumber">
+        <member name="F:GoogleMapsClient.ContactCategoryType.InternationalPhoneNumber">
             <summary>
             Internationa phone number
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.ContactCategory.OpeningHours">
+        <member name="F:GoogleMapsClient.ContactCategoryType.OpeningHours">
             <summary>
             Opening hours
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.ContactCategory.SecondaryOpeningHours">
+        <member name="F:GoogleMapsClient.ContactCategoryType.SecondaryOpeningHours">
             <summary>
             Secondary opening hours
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.ContactCategory.Website">
+        <member name="F:GoogleMapsClient.ContactCategoryType.Website">
             <summary>
             Website
+            </summary>
+        </member>
+        <member name="T:GoogleMapsClient.PlaceOpeningHoursType">
+            <summary>
+            Provides enumeration of opening hours
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceOpeningHoursType.DriveThrough">
+            <summary>
+            Drive through
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceOpeningHoursType.HappyHour">
+            <summary>
+            Happy hour
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceOpeningHoursType.Delivery">
+            <summary>
+            Delivery
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceOpeningHoursType.Takeout">
+            <summary>
+            Takeout
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceOpeningHoursType.Kitchen">
+            <summary>
+            Kitchen
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceOpeningHoursType.Breakfast">
+            <summary>
+            Breakfast
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceOpeningHoursType.Lunch">
+            <summary>
+            Lunch
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceOpeningHoursType.Dinner">
+            <summary>
+            Dinner
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceOpeningHoursType.Brunch">
+            <summary>
+            Brunch
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceOpeningHoursType.Pickup">
+            <summary>
+            Pickup
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceOpeningHoursType.SeniorHours">
+            <summary>
+            SeniorHours
             </summary>
         </member>
         <member name="T:GoogleMapsClient.PlaceType">
@@ -2012,6 +2475,65 @@
             Zoo
             </summary>
         </member>
+        <member name="T:GoogleMapsClient.StatusCodeType">
+            <summary>
+            Provides enumeration of status code type
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.StatusCodeType.OK">
+            <summary>
+            Indicating the API request was succesful
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.StatusCodeType.ZeroResults">
+            <summary>
+            Indicating that the search was succesful but returned no results.
+            This may occur if the search was passed a latlng in a remote location.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.StatusCodeType.InvalidRequest">
+            <summary>
+            indicating the API request was malformed, generally due to missing required 
+            query parameter (location or radius)
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.StatusCodeType.OverQueryLimit">
+            <summary>
+            indicated the following
+            <list type="bullet|number|table">
+            <item>
+                <description>You have exceeded the QPS limits.</description>
+            </item>
+            <item>
+                <description>Billing has not been enabled on your account.</description>
+            </item>
+            <item>
+                <description>The monthly 200$ credit, or self imposed usage cap has ben exceeded</description>
+            </item>
+            <item>
+                <description>The provided method of payment is no longer valid.(i.e expired credit)</description>
+            </item>
+            </list>
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.StatusCodeType.RequestDenied">
+            <summary>
+            Idicates that your erquest was denied, generally because:
+            <list type="bullet|number|table">
+            <item>
+                <description>The request is missing an API key.</description>
+            </item>
+            <item>
+                <description>The key parameter is invalid</description>
+            </item>
+            </list>
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.StatusCodeType.UnknownError">
+            <summary>
+            Indicating an unknown error.
+            </summary>
+        </member>
         <member name="T:GoogleMapsClient.SupportedLanguage">
             <summary>
             Provides enumeration over supported languages
@@ -2422,14 +2944,72 @@
             Zulu
             </summary>
         </member>
+        <member name="T:GoogleMapsClient.ExtensionMethods">
+            <summary>
+            Extension methods
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.ExtensionMethods.AggregateString``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.String},System.Func{System.String,System.String,System.String})">
+            <summary>
+            Aggregates the specified <paramref name="source"/> into a <see cref="T:System.String"/>
+            </summary>
+            <typeparam name="T">The type of the items</typeparam>
+            <param name="source">The source</param>
+            <param name="extractor">The string extractor that is used to convert an item to a string</param>
+            <param name="func">Delegate that places the extracted strings in order</param>
+            <returns></returns>
+        </member>
+        <member name="M:GoogleMapsClient.ExtensionMethods.AggregateString``1(System.Collections.Generic.IEnumerable{``0},System.Func{``0,System.String},System.String)">
+            <summary>
+            Aggregates the specified <paramref name="source"/> into a <see cref="T:System.String"/>
+            </summary>
+            <typeparam name="T">The type of the items</typeparam>
+            <param name="source">The source</param>
+            <param name="extractor">The string extractor that is used to convert an item to a string</param>
+            <param name="separator">The separator</param>
+            <returns></returns>
+        </member>
+        <member name="M:GoogleMapsClient.ExtensionMethods.AggregateString``1(System.Collections.Generic.IEnumerable{``0},System.Func{System.String,System.String,System.String})">
+            <summary>
+            Aggregates the specified <paramref name="source"/> into a <see cref="T:System.String"/>.
+            NOTE: This method converts the items of the <paramref name="source"/> to <see cref="T:System.String"/>
+                  using the <see cref="M:System.Object.ToString"/> method!
+            </summary>
+            <typeparam name="T">The type of the items</typeparam>
+            <param name="source">The source</param>
+            <param name="func">Delegate that places the extracted strings in order</param>
+            <returns></returns>
+        </member>
+        <member name="M:GoogleMapsClient.ExtensionMethods.AggregateString``1(System.Collections.Generic.IEnumerable{``0},System.String)">
+            <summary>
+            Aggregates the specified <paramref name="source"/> into a <see cref="T:System.String"/>.
+            NOTE: This method converts the items of the <paramref name="source"/> to <see cref="T:System.String"/>
+                  using the <see cref="M:System.Object.ToString"/> method!
+            NOTE: This method uses ", " as the items separator!
+            </summary>
+            <typeparam name="T">The type of the items</typeparam>
+            <param name="source">The source</param>
+            <param name="separator">The separator</param>
+            <returns></returns>
+        </member>
         <member name="T:GoogleMapsClient.GoogleMapsClientConstants">
             <summary>
             Constants related to the Google maps client
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.GoogleMapsClientConstants.PlaceTypeToStringMapper">
+        <member name="P:GoogleMapsClient.GoogleMapsClientConstants.AddressTypeToStringMapper">
             <summary>
-            Maps the <see cref="T:GoogleMapsClient.PlaceType"/>s to their related <see cref="T:System.String"/>s
+            Maps the <see cref="T:GoogleMapsClient.AddressType"/>s to their related <see cref="T:System.String"/>s
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.GoogleMapsClientConstants.AtmosphereCategoryTypeToStringMapper">
+            <summary>
+            Maps the <see cref="T:GoogleMapsClient.AtmosphereCategoryType"/> to theis related <see cref="T:System.String"/>s
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.GoogleMapsClientConstants.BasicCategoryTypeToStringMapper">
+            <summary>
+            Maps the <see cref="T:GoogleMapsClient.BasicCategoryType"/> to their related <see cref="T:System.String"/>s
             </summary>
         </member>
         <member name="P:GoogleMapsClient.GoogleMapsClientConstants.CollectionTypeToStringMapper">
@@ -2437,10 +3017,200 @@
             Maps the <see cref="T:GoogleMapsClient.CollectionType"/>s to their related <see cref="T:System.String"/>s
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.GoogleMapsClientConstants.AddressTypeToStringMapper">
+        <member name="P:GoogleMapsClient.GoogleMapsClientConstants.ContactCategoryTypeToStringMapper">
             <summary>
-            Maps the <see cref="T:GoogleMapsClient.AddressType"/>s to their related <see cref="T:System.String"/>s
+            Maps the <see cref="T:GoogleMapsClient.ContactCategoryType"/> to their related <see cref="T:System.String"/>s
             </summary>
+        </member>
+        <member name="P:GoogleMapsClient.GoogleMapsClientConstants.PlaceOpeningHoursTypeToStringMapper">
+            <summary>
+            Maps the <see cref="T:GoogleMapsClient.PlaceOpeningHoursType"/> to their related <see cref="T:System.String"/>s
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.GoogleMapsClientConstants.PlaceTypeToStringMapper">
+            <summary>
+            Maps the <see cref="T:GoogleMapsClient.PlaceType"/>s to their related <see cref="T:System.String"/>s
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.GoogleMapsClientConstants.StatusCodeTypeToStringMapper">
+            <summary>
+            Maps the <see cref="T:GoogleMapsClient.StatusCodeType"/> to ther related <see cref="T:System.String"/>
+            </summary>
+        </member>
+        <member name="T:GoogleMapsClient.AddressTypeEnumerableToStringJsonConverter">
+            <summary>
+            The <see cref="T:Newtonsoft.Json.JsonConverter`1"/> that converts a <see cref="T:System.Collections.Generic.IEnumerable`1"/> to <see cref="T:System.String"/>
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.AddressTypeEnumerableToStringJsonConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.AddressTypeEnumerableToStringJsonConverter.GetMapper">
+            <inheritdoc/>
+        </member>
+        <member name="T:GoogleMapsClient.AddressTypeToStringJsonConverter">
+            <summary>
+            The <see cref="T:Newtonsoft.Json.JsonConverter`1"/> that converts a <see cref="T:GoogleMapsClient.AddressType"/> to <see cref="T:System.String"/>
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.AddressTypeToStringJsonConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.AddressTypeToStringJsonConverter.GetMapper">
+            <inheritdoc/>
+        </member>
+        <member name="T:GoogleMapsClient.AtmosphereCategoryTypeToStringJsonConverter">
+            <summary>
+            The <see cref="T:Newtonsoft.Json.JsonConverter`1"/> that converts a <see cref="T:GoogleMapsClient.AtmosphereCategoryType"/> to <see cref="T:System.String"/>
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.AtmosphereCategoryTypeToStringJsonConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.AtmosphereCategoryTypeToStringJsonConverter.GetMapper">
+            <inheritdoc/>
+        </member>
+        <member name="T:GoogleMapsClient.BaseEnumEnumerableJsonConverter`1">
+            <summary>
+            The base for all the <see cref="T:Newtonsoft.Json.JsonConverter`1"/>s that are used for converting between an enumerable of <see cref="T:System.Enum"/>s and a <see cref="T:System.String"/>.
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.BaseEnumEnumerableJsonConverter`1.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.BaseEnumEnumerableJsonConverter`1.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Collections.Generic.IEnumerable{`0},System.Boolean,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:GoogleMapsClient.BaseEnumEnumerableJsonConverter`1.WriteJson(Newtonsoft.Json.JsonWriter,System.Collections.Generic.IEnumerable{`0},Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/> 
+        </member>
+        <member name="M:GoogleMapsClient.BaseEnumEnumerableJsonConverter`1.GetMapper">
+            <summary>
+            Gets a <see cref="T:System.Collections.Generic.IReadOnlyDictionary`2"/> that maps the values of the <typeparamref name="T"/>
+            to <see cref="T:System.String"/>s
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:GoogleMapsClient.BaseEnumJsonConverter`1">
+            <summary>
+            The base for all the <see cref="T:Newtonsoft.Json.JsonConverter`1"/>s that are used for converting between an <see cref="T:System.Enum"/> and a <see cref="T:System.String"/>.
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.BaseEnumJsonConverter`1.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.BaseEnumJsonConverter`1.ReadJson(Newtonsoft.Json.JsonReader,System.Type,`0,System.Boolean,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:GoogleMapsClient.BaseEnumJsonConverter`1.WriteJson(Newtonsoft.Json.JsonWriter,`0,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/> 
+        </member>
+        <member name="M:GoogleMapsClient.BaseEnumJsonConverter`1.GetMapper">
+            <summary>
+            Gets a <see cref="T:System.Collections.Generic.IReadOnlyDictionary`2"/> that maps the values of the <typeparamref name="T"/>
+            to <see cref="T:System.String"/>s
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:GoogleMapsClient.BasicCategoryTypeToStringJsonConverter">
+            <summary>
+            The <see cref="T:Newtonsoft.Json.JsonConverter`1"/> that converts a <see cref="T:GoogleMapsClient.BasicCategoryType"/> to <see cref="T:System.String"/>
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.BasicCategoryTypeToStringJsonConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.BasicCategoryTypeToStringJsonConverter.GetMapper">
+            <inheritdoc/>
+        </member>
+        <member name="T:GoogleMapsClient.CollectionTypeToStringJsonConverter">
+            <summary>
+            The <see cref="T:Newtonsoft.Json.JsonConverter`1"/> that converts a <see cref="T:GoogleMapsClient.CollectionType"/> to <see cref="T:System.String"/>
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.CollectionTypeToStringJsonConverter.#ctor">
+            <summary>
+            Defualt constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.CollectionTypeToStringJsonConverter.GetMapper">
+            <inheritdoc/>
+        </member>
+        <member name="T:GoogleMapsClient.ContactCategoryTypeToStringJsonConverter">
+            <summary>
+            The <see cref="T:Newtonsoft.Json.JsonConverter`1"/> that converts a <see cref="T:GoogleMapsClient.ContactCategoryType"/> to <see cref="T:System.String"/>
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.ContactCategoryTypeToStringJsonConverter.#ctor">
+            <summary>
+            Defualt constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.ContactCategoryTypeToStringJsonConverter.GetMapper">
+            <inheritdoc/>
+        </member>
+        <member name="T:GoogleMapsClient.DateOnlyToStringJsonConverter">
+            <summary>
+            The <see cref="T:Newtonsoft.Json.JsonConverter`1"/> that converts a <see cref="T:System.DateOnly"/> to <see cref="T:System.String"/>
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.DateOnlyToStringJsonConverter.DateFormat">
+            <summary>
+            The format that is used for serializing and deserializing dates
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.DateOnlyToStringJsonConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.DateOnlyToStringJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.DateOnly,System.Boolean,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:GoogleMapsClient.DateOnlyToStringJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.DateOnly,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="T:GoogleMapsClient.DateTimeOffsetToUnixTimeStampJsonConverter">
+            <summary>
+            The <see cref="T:Newtonsoft.Json.JsonConverter`1"/> that converts a <see cref="T:System.DateOnly"/> to an <see cref="T:System.Int32"/> that represents the
+            unix timestamp
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.DateTimeOffsetToUnixTimeStampJsonConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.DateTimeOffsetToUnixTimeStampJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.DateTimeOffset,System.Boolean,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:GoogleMapsClient.DateTimeOffsetToUnixTimeStampJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.DateTimeOffset,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="T:GoogleMapsClient.PlaceOpeningHoursTypeToStringJsonConverter">
+            <summary>
+            The <see cref="T:Newtonsoft.Json.JsonConverter`1"/> that converts a <see cref="T:GoogleMapsClient.PlaceOpeningHoursType"/> to <see cref="T:System.String"/>
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.PlaceOpeningHoursTypeToStringJsonConverter.#ctor">
+            <summary>
+            Defualt constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.PlaceOpeningHoursTypeToStringJsonConverter.GetMapper">
+            <inheritdoc/>
         </member>
         <member name="T:GoogleMapsClient.PlaceTypeToStringJsonConverter">
             <summary>
@@ -2452,10 +3222,52 @@
             Defualt constructor
             </summary>
         </member>
-        <member name="M:GoogleMapsClient.PlaceTypeToStringJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,GoogleMapsClient.PlaceType,System.Boolean,Newtonsoft.Json.JsonSerializer)">
+        <member name="M:GoogleMapsClient.PlaceTypeToStringJsonConverter.GetMapper">
             <inheritdoc/>
         </member>
-        <member name="M:GoogleMapsClient.PlaceTypeToStringJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter,GoogleMapsClient.PlaceType,Newtonsoft.Json.JsonSerializer)">
+        <member name="T:GoogleMapsClient.StatusCodeTypeToStringJsonConverter">
+            <summary>
+            The <see cref="T:Newtonsoft.Json.JsonConverter`1"/> that converts a <see cref="T:GoogleMapsClient.StatusCodeType"/> to <see cref="T:System.String"/>
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.StatusCodeTypeToStringJsonConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.StatusCodeTypeToStringJsonConverter.GetMapper">
+            <inheritdoc/>
+        </member>
+        <member name="T:GoogleMapsClient.SupportedLanguageToStringJsonConverter">
+            <summary>
+            The <see cref="T:Newtonsoft.Json.JsonConverter`1"/> that converts a <see cref="T:GoogleMapsClient.SupportedLanguage"/> to <see cref="T:System.String"/>
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.SupportedLanguageToStringJsonConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.SupportedLanguageToStringJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,GoogleMapsClient.SupportedLanguage,System.Boolean,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:GoogleMapsClient.SupportedLanguageToStringJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter,GoogleMapsClient.SupportedLanguage,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/> 
+        </member>
+        <member name="T:GoogleMapsClient.TimeOnlyToStringJsonConveter">
+            <summary>
+            The <see cref="T:Newtonsoft.Json.JsonConverter`1"/> that converts a <see cref="T:System.TimeOnly"/> to <see cref="T:System.String"/>
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.TimeOnlyToStringJsonConveter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.TimeOnlyToStringJsonConveter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.TimeOnly,System.Boolean,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="M:GoogleMapsClient.TimeOnlyToStringJsonConveter.WriteJson(Newtonsoft.Json.JsonWriter,System.TimeOnly,Newtonsoft.Json.JsonSerializer)">
             <inheritdoc/>
         </member>
         <member name="T:GoogleMapsClient.GoogleMapsClient">

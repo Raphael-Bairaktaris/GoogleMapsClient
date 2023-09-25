@@ -19,6 +19,7 @@ namespace GoogleMapsClient
         /// timezone for the place, for example 2010-12-31.
         /// </summary>
         [JsonProperty("date")]
+        [JsonConverter(typeof(DateOnlyToStringJsonConverter))]
         public DateOnly Date { get; set; }
 
         /// <summary>
