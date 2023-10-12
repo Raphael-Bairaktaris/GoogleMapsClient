@@ -18,7 +18,7 @@ namespace GoogleMapsClient
         /// <summary>
         /// The member of the <see cref="Location"/> property
         /// </summary>
-        private PlaceFindLatLngLiteralResponseModel? mLocation;
+        private PlaceFindLatitudeLongitudeLiteralResponseModel? mLocation;
 
         /// <summary>
         /// The member of the <see cref="Viewport"/> property
@@ -34,9 +34,9 @@ namespace GoogleMapsClient
         /// </remarks>
         [AllowNull]
         [JsonProperty("location")]
-        public PlaceFindLatLngLiteralResponseModel? Location 
+        public PlaceFindLatitudeLongitudeLiteralResponseModel? Location 
         {
-            get => mLocation ??= new PlaceFindLatLngLiteralResponseModel();
+            get => mLocation ??= new PlaceFindLatitudeLongitudeLiteralResponseModel();
 
             set => mLocation = value;
         }

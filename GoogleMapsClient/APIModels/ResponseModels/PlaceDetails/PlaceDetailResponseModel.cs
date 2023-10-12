@@ -43,6 +43,7 @@ namespace GoogleMapsClient
         public IEnumerable<string> HtmlAtributions 
         {
             get => mHtmlAttributions ?? Enumerable.Empty<string>();
+
             set => mHtmlAttributions = value;
         }
 
@@ -77,6 +78,7 @@ namespace GoogleMapsClient
         public string InfoMessages 
         {
             get => mInfoMessages ?? string.Empty;
+
             set => mInfoMessages = value;
         }
 

@@ -8,19 +8,30 @@ Console.WriteLine("Hello, World!");
 
 //var bounds = new PlaceFindBoundsResponseModel();
 
-//bounds.Northeast = new PlaceFindLatLngLiteralResponseModel();
+//bounds.Northeast = new PlaceFindLatitudeLongitudeLiteralResponseModel();
 
-//bounds.Northeast.Lng = 10;
-//bounds.Northeast.Lng = 20;
-//bounds.Northeast.Lng = 40;
-//bounds.Northeast.Lng = 30;
+//bounds.Northeast.Longitude = 10;
+//bounds.Northeast.Longitude = 20;
+//bounds.Northeast.Longitude = 40;
+//bounds.Northeast.Longitude = 30;
 
-//var value = bounds.Northeast.Lng;
+//var value = bounds.Northeast.Longitude;
 
 //var locations = await client.GetPlaceAutocompletePredictionsAsync(new PlaceAutocompletePredictionAPIArgs()
 //{
 //    Input = "Ζακύνθου 35 Πάτρα"
 //});
+
+var coordinates1 = new Coordinates(69, 420);
+
+var coordinates2 = new Coordinates(69, 420);
+
+var areEqual = coordinates1 == coordinates2;
+
+var info = new LocationBiasInfo(new Coordinates(10, 20), new Coordinates(44.5, 20.3));
+
+
+var apiArg = info.ToAPIString();
 
 var json = $$"""
      {

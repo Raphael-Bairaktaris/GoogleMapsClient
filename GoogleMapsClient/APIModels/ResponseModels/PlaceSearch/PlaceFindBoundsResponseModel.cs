@@ -17,12 +17,12 @@ namespace GoogleMapsClient
         /// <summary>
         /// The member of the <see cref="Northeast"/> property
         /// </summary>
-        private PlaceFindLatLngLiteralResponseModel? mNortheast;
+        private PlaceFindLatitudeLongitudeLiteralResponseModel? mNortheast;
 
         /// <summary>
         /// The member of the <see cref="Southwest"/> property
         /// </summary>
-        private PlaceFindLatLngLiteralResponseModel? mSouthwest;
+        private PlaceFindLatitudeLongitudeLiteralResponseModel? mSouthwest;
 
         #endregion
 
@@ -32,9 +32,9 @@ namespace GoogleMapsClient
         /// https://developers.google.com/maps/documentation/places/web-service/search-find-place#LatLngLiteral
         /// </remarks>
         [AllowNull]
-        public PlaceFindLatLngLiteralResponseModel Northeast
+        public PlaceFindLatitudeLongitudeLiteralResponseModel Northeast
         {
-            get => mNortheast ??= new PlaceFindLatLngLiteralResponseModel();
+            get => mNortheast ??= new PlaceFindLatitudeLongitudeLiteralResponseModel();
 
             set => mNortheast = value;
         }
@@ -43,9 +43,9 @@ namespace GoogleMapsClient
         /// https://developers.google.com/maps/documentation/places/web-service/search-find-place#LatLngLiteral
         /// </remarks>
         [AllowNull]
-        public PlaceFindLatLngLiteralResponseModel? Southwest 
+        public PlaceFindLatitudeLongitudeLiteralResponseModel? Southwest 
         { 
-            get => mSouthwest ??= new PlaceFindLatLngLiteralResponseModel();
+            get => mSouthwest ??= new PlaceFindLatitudeLongitudeLiteralResponseModel();
             
             set => mSouthwest = value;
         }

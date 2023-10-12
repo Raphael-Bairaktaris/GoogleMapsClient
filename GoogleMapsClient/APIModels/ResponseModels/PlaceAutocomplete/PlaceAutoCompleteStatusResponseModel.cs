@@ -7,6 +7,11 @@
     {
         #region Public Property
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public object Status { get; set; }
+
         #endregion
 
         #region Constructors

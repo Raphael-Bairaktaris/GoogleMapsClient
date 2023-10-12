@@ -10,7 +10,7 @@ namespace GoogleMapsClient
     /// <summary>
     /// Represents a specific location with Latitude and Longitude in decimal degrees.
     /// </summary>
-    public class PlaceFindLatLngLiteralResponseModel
+    public class PlaceFindLatitudeLongitudeLiteralResponseModel
     {
         #region Public Property
 
@@ -18,13 +18,13 @@ namespace GoogleMapsClient
         /// Latitude in decimal degrees
         /// </summary>
         [JsonProperty("lat")]
-        public double Lat { get; set; }
+        public double Latitude { get; set; }
 
         /// <summary>
-        /// Longtitude in decimal degrees
+        /// Longitude in decimal degrees
         /// </summary>
         [JsonProperty("lng")]
-        public double Lng { get; set; }
+        public double Longitude { get; set; }
 
         #endregion
 
@@ -33,7 +33,7 @@ namespace GoogleMapsClient
         /// <summary>
         /// Default Constructor
         /// </summary>
-        public PlaceFindLatLngLiteralResponseModel()
+        public PlaceFindLatitudeLongitudeLiteralResponseModel()
         {
             
         }
@@ -43,7 +43,7 @@ namespace GoogleMapsClient
         #region Public Methods
 
         /// <inheritdoc/>
-        public override string ToString() => $"Latitude: {Lat}, Longitude: {Lng}";
+        public override string ToString() => $"Latitude: {Latitude}, Longitude: {Longitude}";
 
         #endregion
     }

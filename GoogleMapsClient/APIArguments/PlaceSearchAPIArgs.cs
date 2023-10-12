@@ -30,9 +30,17 @@ namespace GoogleMapsClient
         /// <remarks>
         /// https://en.wikipedia.org/wiki/E.164
         /// </remarks>
-        public string? Inputtype { get; set; }
+        public string? InputType { get; set; }
 
-        //Na rwthsw sxetika me to FIELD
+        /// <summary>
+        /// 
+        /// </summary>
+        public IEnumerable<string>? Fields { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public LocationBiasInfo? LocationBias { get; set; }
 
         /// <summary>
         /// The Basic category includes the following fields: address_components, adr_address,

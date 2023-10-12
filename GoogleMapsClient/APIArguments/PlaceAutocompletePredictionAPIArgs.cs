@@ -11,7 +11,7 @@
         /// The text string on which to search. The Place Autocomplete service will return candidate 
         /// matches based on this string and order results based on their perceived relevance.
         /// </summary>
-        public string? Input { get; set; }
+        public string Input { get; set; }
 
         /// <summary>
         /// Defines the distance (in meters) within which to return place results. You may bias results

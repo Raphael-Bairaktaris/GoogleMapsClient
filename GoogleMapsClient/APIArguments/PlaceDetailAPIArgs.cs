@@ -1,10 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GoogleMapsClient
 {
@@ -13,16 +7,14 @@ namespace GoogleMapsClient
     /// </summary>
     public class PlaceDetailAPIArgs
     {
-
         #region Public Properties
-
+        
         /// <summary>
         /// A textual identifier that uniquely identifies a place, returned from a Place Search.
         /// </summary>
         /// <remarks>
         /// https://developers.google.com/maps/documentation/places/web-service/place-id
         /// </remarks>
-        [AllowNull]
         [JsonProperty("place_id")]
         public string PlaceId { get; set; }
 
