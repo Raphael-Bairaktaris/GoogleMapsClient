@@ -1,12 +1,5 @@
 ﻿using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GoogleMapsClient
 {
@@ -76,7 +69,6 @@ namespace GoogleMapsClient
         /// object. This field contains more detailed information about thereasons behind the given status code. 
         /// This field is not always returned, and its content is subject to change.
         /// </summary>
-        [AllowNull]
         [JsonProperty("error_message")]
         public string ErrorMessage 
         { 
@@ -90,7 +82,6 @@ namespace GoogleMapsClient
         /// field within the response object. This field is only returned for successful requests. It may not always be returned, 
         /// and its content is subject to change.
         /// </summary>
-        [AllowNull]
         [JsonProperty("info_messages")]
         public string InfoMessages 
         { 

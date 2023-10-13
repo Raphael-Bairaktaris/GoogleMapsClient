@@ -22,14 +22,23 @@ Console.WriteLine("Hello, World!");
 //    Input = "Ζακύνθου 35 Πάτρα"
 //});
 
+var apiKey = File.ReadAllText(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "GoogleMapsAPIKey.txt"));
+
+var client = new GoogleMapsClient.GoogleMapsClient(apiKey);
+
+var placesResult = await client.FindPlaceTextAsync("Platy");
+
 var coordinates1 = new Coordinates(69, 420);
 
 var coordinates2 = new Coordinates(69, 420);
 
 var areEqual = coordinates1 == coordinates2;
 
-var info = new LocationBiasInfo(new Coordinates(10, 20), new Coordinates(44.5, 20.3));
+var locationRestrioction = new LocationRestrictionInfo(new Coordinates(40, 20), new Coordinates(64.5, 20.3));
 
+var apiString = locationRestrioction.ToAPIString();
+
+var info = new LocationBiasInfo(new Coordinates(10, 20), new Coordinates(44.5, 20.3));
 
 var apiArg = info.ToAPIString();
 

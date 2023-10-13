@@ -4,6 +4,80 @@
         <name>GoogleMapsClient</name>
     </assembly>
     <members>
+        <member name="T:GoogleMapsClient.NearbySearchAPIArgs">
+            <summary>
+            Arguements used for receiving a nearby search result
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.NearbySearchAPIArgs.Location">
+            <summary>
+            The point around which to retrieve place information. This must be specified as latitude,longitude.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.NearbySearchAPIArgs.Radius">
+            <summary>
+            Defines the distance (in meters) within which to return place results. You may bias results to a specified circle
+            by passing a location and a radius parameter. Doing so instructs the Places service to prefer showing results within
+            that circle; results outside of the defined area may still be displayed.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.NearbySearchAPIArgs.Keyword">
+            <summary>
+            The text string on which to search. This must be a place name, address, 
+            or category of establishments. Any other types of input can generate errors and are not guaranteed to return valid results. 
+            The Google Places service will return candidate matches based on this string and order the results based on their perceived relevance.
+            Explicitly including location information using this parameter may conflict with the location, radius, and rankby parameters, causing unexpected results.
+            </summary>
+            <example>
+            For example: "restaurant" or "123 Main Street".
+            </example>
+        </member>
+        <member name="P:GoogleMapsClient.NearbySearchAPIArgs.Language">
+            <summary>
+            The language in which to return results.
+            </summary>
+            <remarks>https://developers.google.com/maps/faq#languagesupport</remarks>
+        </member>
+        <member name="P:GoogleMapsClient.NearbySearchAPIArgs.MaxPrice">
+            <summary>
+            Restricts results to only those places within the specified range. Valid values range between 0 (most affordable) to 4 (most expensive),
+            inclusive. The exact amount indicated by a specific value will vary from region to region.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.NearbySearchAPIArgs.MinPrice">
+            <summary>
+            Restricts results to only those places within the specified range. Valid values range between 0 (most affordable) to 4 (most expensive),
+            inclusive. The exact amount indicated by a specific value will vary from region to region.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.NearbySearchAPIArgs.OpenNow">
+            <summary>
+            Returns only those places that are open for business at the time the query is sent. Places that do not specify opening hours
+            in the Google Places database will not be returned if you include this parameter in your query.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.NearbySearchAPIArgs.PageToken">
+            <summary>
+            Returns up to 20 results from a previously run search. Setting a pagetoken parameter will execute a search with 
+            the same parameters used previously — all parameters other than pagetoken will be ignored.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.NearbySearchAPIArgs.RankBy">
+            <summary>
+            Specifies the order in which results are listed.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.NearbySearchAPIArgs.Type">
+            <summary>
+            Restricts the results to places matching the specified type. Only one type may be specified. 
+            If more than one type is provided, all types following the first entry are ignored.
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.NearbySearchAPIArgs.#ctor(GoogleMapsClient.Coordinates,System.Double)">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
         <member name="T:GoogleMapsClient.PlaceAutocompletePredictionAPIArgs">
             <summary>
             Arguments used for retrieving place auto-complete predictions
@@ -13,13 +87,6 @@
             <summary>
             The text string on which to search. The Place Autocomplete service will return candidate 
             matches based on this string and order results based on their perceived relevance.
-            </summary>
-        </member>
-        <member name="P:GoogleMapsClient.PlaceAutocompletePredictionAPIArgs.Radius">
-            <summary>
-            Defines the distance (in meters) within which to return place results. You may bias results
-            to a specified circle by passing a location and a radius parameter. Doing so instructs the 
-            Places service to prefer showing results within that circle; results outside of the defined area may still be displayed.
             </summary>
         </member>
         <member name="P:GoogleMapsClient.PlaceAutocompletePredictionAPIArgs.Components">
@@ -42,6 +109,23 @@
             https://developers.google.com/maps/faq#languagesupport
             </remarks>
         </member>
+        <member name="P:GoogleMapsClient.PlaceAutocompletePredictionAPIArgs.Location">
+            <summary>
+            The point around which to retrieve place information. This must be specified as latitude,longitude. The radius parameter
+            must also be provided when specifying a location. If radius is not provided, the location parameter is ignored.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceAutocompletePredictionAPIArgs.LocationBias">
+            <summary>
+            Prefer results in a specified area, by specifying either a radius plus lat/lng, or two lat/lng pairs representing the 
+            points of a rectangle. If this parameter is not specified, the API uses IP address biasing by default.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceAutocompletePredictionAPIArgs.LocationRestriction">
+            <summary>
+            Restrict results to a specified area, by specifying either a radius plus lat/lng, or two lat/lng pairs representing the points of a rectangle.
+            </summary>
+        </member>
         <member name="P:GoogleMapsClient.PlaceAutocompletePredictionAPIArgs.Offset">
             <summary>
             The position, in the input term, of the last character that the service uses to match predictions. 
@@ -57,6 +141,13 @@
             <summary>
             The origin point from which to calculate straight-line distance to the destination (returned as distance_meters). 
             If this value is omitted, straight-line distance will not be returned. Must be specified as latitude,longitude.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceAutocompletePredictionAPIArgs.Radius">
+            <summary>
+            Defines the distance (in meters) within which to return place results. You may bias results
+            to a specified circle by passing a location and a radius parameter. Doing so instructs the 
+            Places service to prefer showing results within that circle; results outside of the defined area may still be displayed.
             </summary>
         </member>
         <member name="P:GoogleMapsClient.PlaceAutocompletePredictionAPIArgs.Region">
@@ -83,14 +174,20 @@
             even if they match the user input.
             </summary>
         </member>
-        <member name="M:GoogleMapsClient.PlaceAutocompletePredictionAPIArgs.#ctor">
+        <member name="P:GoogleMapsClient.PlaceAutocompletePredictionAPIArgs.Types">
+            <summary>
+            You can restrict results from a Place Autocomplete request to be of a certain type by passing the types parameter.
+            This parameter specifies a type or a type collection, as listed in Place Types. If nothing is specified, all types are returned.
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.PlaceAutocompletePredictionAPIArgs.#ctor(System.String)">
             <summary>
             Default constructor
             </summary>
         </member>
         <member name="T:GoogleMapsClient.PlaceDetailAPIArgs">
             <summary>
-            Represents a place detail 
+            Arguements used for receiving a place detail 
             </summary>
         </member>
         <member name="P:GoogleMapsClient.PlaceDetailAPIArgs.PlaceId">
@@ -100,6 +197,15 @@
             <remarks>
             https://developers.google.com/maps/documentation/places/web-service/place-id
             </remarks>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceDetailAPIArgs.Fields">
+            <summary>
+            Use the fields parameter to specify a comma-separated list of place data types to return 
+            </summary>
+            <example>
+            For example: fields=formatted_address,name,geometry. Use a forward slash when specifying compound values. 
+            For example: opening_hours/open_now.
+            </example>
         </member>
         <member name="P:GoogleMapsClient.PlaceDetailAPIArgs.Basic">
             <summary>
@@ -127,14 +233,39 @@
             List of supported languages
             </summary>
         </member>
-        <member name="M:GoogleMapsClient.PlaceDetailAPIArgs.#ctor">
+        <member name="P:GoogleMapsClient.PlaceDetailAPIArgs.Region">
+            <summary>
+            The region code, specified as a ccTLD ("top-level domain") two-character value. 
+            Most ccTLD codes are identical to ISO 3166-1 codes, with some notable exceptions.
+            </summary>
+            <remarks>
+            https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains#Country_code_top-level_domains
+            </remarks>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceDetailAPIArgs.ReviewsNoTranslations">
+            <summary>
+            Specify reviews_no_translations=true to disable translation of reviews; specify reviews_no_translations=false
+            to enable translation of reviews. Reviews are returned in their original language.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceDetailAPIArgs.ReviewsSort">
+            <summary>
+            The sorting method to use when returning reviews. Can be set to most_relevant (default) or newest.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceDetailAPIArgs.SessionToken">
+            <summary>
+            A random string which identifies an autocomplete session for billing purposes.
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.PlaceDetailAPIArgs.#ctor(System.String)">
             <summary>
             Default constructor
             </summary>
         </member>
         <member name="T:GoogleMapsClient.PlaceSearchAPIArgs">
             <summary>
-            Represent a place search 
+            Arguements used for receiving a place search 
             </summary>
         </member>
         <member name="P:GoogleMapsClient.PlaceSearchAPIArgs.Input">
@@ -157,8 +288,12 @@
         </member>
         <member name="P:GoogleMapsClient.PlaceSearchAPIArgs.Fields">
             <summary>
-            
+            Use the fields parameter to specify a comma-separated list of place data types to return.
             </summary>
+            <example>
+            For example: fields=formatted_address,name,geometry. Use a forward slash when specifying compound values. 
+            For example: opening_hours/open_now.
+            </example>
         </member>
         <member name="P:GoogleMapsClient.PlaceSearchAPIArgs.Basic">
             <summary>
@@ -186,9 +321,60 @@
             List of supported languages
             </summary>
         </member>
-        <member name="M:GoogleMapsClient.PlaceSearchAPIArgs.#ctor">
+        <member name="P:GoogleMapsClient.PlaceSearchAPIArgs.LocationBias">
+            <summary>
+            Prefer results in a specified area, by specifying either a radius plus lat/lng, or two lat/lng pairs
+            representing the points of a rectangle. If this parameter is not specified, the API uses IP address biasing by default.
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.PlaceSearchAPIArgs.#ctor(System.String,System.String)">
             <summary>
             Default constructor
+            </summary>
+        </member>
+        <member name="T:GoogleMapsClient.QueryAutocompleteAPIArgs">
+            <summary>
+            User instead of searching for a specific location can type in a categorical search.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.QueryAutocompleteAPIArgs.Input">
+            <summary>
+            The text string on which to search. The Place Autocomplete service will return candidate
+            matches based on this string and order results based on their perceived relevance.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.QueryAutocompleteAPIArgs.Language">
+            <summary>
+            The language in which to return results.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.QueryAutocompleteAPIArgs.Location">
+            <summary>
+            The point around which to retrieve place information. This must be specified as latitude,longitude.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.QueryAutocompleteAPIArgs.Offset">
+            <summary>
+            The position, in the input term, of the last character that the service uses to match predictions.
+            </summary>
+            <example>
+            For example, if the input is Google and the offset is 3, the service will match on Goo. The string 
+            determined by the offset is matched against the first word in the input term only.
+            For example, if the input term is Google abc and the offset is 3, the service will attempt to 
+            match against Goo abc. If no offset is supplied, the service will use the whole term. The offset 
+            should generally be set to the position of the text caret.
+            </example>
+        </member>
+        <member name="P:GoogleMapsClient.QueryAutocompleteAPIArgs.Radius">
+            <summary>
+            Defines the distance (in meters) within which to return place results. You may bias results to a specified circle by passing
+            a location and a radius parameter. Doing so instructs the Places service to prefer showing results within that circle; 
+            results outside of the defined area may still be displayed.
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.QueryAutocompleteAPIArgs.#ctor(System.String)">
+            <summary>
+            DefaultConstructor
             </summary>
         </member>
         <member name="T:GoogleMapsClient.PlaceAutocompleteMatchedSubstringResponseModel">
@@ -358,6 +544,11 @@
             Status coedes returned by the service
             </summary>
         </member>
+        <member name="P:GoogleMapsClient.PlaceAutoCompleteStatusResponseModel.Status">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="M:GoogleMapsClient.PlaceAutoCompleteStatusResponseModel.#ctor">
             <summary>
             Default constructor
@@ -439,6 +630,39 @@
         <member name="M:GoogleMapsClient.PlaceAutocompleteTermReponseModel.#ctor">
             <summary>
             Default constructor
+            </summary>
+        </member>
+        <member name="T:GoogleMapsClient.PlaceQueryAutocompleteResponseModel">
+            <summary>
+            Represents a pace query autocomplete
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceQueryAutocompleteResponseModel.Predictions">
+            <summary>
+            Contains an array of predictions.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceQueryAutocompleteResponseModel.Status">
+            <summary>
+            Contains the status of the request, and may contain debugging information to help you track down why the request failed.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceQueryAutocompleteResponseModel.ErrorMessage">
+            <summary>
+            When the service returns a status code other than OK, there may be an additional error_message field within the response object. 
+            This field contains more detailed information about thereasons behind the given status code. This field is not always returned, 
+            and its content is subject to change.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceQueryAutocompleteResponseModel.InfoMessages">
+            <summary>
+            When the service returns additional information about the request specification, there may be an additional info_messages field within 
+            the response object. This field is only returned for successful requests. It may not always be returned, and its content is subject to change.
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.PlaceQueryAutocompleteResponseModel.#ctor">
+            <summary>
+            Default constructor.
             </summary>
         </member>
         <member name="T:GoogleMapsClient.PlaceDetailResponseModel">
@@ -1402,6 +1626,65 @@
             Default Constructor
             </summary>
         </member>
+        <member name="T:GoogleMapsClient.PlaceSearchNearbySearchResponseModel">
+            <summary>
+            Represents a nearby search
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceSearchNearbySearchResponseModel.mHTMLAttributions">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceSearchNearbySearchResponseModel.HTMLAttributions"/> property
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceSearchNearbySearchResponseModel.mResults">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceSearchNearbySearchResponseModel.Results"/> property
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceSearchNearbySearchResponseModel.mStatus">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceSearchNearbySearchResponseModel.Status"/> property
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceSearchNearbySearchResponseModel.HTMLAttributions">
+            <summary>
+            May contain a set of attributions about this listing which must be displayed to the user (some listings may not have attribution).
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceSearchNearbySearchResponseModel.Results">
+            <summary>
+            Contains an array of places.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceSearchNearbySearchResponseModel.Status">
+            <summary>
+            Contains the status of the request, and may contain debugging information to help you track down why the request failed.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceSearchNearbySearchResponseModel.ErrorMessage">
+            <summary>
+            When the service returns a status code other than OK, there may be an additional error_message field within the response object.
+            This field contains more detailed information about thereasons behind the given status code. This field is not always returned,
+            and its content is subject to change.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceSearchNearbySearchResponseModel.InfoMessages">
+            <summary>
+            When the service returns additional information about the request specification, there may be an additional info_messages field
+            within the response object. This field is only returned for successful requests. It may not always be returned, and its content is subject to change.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceSearchNearbySearchResponseModel.NextPageToken">
+            <summary>
+            Contains a token that can be used to return up to 20 additional results. A next_page_token will not be returned if there are no additional results to display.
+            The maximum number of results that can be returned is 60. There is a short delay between when a next_page_token is issued, and when it will become valid.
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.PlaceSearchNearbySearchResponseModel.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
         <member name="T:GoogleMapsClient.LocationBiasInfo">
             <summary>
             Contains information relating to one of multiple types of search set of rules.
@@ -1412,36 +1695,6 @@
             A flag indicating whether an IP based location search should be used.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.LocationBiasInfo.ShouldUseCircular">
-            <summary>
-            A flag indicating whether a circular based location search should be used.
-            </summary>
-        </member>
-        <member name="P:GoogleMapsClient.LocationBiasInfo.CircularRadius">
-            <summary>
-            The radius of the circular that is used when a circular based location search is performed.
-            </summary>
-        </member>
-        <member name="P:GoogleMapsClient.LocationBiasInfo.CircularCenter">
-            <summary>
-            The coordinates for the center of the circle when a circular based location search is performed.
-            </summary>
-        </member>
-        <member name="P:GoogleMapsClient.LocationBiasInfo.ShouldUseRectangular">
-            <summary>
-            A flag indicating whether a rectangular based location search should be used.
-            </summary>
-        </member>
-        <member name="P:GoogleMapsClient.LocationBiasInfo.RectangularSouthwest">
-            <summary>
-            The coordinates for the southwest part of the rectangle.
-            </summary>
-        </member>
-        <member name="P:GoogleMapsClient.LocationBiasInfo.RectangularNortheast">
-            <summary>
-            The coordinates for the northseast part of the rectangle.
-            </summary>
-        </member>
         <member name="M:GoogleMapsClient.LocationBiasInfo.#ctor">
             <summary>
             IP bias constructor
@@ -1449,7 +1702,7 @@
         </member>
         <member name="M:GoogleMapsClient.LocationBiasInfo.#ctor(System.Double,GoogleMapsClient.Coordinates)">
             <summary>
-            CIrcular based constructor
+            Circular based constructor
             </summary>
             <param name="circularRadius">The radius of the circular that is used when a circular based location search is performed.</param>
             <param name="circularCenter">The coordinates for the center of the circle when a circular based location search is performed.</param>
@@ -1462,6 +1715,66 @@
             <param name="rectangularNortheast">The coordinates for the northseast part of the rectangle.</param>
         </member>
         <member name="M:GoogleMapsClient.LocationBiasInfo.ToAPIString">
+            <summary>
+            Returns a string that can be used as API arguments and represents the current <see cref="T:GoogleMapsClient.LocationBiasInfo"/>.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:GoogleMapsClient.LocationRestrictionInfo">
+            <summary>
+            Contains information relating to one of multiple types of search set of rules.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.LocationRestrictionInfo.ShouldUseCircular">
+            <summary>
+            A flag indicating whether a circular based location search should be used.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.LocationRestrictionInfo.CircularRadius">
+            <summary>
+            The radius of the circular that is used when a circular based location search is performed.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.LocationRestrictionInfo.CircularCenter">
+            <summary>
+            The coordinates for the center of the circle when a circular based location search is performed.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.LocationRestrictionInfo.ShouldUseRectangular">
+            <summary>
+            A flag indicating whether a rectangular based location search should be used.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.LocationRestrictionInfo.RectangularSouthwest">
+            <summary>
+            The coordinates for the southwest part of the rectangle.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.LocationRestrictionInfo.RectangularNortheast">
+            <summary>
+            The coordinates for the northseast part of the rectangle.
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.LocationRestrictionInfo.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.LocationRestrictionInfo.#ctor(System.Double,GoogleMapsClient.Coordinates)">
+            <summary>
+            Circular based constructor
+            </summary>
+            <param name="circularRadius">The radius of the circular that is used when a circular based location search is performed.</param>
+            <param name="circularCenter">The coordinates for the center of the circle when a circular based location search is performed.</param>
+        </member>
+        <member name="M:GoogleMapsClient.LocationRestrictionInfo.#ctor(GoogleMapsClient.Coordinates,GoogleMapsClient.Coordinates)">
+            <summary>
+            Rectangular based constructor
+            </summary>
+            <param name="rectangularSouthwest">The coordinates for the southwest part of the rectangle.</param>
+            <param name="rectangularNortheast">The coordinates for the northseast part of the rectangle.</param>
+        </member>
+        <member name="M:GoogleMapsClient.LocationRestrictionInfo.ToAPIString">
             <summary>
             Returns a string that can be used as API arguments and represents the current <see cref="T:GoogleMapsClient.LocationBiasInfo"/>.
             </summary>
@@ -2568,6 +2881,63 @@
         <member name="F:GoogleMapsClient.PlaceType.Zoo">
             <summary>
             Zoo
+            </summary>
+        </member>
+        <member name="T:GoogleMapsClient.DataModels.Enums.PriceRangeType">
+            <summary>
+            Provides a price range enumeration
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.DataModels.Enums.PriceRangeType.MostAffordable">
+            <summary>
+            Usually $10 and under
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.DataModels.Enums.PriceRangeType.ModeratelyExpensive">
+            <summary>
+            Usually between $10-$25
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.DataModels.Enums.PriceRangeType.Expensive">
+            <summary>
+            Usually between $25-45$
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.DataModels.Enums.PriceRangeType.MostExpensive">
+            <summary>
+            Usually $50-$100
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.DataModels.Enums.PriceRangeType.Luxurious">
+            <summary>
+            Above $100
+            </summary>
+        </member>
+        <member name="T:GoogleMapsClient.DataModels.Enums.ReviewSortingType">
+            <summary>
+            Provides enumeration for review sort
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.DataModels.Enums.ReviewSortingType.MostRelevant">
+            <summary>
+            For most_relevant (default), reviews are sorted by relevance; the service will bias the 
+            results to return reviews originally written in the preferred language.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.DataModels.Enums.ReviewSortingType.Newest">
+            <summary>
+            For newest, reviews are sorted in chronological order; the preferred
+            language does not affect the sort order.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.DataModels.Enums.ReviewSortingType.HighestRating">
+            <summary>
+            The highest rating reviews.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.DataModels.Enums.ReviewSortingType.LowestRating">
+            <summary>
+            The lowest rating reviews.
             </summary>
         </member>
         <member name="T:GoogleMapsClient.StatusCodeType">
@@ -3991,7 +4361,7 @@
             <param name="apiKey"></param>
             <exception cref="T:System.ArgumentNullException"></exception>
         </member>
-        <member name="M:GoogleMapsClient.GoogleMapsClient.GetPlaceAutocompletePredictionsAsync(GoogleMapsClient.PlaceAutocompletePredictionAPIArgs)">
+        <member name="M:GoogleMapsClient.GoogleMapsClient.FindPlaceTextAsync(System.String)">
             <summary>
             
             </summary>

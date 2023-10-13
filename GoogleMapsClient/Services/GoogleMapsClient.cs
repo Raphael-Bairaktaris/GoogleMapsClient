@@ -35,9 +35,9 @@
         /// </summary>
         /// <param name="args"></param>
         /// <returns></returns>
-        public Task<IEnumerable<PlaceAutocompletePredictionResponseModel>> GetPlaceAutocompletePredictionsAsync(PlaceAutocompletePredictionAPIArgs? args = null)
+        public Task<WebRequestResult<IEnumerable<PlaceFindPlaceFromTextResponseModel>>> FindPlaceTextAsync(string search)
         {
-            return null;
+            return WebRequestsClient.Instance.GetAsync<IEnumerable<PlaceFindPlaceFromTextResponseModel>>($"https://maps.googleapis.com/maps/api/place/textsearch/json?query={search}&key={APIKey}", null);
         }
 
         #endregion

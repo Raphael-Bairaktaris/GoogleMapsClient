@@ -5,7 +5,7 @@ namespace GoogleMapsClient
     /// <summary>
     /// Contains information relating to one of multiple types of search set of rules.
     /// </summary>
-    public class LocationBiasInfo
+    public class LocationBiasInfo : LocationRestrictionInfo
     {
         #region Public Properties
 
@@ -14,38 +14,6 @@ namespace GoogleMapsClient
         /// </summary>
         public bool ShouldUseIPBias { get; }
 
-        /// <summary>
-        /// A flag indicating whether a circular based location search should be used.
-        /// </summary>
-        [MemberNotNullWhen(true, nameof(CircularRadius), nameof(CircularCenter))]
-        public bool ShouldUseCircular { get; }
-
-        /// <summary>
-        /// The radius of the circular that is used when a circular based location search is performed.
-        /// </summary>
-        public double? CircularRadius { get; }
-
-        /// <summary>
-        /// The coordinates for the center of the circle when a circular based location search is performed.
-        /// </summary>
-        public Coordinates? CircularCenter { get; }
-
-        /// <summary>
-        /// A flag indicating whether a rectangular based location search should be used.
-        /// </summary>
-        [MemberNotNullWhen(true, nameof(RectangularSouthwest), nameof(RectangularNortheast))]
-        public bool ShouldUseRectangular { get; }
-
-        /// <summary>
-        /// The coordinates for the southwest part of the rectangle.
-        /// </summary>
-        public Coordinates? RectangularSouthwest { get; }
-
-        /// <summary>
-        /// The coordinates for the northseast part of the rectangle.
-        /// </summary>
-        public Coordinates? RectangularNortheast { get; }
-
         #endregion
 
         #region Constructors
@@ -53,21 +21,19 @@ namespace GoogleMapsClient
         /// <summary>
         /// IP bias constructor
         /// </summary>
-        public LocationBiasInfo()
+        public LocationBiasInfo() : base()
         {
             ShouldUseIPBias = true;
         }
 
         /// <summary>
-        /// CIrcular based constructor
+        /// Circular based constructor
         /// </summary>
         /// <param name="circularRadius">The radius of the circular that is used when a circular based location search is performed.</param>
         /// <param name="circularCenter">The coordinates for the center of the circle when a circular based location search is performed.</param>
-        public LocationBiasInfo(double circularRadius, Coordinates circularCenter)
+        public LocationBiasInfo(double circularRadius, Coordinates circularCenter) : base(circularRadius, circularCenter) 
         {
-            ShouldUseCircular = true;
-            CircularRadius = circularRadius;
-            CircularCenter = circularCenter;
+
         }
 
         /// <summary>
@@ -75,11 +41,8 @@ namespace GoogleMapsClient
         /// </summary>
         /// <param name="rectangularSouthwest">The coordinates for the southwest part of the rectangle.</param>
         /// <param name="rectangularNortheast">The coordinates for the northseast part of the rectangle.</param>
-        public LocationBiasInfo(Coordinates rectangularSouthwest, Coordinates rectangularNortheast)
+        public LocationBiasInfo(Coordinates rectangularSouthwest, Coordinates rectangularNortheast) : base(rectangularSouthwest, rectangularNortheast)
         {
-            ShouldUseRectangular = true;
-            RectangularSouthwest = rectangularSouthwest;
-            RectangularNortheast = rectangularNortheast;
         }
 
         #endregion
@@ -90,16 +53,12 @@ namespace GoogleMapsClient
         /// Returns a string that can be used as API arguments and represents the current <see cref="LocationBiasInfo"/>.
         /// </summary>
         /// <returns></returns>
-        public string ToAPIString()
+        public override string ToAPIString()
         {
             if (ShouldUseIPBias)
                 return "ipbias";
-            else if (ShouldUseCircular)
-                return $"circle:{CircularRadius}@{CircularCenter.Value.Latitude},{CircularCenter.Value.Longitude}";
-            else if (ShouldUseRectangular)
-                return $"rectangle:{RectangularSouthwest.Value.Latitude},{RectangularSouthwest.Value.Longitude}|{RectangularNortheast.Value.Latitude},{RectangularNortheast.Value.Longitude}";
 
-            return string.Empty;
+            return base.ToAPIString();
         }
 
         #endregion

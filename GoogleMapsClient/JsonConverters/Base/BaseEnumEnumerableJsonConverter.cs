@@ -12,7 +12,7 @@ namespace GoogleMapsClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public BaseEnumEnumerableJsonConverter()
+        public BaseEnumEnumerableJsonConverter() : base()
         {
 
         }

@@ -1,19 +1,14 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GoogleMapsClient
 {
     /// <summary>
-    /// Represent a place search 
+    /// Arguements used for receiving a place search 
     /// </summary>
     public class PlaceSearchAPIArgs
     {
         #region Public Properties
+
         /// <summary>
         /// The text string on which to search. This must be a place name, address, or 
         /// category of establishments. Any other type of input can generate errors.
@@ -21,7 +16,8 @@ namespace GoogleMapsClient
         /// <example>
         /// Example "restaurant" or "123 Main Street".
         /// </example>
-        public string? Input { get; set; }
+        [JsonProperty ("input")]
+        public string Input { get; }
 
         /// <summary>
         /// The type of input. This can be one of either textquery or phonenumber. 
@@ -30,17 +26,18 @@ namespace GoogleMapsClient
         /// <remarks>
         /// https://en.wikipedia.org/wiki/E.164
         /// </remarks>
-        public string? InputType { get; set; }
+        [JsonProperty("inputtype")]
+        public string InputType { get; }
 
         /// <summary>
-        /// 
+        /// Use the fields parameter to specify a comma-separated list of place data types to return.
         /// </summary>
+        /// <example>
+        /// For example: fields=formatted_address,name,geometry. Use a forward slash when specifying compound values. 
+        /// For example: opening_hours/open_now.
+        /// </example>
+        [JsonProperty("fields")]
         public IEnumerable<string>? Fields { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public LocationBiasInfo? LocationBias { get; set; }
 
         /// <summary>
         /// The Basic category includes the following fields: address_components, adr_address,
@@ -48,12 +45,14 @@ namespace GoogleMapsClient
         /// name, permanently_closed (deprecated), photo, place_id, plus_code, type, url, utc_offset, 
         /// vicinity, wheelchair_accessible_entrance.
         /// </summary>
+        [JsonProperty("basic")]
         public BasicCategoryType? Basic { get; set; }
 
         /// <summary>
         /// The Contact category includes the following fields: current_opening_hours, formatted_phone_number,
         /// international_phone_number, opening_hours, secondary_opening_hours, website
         /// </summary>
+        [JsonProperty("contact")]
         public ContactCategoryType? Contact { get; set; }
 
         /// <summary>
@@ -61,12 +60,21 @@ namespace GoogleMapsClient
         /// editorial_summary, price_level, rating, reservable, reviews, serves_beer, serves_breakfast, serves_brunch,
         /// serves_dinner, serves_lunch, serves_vegetarian_food, serves_wine, takeout, user_ratings_total.
         /// </summary>
+        [JsonProperty("atmosphere")]
         public AtmosphereCategoryType? Atmosphere {  get; set; }
 
         /// <summary>
         /// List of supported languages
         /// </summary>
+        [JsonProperty("language")]
         public SupportedLanguage? Language { get; set; }
+
+        /// <summary>
+        /// Prefer results in a specified area, by specifying either a radius plus lat/lng, or two lat/lng pairs
+        /// representing the points of a rectangle. If this parameter is not specified, the API uses IP address biasing by default.
+        /// </summary>
+        [JsonProperty("locationbias")]
+        public LocationBiasInfo? LocationBias { get; set; }
 
         #endregion
 
@@ -74,9 +82,10 @@ namespace GoogleMapsClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public PlaceSearchAPIArgs()
+        public PlaceSearchAPIArgs(string input, string inputtype)
         {
-            
+            Input = input;
+            InputType = inputtype;
         }
         #endregion
     }
