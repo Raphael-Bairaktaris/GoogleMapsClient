@@ -52,11 +52,7 @@ namespace GoogleMapsClient
         /// Contains the status of the request, and may contain debugging information to help you track down why the request failed.
         /// </summary>
         [JsonProperty("status")]
-        public PlaceFindPlaceSearchStatusResponseModel Status
-        {
-            get => mStatus ??= new PlaceFindPlaceSearchStatusResponseModel();
-            set => mStatus = value;
-        }
+        public string? Status { get; set; }
 
         /// <summary>
         /// When the service returns a status code other than OK, there may be an additional error_message field within the response object.

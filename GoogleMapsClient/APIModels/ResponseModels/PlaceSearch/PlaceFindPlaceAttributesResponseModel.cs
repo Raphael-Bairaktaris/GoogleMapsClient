@@ -543,5 +543,12 @@ namespace GoogleMapsClient
         }
 
         #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => FormattedAddress;
+
+        #endregion
     }
 }

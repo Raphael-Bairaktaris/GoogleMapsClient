@@ -22,11 +22,16 @@ Console.WriteLine("Hello, World!");
 //    Input = "Ζακύνθου 35 Πάτρα"
 //});
 
+var placeTypeInfo = new PlaceTypeInfo(PlaceType.BowlingAlley);
+
+var s = PlaceType.BowlingAlley;
+var a = placeTypeInfo.ToAPIString();
+
 var apiKey = File.ReadAllText(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "GoogleMapsAPIKey.txt"));
 
 var client = new GoogleMapsClient.GoogleMapsClient(apiKey);
 
-var placesResult = await client.FindPlaceTextAsync("Platy");
+var placesResult = await client.FindPlaceTextAsync("ZAkinthou 35 Patra");
 
 var coordinates1 = new Coordinates(69, 420);
 

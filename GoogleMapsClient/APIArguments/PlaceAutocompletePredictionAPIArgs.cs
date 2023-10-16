@@ -117,7 +117,7 @@ namespace GoogleMapsClient
         /// This parameter specifies a type or a type collection, as listed in Place Types. If nothing is specified, all types are returned.
         /// </summary>
         [JsonProperty("types")]
-        public PlaceType Types { get; set; }
+        public PlaceTypeInfo? Types { get; set; }
 
         #endregion
 

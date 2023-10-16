@@ -1,4 +1,5 @@
-﻿using System.Collections.Immutable;
+﻿using GoogleMapsClient.DataModels.Enums;
+using System.Collections.Immutable;
 
 namespace GoogleMapsClient
 {
@@ -265,6 +266,38 @@ namespace GoogleMapsClient
             { StatusCodeType.OverQueryLimit, "OVER_QUERY_LIMIT" },
             { StatusCodeType.RequestDenied, "REQUEST_DENIED" },
             { StatusCodeType.UnknownError, "UNKNOWN_ERROR" },
+        }.ToImmutableDictionary();
+
+        /// <summary>
+        /// Maps the <see cref="ReviewSortingType"/> to their related <see cref="string"/>
+        /// </summary>
+        public static IReadOnlyDictionary<ReviewSortingType, string> ReviewSortingTypeToStringMapper { get; } = new Dictionary<ReviewSortingType, string>()
+        {
+            { ReviewSortingType.MostRelevant, "Most_Relevant" },
+            { ReviewSortingType.Newest, "Newest" },
+            { ReviewSortingType.HighestRating, "Highest_Rating" },
+            { ReviewSortingType.LowestRating, "Lowest_Rating" }
+        }.ToImmutableDictionary();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static IReadOnlyDictionary<PriceRangeType, string> PriceRangeTypeToStringMapper { get; } = new Dictionary<PriceRangeType, string>()
+        {
+            { PriceRangeType.MostAffordable, "Most_Affordable" },
+            { PriceRangeType.ModeratelyExpensive, "Moderately_Expensive" },
+            { PriceRangeType.Expensive, "Expensive" },
+            { PriceRangeType.MostExpensive, "Most_Expensive" },
+            { PriceRangeType.Luxurious, "Luxurious" }
+        }.ToImmutableDictionary();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static IReadOnlyDictionary<RankByType, string> RankByTypeToStringMapper { get; } = new Dictionary<RankByType, string>()
+        {
+            { RankByType.Prominence, "prominence" },
+            { RankByType.Distance, "distance" }
         }.ToImmutableDictionary();
     }
 }

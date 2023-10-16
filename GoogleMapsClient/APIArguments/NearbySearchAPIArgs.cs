@@ -75,7 +75,7 @@ namespace GoogleMapsClient
         /// Specifies the order in which results are listed.
         /// </summary>
         [JsonProperty("rankby")]
-        public IEnumerable<string>? RankBy { get; set; }
+        public RankByType RankBy { get; set; } = RankByType.Prominence;
 
         /// <summary>
         /// Restricts the results to places matching the specified type. Only one type may be specified. 

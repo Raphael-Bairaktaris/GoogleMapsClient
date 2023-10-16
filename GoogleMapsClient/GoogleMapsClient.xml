@@ -377,6 +377,47 @@
             DefaultConstructor
             </summary>
         </member>
+        <member name="T:GoogleMapsClient.GoogleResultResponseModel`1">
+            <summary>
+            Represents a result returned directly from the Google API
+            </summary>
+            <typeparam name="T">The type of the results.</typeparam>
+        </member>
+        <member name="F:GoogleMapsClient.GoogleResultResponseModel`1.mHTMLAttributions">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.GoogleResultResponseModel`1.HTMLAttributions"/> property
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.GoogleResultResponseModel`1.mResults">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.GoogleResultResponseModel`1.Results"/> property
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.GoogleResultResponseModel`1.mStatus">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.GoogleResultResponseModel`1.Status"/> property
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.GoogleResultResponseModel`1.HTMLAttributions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.GoogleResultResponseModel`1.Results">
+            <summary>
+            The results
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.GoogleResultResponseModel`1.Status">
+            <summary>
+            The status
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.GoogleResultResponseModel`1.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
         <member name="T:GoogleMapsClient.PlaceAutocompleteMatchedSubstringResponseModel">
             <summary>
             Represents an auto complete matched substring 
@@ -1267,6 +1308,9 @@
             Default Constructor
             </summary>
         </member>
+        <member name="M:GoogleMapsClient.PlaceFindPlaceAttributesResponseModel.ToString">
+            <inheritdoc/>
+        </member>
         <member name="T:GoogleMapsClient.PlaceFindPlaceFromTextResponseModel">
             <summary>
             Represents a places find place from text
@@ -1779,6 +1823,122 @@
             Returns a string that can be used as API arguments and represents the current <see cref="T:GoogleMapsClient.LocationBiasInfo"/>.
             </summary>
             <returns></returns>
+        </member>
+        <member name="T:GoogleMapsClient.PlaceTypeInfo">
+            <summary>
+            Contains information relating to one of multiple types of search set of rules.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceTypeInfo.CollectionType">
+            <summary>
+            The collection type enum.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceTypeInfo.ShouldUseCollectionType">
+            <summary>
+            A flag indicating whether the collection type should be used.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceTypeInfo.PlaceType">
+            <summary>
+            The place type enum.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceTypeInfo.ShouldUsePlaceType">
+            <summary>
+            A flag indicating whether the place type should be used.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceTypeInfo.AddressType">
+            <summary>
+            The address type enum.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceTypeInfo.ShouldUseAddressType">
+            <summary>
+            A flag indicating whether the address type should be used.
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.PlaceTypeInfo.#ctor(GoogleMapsClient.CollectionType)">
+            <summary>
+            Collection type constructor.
+            </summary>
+            <param name="collectionType">The collection type enum.</param>
+        </member>
+        <member name="M:GoogleMapsClient.PlaceTypeInfo.#ctor(GoogleMapsClient.PlaceType)">
+            <summary>
+            Place type constructor.
+            </summary>
+            <param name="placeType">The place type enum.</param>
+        </member>
+        <member name="M:GoogleMapsClient.PlaceTypeInfo.#ctor(GoogleMapsClient.AddressType)">
+            <summary>
+            Address type constructor.
+            </summary>
+            <param name="addressType">The address type enum.</param>
+        </member>
+        <member name="M:GoogleMapsClient.PlaceTypeInfo.ToAPIString">
+            <summary>
+            Returns a string that can be used as API arguments and represents the current <see cref="T:GoogleMapsClient.PlaceTypeInfo"/>.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:GoogleMapsClient.DataModels.Enums.PriceRangeType">
+            <summary>
+            Provides a price range enumeration
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.DataModels.Enums.PriceRangeType.MostAffordable">
+            <summary>
+            Usually $10 and under
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.DataModels.Enums.PriceRangeType.ModeratelyExpensive">
+            <summary>
+            Usually between $10-$25
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.DataModels.Enums.PriceRangeType.Expensive">
+            <summary>
+            Usually between $25-45$
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.DataModels.Enums.PriceRangeType.MostExpensive">
+            <summary>
+            Usually $50-$100
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.DataModels.Enums.PriceRangeType.Luxurious">
+            <summary>
+            Above $100
+            </summary>
+        </member>
+        <member name="T:GoogleMapsClient.DataModels.Enums.ReviewSortingType">
+            <summary>
+            Provides enumeration for review sort
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.DataModels.Enums.ReviewSortingType.MostRelevant">
+            <summary>
+            For most_relevant (default), reviews are sorted by relevance; the service will bias the 
+            results to return reviews originally written in the preferred language.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.DataModels.Enums.ReviewSortingType.Newest">
+            <summary>
+            For newest, reviews are sorted in chronological order; the preferred
+            language does not affect the sort order.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.DataModels.Enums.ReviewSortingType.HighestRating">
+            <summary>
+            The highest rating reviews.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.DataModels.Enums.ReviewSortingType.LowestRating">
+            <summary>
+            The lowest rating reviews.
+            </summary>
         </member>
         <member name="T:GoogleMapsClient.AddressType">
             <summary>
@@ -2881,63 +3041,6 @@
         <member name="F:GoogleMapsClient.PlaceType.Zoo">
             <summary>
             Zoo
-            </summary>
-        </member>
-        <member name="T:GoogleMapsClient.DataModels.Enums.PriceRangeType">
-            <summary>
-            Provides a price range enumeration
-            </summary>
-        </member>
-        <member name="F:GoogleMapsClient.DataModels.Enums.PriceRangeType.MostAffordable">
-            <summary>
-            Usually $10 and under
-            </summary>
-        </member>
-        <member name="F:GoogleMapsClient.DataModels.Enums.PriceRangeType.ModeratelyExpensive">
-            <summary>
-            Usually between $10-$25
-            </summary>
-        </member>
-        <member name="F:GoogleMapsClient.DataModels.Enums.PriceRangeType.Expensive">
-            <summary>
-            Usually between $25-45$
-            </summary>
-        </member>
-        <member name="F:GoogleMapsClient.DataModels.Enums.PriceRangeType.MostExpensive">
-            <summary>
-            Usually $50-$100
-            </summary>
-        </member>
-        <member name="F:GoogleMapsClient.DataModels.Enums.PriceRangeType.Luxurious">
-            <summary>
-            Above $100
-            </summary>
-        </member>
-        <member name="T:GoogleMapsClient.DataModels.Enums.ReviewSortingType">
-            <summary>
-            Provides enumeration for review sort
-            </summary>
-        </member>
-        <member name="F:GoogleMapsClient.DataModels.Enums.ReviewSortingType.MostRelevant">
-            <summary>
-            For most_relevant (default), reviews are sorted by relevance; the service will bias the 
-            results to return reviews originally written in the preferred language.
-            </summary>
-        </member>
-        <member name="F:GoogleMapsClient.DataModels.Enums.ReviewSortingType.Newest">
-            <summary>
-            For newest, reviews are sorted in chronological order; the preferred
-            language does not affect the sort order.
-            </summary>
-        </member>
-        <member name="F:GoogleMapsClient.DataModels.Enums.ReviewSortingType.HighestRating">
-            <summary>
-            The highest rating reviews.
-            </summary>
-        </member>
-        <member name="F:GoogleMapsClient.DataModels.Enums.ReviewSortingType.LowestRating">
-            <summary>
-            The lowest rating reviews.
             </summary>
         </member>
         <member name="T:GoogleMapsClient.StatusCodeType">

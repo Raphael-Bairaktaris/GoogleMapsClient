@@ -50,7 +50,7 @@ namespace GoogleMapsClient
         /// </summary>
         protected LocationRestrictionInfo()
         {
-            
+
         }
 
         /// <summary>
