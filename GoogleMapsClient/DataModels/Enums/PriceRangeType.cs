@@ -8,26 +8,26 @@
         /// <summary>
         /// Usually $10 and under
         /// </summary>
-        MostAffordable = 0,
+        Free = 0,
 
         /// <summary>
         /// Usually between $10-$25
         /// </summary>
-        ModeratelyExpensive = 1,
+        Inexpensive = 1,
 
         /// <summary>
         /// Usually between $25-45$
         /// </summary>
-        Expensive = 2,
+        ModeratelyExpensive = 2,
 
         /// <summary>
         /// Usually $50-$100
         /// </summary>
-        MostExpensive = 3,
+        Expensive = 3,
 
         /// <summary>
         /// Above $100
         /// </summary>
-        Luxurious = 4
+        VeryExpensive = 4
     }
 }

@@ -52,5 +52,12 @@ namespace GoogleMapsClient
         }
 
         #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Day {Day}, Time {Time}";
+
+        #endregion
     }
 }

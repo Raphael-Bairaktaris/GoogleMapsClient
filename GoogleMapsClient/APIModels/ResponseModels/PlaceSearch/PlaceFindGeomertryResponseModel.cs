@@ -1,15 +1,9 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GoogleMapsClient
 {
     /// <summary>
-    /// An object describing the location.
+    /// Contains the location and viewport for the location.
     /// </summary>
     public class PlaceFindGeomertryResponseModel
     {
@@ -32,7 +26,6 @@ namespace GoogleMapsClient
         /// <remarks>
         /// https://developers.google.com/maps/documentation/places/web-service/search-find-place#LatLngLiteral
         /// </remarks>
-        [AllowNull]
         [JsonProperty("location")]
         public PlaceFindLatitudeLongitudeLiteralResponseModel? Location 
         {
@@ -44,7 +37,6 @@ namespace GoogleMapsClient
         /// <remarks>
         /// https://developers.google.com/maps/documentation/places/web-service/search-find-place#Bounds
         /// </remarks>
-        [AllowNull]
         [JsonProperty("viewport")]
         public PlaceFindBoundsResponseModel? Viewport 
         {

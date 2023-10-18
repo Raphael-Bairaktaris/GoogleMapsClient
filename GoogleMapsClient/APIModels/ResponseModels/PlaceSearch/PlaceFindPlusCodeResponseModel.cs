@@ -1,10 +1,5 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GoogleMapsClient
 {
@@ -50,7 +45,6 @@ namespace GoogleMapsClient
         /// (CWC8+R9, Mountain View, CA, USA). Some APIs may return an empty string if the compound_code
         /// is not available.
         /// </summary>
-        [AllowNull]
         [JsonProperty("compounde_code")]
         public string CompoundCode 
         { 
@@ -70,6 +64,13 @@ namespace GoogleMapsClient
         {
             
         }
+
+        #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"GlobalCode {GlobalCode}, CompoundCode {CompoundCode}";
 
         #endregion
     }

@@ -35,9 +35,9 @@
         /// </summary>
         /// <param name="args"></param>
         /// <returns></returns>
-        public Task<WebRequestResult<GoogleResultResponseModel<PlaceFindPlaceAttributesResponseModel>>> FindPlaceTextAsync(string search)
+        public Task<WebRequestResult<GoogleResultResponseModel<PlaceFindAttributesResponseModel>>> FindPlaceTextAsync(string search)
         {
-            return WebRequestsClient.Instance.GetAsync<GoogleResultResponseModel<PlaceFindPlaceAttributesResponseModel>>($"https://maps.googleapis.com/maps/api/place/textsearch/json?query={search}&key={APIKey}", null);
+            return WebRequestsClient.Instance.GetAsync<GoogleResultResponseModel<PlaceFindAttributesResponseModel>>($"https://maps.googleapis.com/maps/api/place/textsearch/json?query={search}&key={APIKey}", null);
         }
 
         #endregion

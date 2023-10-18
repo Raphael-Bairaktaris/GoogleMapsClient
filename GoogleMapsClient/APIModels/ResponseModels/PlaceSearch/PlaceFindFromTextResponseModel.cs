@@ -1,19 +1,18 @@
 ﻿using Newtonsoft.Json;
-using System.Diagnostics.CodeAnalysis;
 
 namespace GoogleMapsClient
 {
     /// <summary>
     /// Represents a places find place from text
     /// </summary>
-    public class PlaceFindPlaceFromTextResponseModel
+    public class PlaceFindFromTextResponseModel
     {
         #region Private Members
 
         /// <summary>
         /// The member of the <see cref="Candidates"/> property
         /// </summary>
-        private IEnumerable<PlaceFindPlaceAttributesResponseModel>? mCandidates;
+        private IEnumerable<PlaceFindAttributesResponseModel>? mCandidates;
 
         /// <summary>
         /// The member of the <see cref="ErrorMessage"/> property
@@ -25,11 +24,6 @@ namespace GoogleMapsClient
         /// </summary>
         private string? mInfoMessages;
 
-        /// <summary>
-        /// The member of the <see cref="Status"/> property
-        /// </summary>
-        private PlaceFindPlaceSearchStatusResponseModel? mStatus;
-
         #endregion
 
         #region Public properties
@@ -40,28 +34,12 @@ namespace GoogleMapsClient
         /// <remarks>
         /// https://developers.google.com/maps/documentation/places/web-service/search-find-place#AddressComponent
         /// </remarks>
-        [AllowNull]
         [JsonProperty("candidates")]
-        public IEnumerable<PlaceFindPlaceAttributesResponseModel> Candidates 
+        public IEnumerable<PlaceFindAttributesResponseModel> Candidates 
         { 
-            get => mCandidates ?? Enumerable.Empty<PlaceFindPlaceAttributesResponseModel>();
+            get => mCandidates ?? Enumerable.Empty<PlaceFindAttributesResponseModel>();
 
             set => mCandidates = value;
-        }
-
-        /// <summary>
-        /// Contains the status of the request, and may contain debugging information to help you track down why the request failed.
-        /// </summary>
-        /// <remarks>
-        /// https://developers.google.com/maps/documentation/places/web-service/search-find-place#PlacesSearchStatus
-        /// </remarks>
-        [AllowNull]
-        [JsonProperty("status")]
-        public PlaceFindPlaceSearchStatusResponseModel Status
-        {
-            get => mStatus ??= new PlaceFindPlaceSearchStatusResponseModel();
-
-            set => mStatus = value;
         }
 
         /// <summary>
@@ -96,7 +74,7 @@ namespace GoogleMapsClient
         /// <summary>
         /// Default constructor
         /// </summary>
-        public PlaceFindPlaceFromTextResponseModel()
+        public PlaceFindFromTextResponseModel()
         {
         }
 

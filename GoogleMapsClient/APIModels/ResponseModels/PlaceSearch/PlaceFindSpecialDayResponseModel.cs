@@ -1,16 +1,11 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GoogleMapsClient
 {
     /// <summary>
     /// Represents a place special day response
     /// </summary>
-    public class PlaceFindPlaceSpecialDayResponseModel
+    public class PlaceFindSpecialDayResponseModel
     {
         #region Public Property
 
@@ -20,7 +15,7 @@ namespace GoogleMapsClient
         /// </summary>
         [JsonProperty("date")]
         [JsonConverter(typeof(DateOnlyToStringJsonConverter))]
-        public DateOnly Date { get; set; }
+        public DateOnly? Date { get; set; }
 
         /// <summary>
         /// True if there are exceptional hours for this day. If true, 
@@ -30,7 +25,7 @@ namespace GoogleMapsClient
         /// The exceptions apply to the hours, and the hours are used to generate the other fields.
         /// </summary>
         [JsonProperty("exceptional_hours")]
-        public bool ExceptionalHours { get; set; }
+        public bool? ExceptionalHours { get; set; }
 
         #endregion
 
@@ -39,7 +34,7 @@ namespace GoogleMapsClient
         /// <summary>
         /// Default Constructor
         /// </summary>
-        public PlaceFindPlaceSpecialDayResponseModel()
+        public PlaceFindSpecialDayResponseModel()
         {
             
         }

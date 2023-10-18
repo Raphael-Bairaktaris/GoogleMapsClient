@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using GoogleMapsClient.DataModels.Enums;
+using Newtonsoft.Json;
 using System.Diagnostics.CodeAnalysis;
 
 namespace GoogleMapsClient
@@ -6,7 +7,7 @@ namespace GoogleMapsClient
     /// <summary>
     /// Attributes describing a place. Not all attributes will be available for all place types.
     /// </summary>
-    public class PlaceFindPlaceAttributesResponseModel
+    public class PlaceFindAttributesResponseModel
     {
         #region Private Members
 
@@ -88,7 +89,7 @@ namespace GoogleMapsClient
         /// <summary>
         /// The member of the <see cref="Reviews"/> property
         /// </summary>
-        private IEnumerable<PlaceFindPlaceReviewResponseModel>? mReviews;
+        private IEnumerable<PlaceFindReviewResponseModel>? mReviews;
 
         /// <summary>
         /// The member of the <see cref="SecondaryOpeningHours"/> property
@@ -129,9 +130,8 @@ namespace GoogleMapsClient
         /// <remarks>
         /// http://microformats.org/wiki/adr
         /// </remarks>
-        [AllowNull]
         [JsonProperty("adr_address")]
-        public string ADRAddress
+        public string? ADRAddress
         {
             get => mADRAddress ?? string.Empty;
             set => mADRAddress = value;
@@ -142,9 +142,8 @@ namespace GoogleMapsClient
         /// if it is a business. If no data exists, business_status is not returned.
         ///The allowed values include: OPERATIONAL, CLOSED_TEMPORARILY, and CLOSED_PERMANENTLY
         /// </summary>
-        [AllowNull]
         [JsonProperty("business_status")]
-        public string BusinessStatus
+        public string? BusinessStatus
         {
             get => mBusinessStatus ?? string.Empty;
             set => mBusinessStatus = value;
@@ -154,7 +153,7 @@ namespace GoogleMapsClient
         /// Specifies if the business supports curbside pickup.
         /// </summary>
         [JsonProperty("curbside_pickup")]
-        public bool CurbsidePickup { get; set; }
+        public bool? CurbsidePickup { get; set; }
 
         /// <summary>
         /// Contains the hours of operation for the next seven days (including today). 
@@ -166,7 +165,7 @@ namespace GoogleMapsClient
         /// https://developers.google.com/maps/documentation/places/web-service/search-find-place#PlaceOpeningHours
         /// </remarks>
         [JsonProperty("current_opening_hours")]
-        public PlaceFindPlaceOpeningHoursResponseModel CurrentOpeningHours 
+        public PlaceFindPlaceOpeningHoursResponseModel? CurrentOpeningHours 
         { 
             get => mCurrentOpeningHours ??= new PlaceFindPlaceOpeningHoursResponseModel();
             set => mCurrentOpeningHours = value;
@@ -176,13 +175,13 @@ namespace GoogleMapsClient
         /// Specifies if the business supports delivery.
         /// </summary>
         [JsonProperty("delivery")]
-        public bool Delivery { get; set; }
+        public bool? Delivery { get; set; }
 
         /// <summary>
         /// Specifies if the business supports indoor or outdoor seaing options.
         /// </summary>
         [JsonProperty("dine_in")]
-        public bool DineIn { get; set; }
+        public bool? DineIn { get; set; }
 
         /// <summary>
         /// Contains a summary of the place. A summary is comprised of a textual overview, 
@@ -192,9 +191,8 @@ namespace GoogleMapsClient
         /// <remarks>
         /// https://developers.google.com/maps/documentation/places/web-service/search-find-place#PlaceEditorialSummary
         /// </remarks>
-        [AllowNull]
         [JsonProperty("editorial_summary")]
-        public PlaceFindEditorialSummaryResponseModel EditorialSummary 
+        public PlaceFindEditorialSummaryResponseModel? EditorialSummary 
         { 
             get => mEditorialSummary ??= new PlaceFindEditorialSummaryResponseModel();
             set => mEditorialSummary = value;
@@ -204,7 +202,6 @@ namespace GoogleMapsClient
         /// A string containing the human-readable address of this place. 
         /// Often this address is equilevant of the postal address.
         /// </summary>
-        [AllowNull]
         [JsonProperty("formatted_address")]
         public string FormattedAddress
         {
@@ -218,9 +215,8 @@ namespace GoogleMapsClient
         ///<remarks>
         /// https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers
         ///</remarks>
-        [AllowNull]
         [JsonProperty("formatted_phone_number")]
-        public string FormattedPhoneNumber
+        public string? FormattedPhoneNumber
         {
             get => mFormattedPhoneNumber ?? string.Empty;
             set => mFormattedPhoneNumber = value;
@@ -241,8 +237,8 @@ namespace GoogleMapsClient
         }
 
         /// <summary>
-        ///Contains the URL of a suggested icon which may be displayed to the user when
-        ///indicating this result on a map.
+        /// Contains the URL of a suggested icon which may be displayed to the user when
+        /// indicating this result on a map.
         /// </summary>
         [AllowNull]
         [JsonProperty("icon")]
@@ -270,8 +266,8 @@ namespace GoogleMapsClient
         public Uri? IconMaskBaseUri { get; set; }
 
         /// <summary>
-        ///Contains the place's phone number in international format. International format includes
-        ///the country code, and is prefixed with the plus, +, sign.
+        /// Contains the place's phone number in international format. International format includes
+        /// the country code, and is prefixed with the plus, +, sign.
         /// </summary>
         /// <example>
         /// For example, the international_phone_number for Google's Sydney, 
@@ -287,7 +283,7 @@ namespace GoogleMapsClient
 
         /// <summary>
         /// Contains the human-readable name for the returned result. For establishment results,
-        ///this is usually the canonicalized business name
+        /// this is usually the canonicalized business name
         /// </summary>
         [AllowNull]
         [JsonProperty("name")]
@@ -319,7 +315,7 @@ namespace GoogleMapsClient
         /// https://developers.google.com/maps/documentation/places/web-service/search-find-place#PlacePhoto
         /// </remarks>
         [JsonProperty("photo")]
-        public object? Photo { get; set; }
+        public PlacePhotoResponseModel? Photo { get; set; }
 
         /// <summary>
         /// A textual identifier that uniquely identifies a place. To retrieve information
@@ -328,9 +324,8 @@ namespace GoogleMapsClient
         /// <remarks>
         /// https://developers.google.com/maps/documentation/places/web-service/place-id
         /// </remarks>
-        [AllowNull]
         [JsonProperty("place_id")]
-        public string PlaceId
+        public string? PlaceId
         {
             get => mPlaceId ?? string.Empty;
             set => mPlaceId = value;
@@ -347,9 +342,8 @@ namespace GoogleMapsClient
         /// https://en.wikipedia.org/wiki/Open_Location_Code
         /// https://developers.google.com/maps/documentation/places/web-service/search-find-place#PlusCode
         /// </remarks>
-        [AllowNull]
         [JsonProperty("plus_code")]
-        public PlaceFindPlusCodeResponseModel PlusCode 
+        public PlaceFindPlusCodeResponseModel? PlusCode 
         {
             get => mPlusCode ??= new PlaceFindPlusCodeResponseModel(); 
             set => mPlusCode = value;
@@ -374,19 +368,19 @@ namespace GoogleMapsClient
         /// </list>
         /// </summary>
         [JsonProperty("price_level")]
-        public uint PriceLevel { get; set; }
+        public PriceRangeType? PriceLevel { get; set; }
 
         /// <summary>
         /// Contains the place's rating from 1.0 to 5.0 based on user reviews.
         /// </summary>
         [JsonProperty("rating")]
-        public uint Rating { get; set; }
+        public RatingType? Rating { get; set; }
 
         /// <summary>
         /// Specifies if the place supports reservations.
         /// </summary>
         [JsonProperty("reservable")]
-        public bool Reservable { get; set; }
+        public bool? Reservable { get; set; }
 
         /// <summary>
         /// An array of up to five reviews. By default the reviews are sorted in order of relevance.
@@ -396,9 +390,9 @@ namespace GoogleMapsClient
         ///</remarks>
         [AllowNull]
         [JsonProperty("reviews")]
-        public IEnumerable<PlaceFindPlaceReviewResponseModel> Reviews 
+        public IEnumerable<PlaceFindReviewResponseModel> Reviews 
         {
-            get => mReviews ?? Enumerable.Empty<PlaceFindPlaceReviewResponseModel>();
+            get => mReviews ?? Enumerable.Empty<PlaceFindReviewResponseModel>();
             set => mReviews = value;
         }
 
@@ -414,7 +408,7 @@ namespace GoogleMapsClient
         /// https://developers.google.com/maps/documentation/places/web-service/search-find-place#PlaceOpeningHours
         /// </remarks>
         [JsonProperty("secondary_opening_hours")]
-        public IEnumerable<PlaceFindPlaceOpeningHoursResponseModel> SecondaryOpeningHours 
+        public IEnumerable<PlaceFindPlaceOpeningHoursResponseModel>? SecondaryOpeningHours 
         {
             get => mSecondaryOpeningHours ?? Enumerable.Empty<PlaceFindPlaceOpeningHoursResponseModel>();
             set => mSecondaryOpeningHours = value;
@@ -424,48 +418,48 @@ namespace GoogleMapsClient
         /// Specifies if the place serves beer.
         /// </summary>
         [JsonProperty("serves_beer")]
-        public bool ServesBeer { get; set; }
+        public bool? ServesBeer { get; set; }
 
         /// <summary>
         /// Specifies if the place serves breakfast.
         /// </summary>
         [JsonProperty("serves_breakfast")]
-        public bool ServesBreakfast { get; set; }
+        public bool? ServesBreakfast { get; set; }
 
         /// <summary>
         /// Specifies if the place serves brunch.
         /// </summary>
-        public bool ServesBrunch { get; set; }
+        public bool? ServesBrunch { get; set; }
 
         /// <summary>
         /// Specifies if the place serves dinner.
         /// </summary>
         [JsonProperty("serves_dinner")]
-        public bool ServesDinner { get; set; }
+        public bool? ServesDinner { get; set; }
 
         /// <summary>
         ///Specifies if the place serves lunch. 
         /// </summary>
         [JsonProperty("serves_lunch")]
-        public bool ServesLunch { get; set; }
+        public bool? ServesLunch { get; set; }
 
         /// <summary>
         /// Specifies if the place serves vegetarian food.
         /// </summary>
         [JsonProperty("serves_vegetarian_food")]
-        public bool ServesVegetarianFood { get; set; }
+        public bool? ServesVegetarianFood { get; set; }
 
         /// <summary>
         /// Specifies if the place serves wine.
         /// </summary>
         [JsonProperty("serves_wine")]
-        public bool ServesWine { get; set; }
+        public bool? ServesWine { get; set; }
 
         /// <summary>
         /// Specifies if the business supports takeout.
         /// </summary>
         [JsonProperty("takeout")]
-        public bool Takeout { get; set; }
+        public bool? Takeout { get; set; }
 
         /// <summary>
         /// Contains an array of feature types describing the given result.
@@ -473,10 +467,9 @@ namespace GoogleMapsClient
         /// <remarks>
         /// https://developers.google.com/maps/documentation/places/web-service/supported_types#table2
         /// </remarks>
-        [AllowNull]
         [JsonProperty("types")]
         [JsonConverter(typeof(AddressTypeEnumerableToStringJsonConverter))]
-        public IEnumerable<AddressType> Types
+        public IEnumerable<AddressType>? Types
         {
             get => mTypes ?? Enumerable.Empty<AddressType>();
             set => mTypes = value;
@@ -494,7 +487,7 @@ namespace GoogleMapsClient
         /// The total numver  of reviews, with or without text, for this place.
         /// </summary>
         [JsonProperty("user_rating_total")]
-        public uint UserRatingTotal { get; set; }
+        public uint? UserRatingTotal { get; set; }
 
         /// <summary>
         /// Contains the number of minutes this place’s current timezone is offset from UTC.
@@ -505,14 +498,15 @@ namespace GoogleMapsClient
         /// time this would be -480 (-8 hours from UTC).
         /// </example>
         [JsonProperty("utc_offset")]
-        public int UTCOffset { get; set; }
+        public int? UTCOffset { get; set; }
 
         /// <summary>
-        /// 
+        /// For establishment (types:["establishment", ...]) results only, the vicinity field contains a 
+        /// simplified address for the place, including the street name, street number, and locality, 
+        /// but not the province/state, postal code, or country
         /// </summary>
-        [AllowNull]
         [JsonProperty("vicinity")]
-        public string Vicinity
+        public string? Vicinity
         {
             get => mVicinity ?? string.Empty;
             set => mVicinity = value;
@@ -528,7 +522,7 @@ namespace GoogleMapsClient
         /// Specifies if the place has an entrance that is wheelchair accessible
         /// </summary>
         [JsonProperty("wheelchair_accessible_entrance")]
-        public bool WheelchairAccessibleEntrance { get; set; }
+        public bool? WheelchairAccessibleEntrance { get; set; }
         
         #endregion
 
@@ -537,7 +531,7 @@ namespace GoogleMapsClient
         /// <summary>
         /// Default Constructor
         /// </summary>
-        public PlaceFindPlaceAttributesResponseModel()
+        public PlaceFindAttributesResponseModel()
         {
             
         }

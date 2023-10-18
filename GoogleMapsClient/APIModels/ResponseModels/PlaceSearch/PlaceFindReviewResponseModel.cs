@@ -1,17 +1,12 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GoogleMapsClient
 { 
     /// <summary>
     /// Represents a place review response
     /// </summary>
-    public class PlaceFindPlaceReviewResponseModel
+    public class PlaceFindReviewResponseModel
     {
         #region Private Members
 
@@ -38,9 +33,8 @@ namespace GoogleMapsClient
         /// The name of the user who submitted the review. 
         /// Anonymous reviews are attributed to "A Google user".
         /// </summary>
-        [AllowNull]
         [JsonProperty("author_name")]
-        public string AuthorName 
+        public string? AuthorName 
         {
             get => mAuthorName ?? string.Empty;
 
@@ -51,14 +45,13 @@ namespace GoogleMapsClient
         /// The user's overall rating for this place. This is a whole number ranging from 1 to 5.
         /// </summary>
         [JsonProperty("rating")]
-        public uint Rating { get; set; }
+        public RatingType? Rating { get; set; }
 
         /// <summary>
         /// The time that the review was submitted in text, relative to the current time.
         /// </summary>
-        [AllowNull]
         [JsonProperty("relative_time_description")]
-        public string RelativeTimeDescpription
+        public string? RelativeTimeDescpription
         {
             get => mRelativeTimeDescription ?? string.Empty;
 
@@ -88,7 +81,7 @@ namespace GoogleMapsClient
         /// and so on.This field is empty if there is only a rating with no review text.
         /// </example>
         [JsonProperty("language")]
-        public SupportedLanguage Language { get; set; }
+        public SupportedLanguage? Language { get; set; }
 
         /// <summary>
         /// An IETF language code indicating the original language of the review. If the review 
@@ -100,7 +93,7 @@ namespace GoogleMapsClient
         /// and so on.This field is empty if there is only a rating with no review text.
         /// </example>
         [JsonProperty("original_language")]
-        public SupportedLanguage OriginalLanguage { get; set; }
+        public SupportedLanguage? OriginalLanguage { get; set; }
 
         /// <summary>
         /// The URL to the user's photo, if available
@@ -115,9 +108,8 @@ namespace GoogleMapsClient
         /// <example>
         /// For example, the entity reference &amp; may represent an ampersand character.
         /// </example>
-        [AllowNull]
         [JsonProperty("text")]
-        public string Text 
+        public string? Text 
         { 
             get => mText ?? string.Empty;
 
@@ -133,7 +125,7 @@ namespace GoogleMapsClient
         /// For example, you can add the following string, “Translated by Google”, to the review.
         /// </example>
         [JsonProperty("translated")]
-        public bool Translated { get; set; }
+        public bool? Translated { get; set; }
 
         #endregion
 
@@ -141,7 +133,7 @@ namespace GoogleMapsClient
         /// <summary>
         /// Default Constructor
         /// </summary>
-        public PlaceFindPlaceReviewResponseModel()
+        public PlaceFindReviewResponseModel()
         {
             
         }

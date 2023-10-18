@@ -280,24 +280,37 @@ namespace GoogleMapsClient
         }.ToImmutableDictionary();
 
         /// <summary>
-        /// 
+        /// Maps the <see cref="PriceRangeType"/> to thei related <see cref="string"/>
         /// </summary>
         public static IReadOnlyDictionary<PriceRangeType, string> PriceRangeTypeToStringMapper { get; } = new Dictionary<PriceRangeType, string>()
         {
-            { PriceRangeType.MostAffordable, "Most_Affordable" },
-            { PriceRangeType.ModeratelyExpensive, "Moderately_Expensive" },
-            { PriceRangeType.Expensive, "Expensive" },
-            { PriceRangeType.MostExpensive, "Most_Expensive" },
-            { PriceRangeType.Luxurious, "Luxurious" }
+            { PriceRangeType.Free, "Free" },
+            { PriceRangeType.Inexpensive, "Inexpensive" },
+            { PriceRangeType.ModeratelyExpensive, "ModeratelyExpensive" },
+            { PriceRangeType.Expensive , "Expensive" },
+            { PriceRangeType.VeryExpensive , "Very_Expensive" }
         }.ToImmutableDictionary();
 
         /// <summary>
-        /// 
+        /// Maps the <see cref="RankByType"/> to their related <see cref="string"/>
         /// </summary>
         public static IReadOnlyDictionary<RankByType, string> RankByTypeToStringMapper { get; } = new Dictionary<RankByType, string>()
         {
             { RankByType.Prominence, "prominence" },
             { RankByType.Distance, "distance" }
+        }.ToImmutableDictionary();
+
+        /// <summary>
+        /// Maps the <see cref="RatingType"/> to their related <see cref="int"/>
+        /// </summary>
+        public static IReadOnlyDictionary<RatingType, int> RatingTypeToIntMapper { get; } = new Dictionary<RatingType, int>()
+        {
+            { RatingType.Poor, 1 },
+            { RatingType.Unsatisfactory, 2 },
+            { RatingType.Satisfactory, 3 },
+            { RatingType.VerySatisfactory, 4},
+            { RatingType.Outstanding, 5 }
+
         }.ToImmutableDictionary();
     }
 }

@@ -17,12 +17,7 @@ namespace GoogleMapsClient
         /// <summary>
         /// The member of the <see cref="Results"/> property
         /// </summary>
-        private IEnumerable<PlaceFindPlaceAttributesResponseModel>? mResults;
-
-        /// <summary>
-        /// The member of the <see cref="Status"/> property
-        /// </summary>
-        private PlaceFindPlaceSearchStatusResponseModel? mStatus;
+        private IEnumerable<PlaceFindAttributesResponseModel>? mResults;
 
         #endregion
 
@@ -41,10 +36,11 @@ namespace GoogleMapsClient
         /// <summary>
         /// Contains an array of places.
         /// </summary>
+        /// <remarks>https://developers.google.com/maps/documentation/places/web-service/search-nearby#Place</remarks>
         [JsonProperty("results")]
-        public IEnumerable<PlaceFindPlaceAttributesResponseModel> Results 
+        public IEnumerable<PlaceFindAttributesResponseModel> Results 
         {
-            get => mResults ?? Enumerable.Empty<PlaceFindPlaceAttributesResponseModel>();
+            get => mResults ?? Enumerable.Empty<PlaceFindAttributesResponseModel>();
             set => mResults = value;
         }
 

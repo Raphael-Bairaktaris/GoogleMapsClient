@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Newtonsoft.Json;
 
 namespace GoogleMapsClient
 {
@@ -31,7 +26,7 @@ namespace GoogleMapsClient
         /// <remarks>
         /// https://developers.google.com/maps/documentation/places/web-service/search-find-place#LatLngLiteral
         /// </remarks>
-        [AllowNull]
+        [JsonProperty("northeast")]
         public PlaceFindLatitudeLongitudeLiteralResponseModel Northeast
         {
             get => mNortheast ??= new PlaceFindLatitudeLongitudeLiteralResponseModel();
@@ -42,7 +37,7 @@ namespace GoogleMapsClient
         /// <remarks>
         /// https://developers.google.com/maps/documentation/places/web-service/search-find-place#LatLngLiteral
         /// </remarks>
-        [AllowNull]
+        [JsonProperty("southwest")]
         public PlaceFindLatitudeLongitudeLiteralResponseModel? Southwest 
         { 
             get => mSouthwest ??= new PlaceFindLatitudeLongitudeLiteralResponseModel();
@@ -61,6 +56,13 @@ namespace GoogleMapsClient
         {
             
         }
+
+        #endregion
+
+        #region Public Methods
+
+        /// <inheritdoc/>
+        public override string ToString() => $"Northeast: {Northeast}, Southwest {Southwest}";
 
         #endregion
     }

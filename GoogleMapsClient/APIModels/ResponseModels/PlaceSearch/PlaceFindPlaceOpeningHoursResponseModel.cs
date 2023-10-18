@@ -1,10 +1,5 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GoogleMapsClient
 {
@@ -23,7 +18,7 @@ namespace GoogleMapsClient
         /// <summary>
         /// The members of the <see cref="SpecialDays"/> property
         /// </summary>
-        private IEnumerable<PlaceFindPlaceSpecialDayResponseModel>? mSpecialDays;
+        private IEnumerable<PlaceFindSpecialDayResponseModel>? mSpecialDays;
 
         /// <summary>
         /// The member of the <see cref="Type"/> property
@@ -66,9 +61,9 @@ namespace GoogleMapsClient
         /// </remarks>
         [AllowNull]
         [JsonProperty("special_days")]
-        public IEnumerable<PlaceFindPlaceSpecialDayResponseModel> SpecialDays 
+        public IEnumerable<PlaceFindSpecialDayResponseModel> SpecialDays 
         {
-            get => mSpecialDays ?? Enumerable.Empty<PlaceFindPlaceSpecialDayResponseModel>();
+            get => mSpecialDays ?? Enumerable.Empty<PlaceFindSpecialDayResponseModel>();
             set => mSpecialDays = value;
         }
 
