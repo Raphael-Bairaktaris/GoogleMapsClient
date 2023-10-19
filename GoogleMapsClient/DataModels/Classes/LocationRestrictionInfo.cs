@@ -5,7 +5,7 @@ namespace GoogleMapsClient
     /// <summary>
     /// Contains information relating to one of multiple types of search set of rules.
     /// </summary>
-    public class LocationRestrictionInfo
+    public class LocationRestrictionInfo : IAPIStringFormattable
     {
         #region Public Properties
 
@@ -81,13 +81,10 @@ namespace GoogleMapsClient
 
         #region Public Methods
 
-        /// <summary>
-        /// Returns a string that can be used as API arguments and represents the current <see cref="LocationBiasInfo"/>.
-        /// </summary>
-        /// <returns></returns>
+        /// <inheritdoc/>
         public virtual string ToAPIString()
         {
-             if (ShouldUseCircular)
+            if (ShouldUseCircular)
                 return $"circle:{CircularRadius}@{CircularCenter.Value.Latitude},{CircularCenter.Value.Longitude}";
             else if (ShouldUseRectangular)
                 return $"rectangle:{RectangularSouthwest.Value.Latitude},{RectangularSouthwest.Value.Longitude}|{RectangularNortheast.Value.Latitude},{RectangularNortheast.Value.Longitude}";

@@ -325,7 +325,7 @@ namespace GoogleMapsClient
         /// https://developers.google.com/maps/documentation/places/web-service/place-id
         /// </remarks>
         [JsonProperty("place_id")]
-        public string? PlaceId
+        public string PlaceId
         {
             get => mPlaceId ?? string.Empty;
             set => mPlaceId = value;
@@ -374,7 +374,7 @@ namespace GoogleMapsClient
         /// Contains the place's rating from 1.0 to 5.0 based on user reviews.
         /// </summary>
         [JsonProperty("rating")]
-        public RatingType? Rating { get; set; }
+        public double? Rating { get; set; }
 
         /// <summary>
         /// Specifies if the place supports reservations.
@@ -484,7 +484,7 @@ namespace GoogleMapsClient
         public Uri? Url { get; set; }
 
         /// <summary>
-        /// The total numver  of reviews, with or without text, for this place.
+        /// The total number of reviews, with or without text, for this place.
         /// </summary>
         [JsonProperty("user_rating_total")]
         public uint? UserRatingTotal { get; set; }

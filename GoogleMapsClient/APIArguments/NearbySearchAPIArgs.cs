@@ -1,5 +1,4 @@
 ﻿using GoogleMapsClient.DataModels.Enums;
-using Newtonsoft.Json;
 
 namespace GoogleMapsClient
 {
@@ -13,7 +12,7 @@ namespace GoogleMapsClient
         /// <summary>
         /// The point around which to retrieve place information. This must be specified as latitude,longitude.
         /// </summary>
-        [JsonProperty("location")]
+        [ArgumentName("location")]
         public Coordinates Location { get; }
 
         /// <summary>
@@ -21,7 +20,7 @@ namespace GoogleMapsClient
         /// by passing a location and a radius parameter. Doing so instructs the Places service to prefer showing results within
         /// that circle; results outside of the defined area may still be displayed.
         /// </summary>
-        [JsonProperty("radius")]
+        [ArgumentName("radius")]
         public double Radius { get; }
 
         /// <summary>
@@ -33,55 +32,55 @@ namespace GoogleMapsClient
         /// <example>
         /// For example: "restaurant" or "123 Main Street".
         /// </example>
-        [JsonProperty("keyword")]
+        [ArgumentName("keyword")]
         public string? Keyword { get; set; }
 
         /// <summary>
         /// The language in which to return results.
         /// </summary>
         /// <remarks>https://developers.google.com/maps/faq#languagesupport</remarks>
-        [JsonProperty("language")]
+        [ArgumentName("language")]
         public SupportedLanguage? Language { get; set; }
 
         /// <summary>
         /// Restricts results to only those places within the specified range. Valid values range between 0 (most affordable) to 4 (most expensive),
         /// inclusive. The exact amount indicated by a specific value will vary from region to region.
         /// </summary>
-        [JsonProperty("maxprice")]
+        [ArgumentName("maxprice")]
         public PriceRangeType? MaxPrice { get; set; }
 
         /// <summary>
         /// Restricts results to only those places within the specified range. Valid values range between 0 (most affordable) to 4 (most expensive),
         /// inclusive. The exact amount indicated by a specific value will vary from region to region.
         /// </summary>
-        [JsonProperty("minprice")]
+        [ArgumentName("minprice")]
         public PriceRangeType? MinPrice { get; set; }
 
         /// <summary>
         /// Returns only those places that are open for business at the time the query is sent. Places that do not specify opening hours
         /// in the Google Places database will not be returned if you include this parameter in your query.
         /// </summary>
-        [JsonProperty("opennow")]
+        [ArgumentName("opennow")]
         public bool? OpenNow { get; set; }
 
         /// <summary>
         /// Returns up to 20 results from a previously run search. Setting a pagetoken parameter will execute a search with 
         /// the same parameters used previously — all parameters other than pagetoken will be ignored.
         /// </summary>
-        [JsonProperty("pagetoken")]
+        [ArgumentName("pagetoken")]
         public string? PageToken { get; set; }
 
         /// <summary>
         /// Specifies the order in which results are listed.
         /// </summary>
-        [JsonProperty("rankby")]
+        [ArgumentName("rankby")]
         public RankByType RankBy { get; set; } = RankByType.Prominence;
 
         /// <summary>
         /// Restricts the results to places matching the specified type. Only one type may be specified. 
         /// If more than one type is provided, all types following the first entry are ignored.
         /// </summary>
-        [JsonProperty("type")]
+        [ArgumentName("type")]
         public PlaceType? Type { get; set; }
 
         #endregion

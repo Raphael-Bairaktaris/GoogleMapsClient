@@ -31,7 +31,14 @@ var apiKey = File.ReadAllText(Path.Combine(Environment.GetFolderPath(Environment
 
 var client = new GoogleMapsClient.GoogleMapsClient(apiKey);
 
-var placesResult = await client.FindPlaceTextAsync("ZAkinthou 35 Patra");
+var placesResult = await client.TextSearchAsync(new TextSearchAPIArgs() 
+{
+    Query = "εργον αγορα θεσσαλονικη"
+});
+
+var detailedResult = await client.PlaceDetailAsync(new PlaceDetailAPIArgs(placesResult.Result.Results.First().PlaceId));
+
+var h = new PlacePhotoAPIArgs("asdasd", false, 10);
 
 var coordinates1 = new Coordinates(69, 420);
 

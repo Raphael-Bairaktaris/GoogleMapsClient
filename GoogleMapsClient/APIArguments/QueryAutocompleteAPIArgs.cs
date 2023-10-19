@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json;
-
-namespace GoogleMapsClient
+﻿namespace GoogleMapsClient
 {
     /// <summary>
     /// User instead of searching for a specific location can type in a categorical search.
@@ -13,19 +11,19 @@ namespace GoogleMapsClient
         /// The text string on which to search. The Place Autocomplete service will return candidate
         /// matches based on this string and order results based on their perceived relevance.
         /// </summary>
-        [JsonProperty("input")]
+        [ArgumentName("input")]
         public string Input { get; }
 
         /// <summary>
         /// The language in which to return results.
         /// </summary>
-        [JsonProperty("language")]
+        [ArgumentName("language")]
         public SupportedLanguage? Language { get; set; }
 
         /// <summary>
         /// The point around which to retrieve place information. This must be specified as latitude,longitude.
         /// </summary>
-        [JsonProperty("location")]
+        [ArgumentName("location")]
         public Coordinates? Location { get; set; }
 
         /// <summary>
@@ -38,7 +36,7 @@ namespace GoogleMapsClient
         /// match against Goo abc. If no offset is supplied, the service will use the whole term. The offset 
         /// should generally be set to the position of the text caret.
         /// </example>
-        [JsonProperty("offset")]
+        [ArgumentName("offset")]
         public uint? Offset { get; set; }
 
         /// <summary>
@@ -46,6 +44,7 @@ namespace GoogleMapsClient
         /// a location and a radius parameter. Doing so instructs the Places service to prefer showing results within that circle; 
         /// results outside of the defined area may still be displayed.
         /// </summary>
+        [ArgumentName("radius")]
         public double? Radius { get; set; }
 
         #endregion

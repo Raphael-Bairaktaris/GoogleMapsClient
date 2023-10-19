@@ -5,7 +5,7 @@ namespace GoogleMapsClient
     /// <summary>
     /// Contains information relating to one of multiple types of search set of rules.
     /// </summary>
-    public class PlaceTypeInfo
+    public class PlaceTypeInfo : IAPIStringFormattable
     {
         #region Public Properties
 
@@ -80,10 +80,7 @@ namespace GoogleMapsClient
 
         #region Public Methods
 
-        /// <summary>
-        /// Returns a string that can be used as API arguments and represents the current <see cref="PlaceTypeInfo"/>.
-        /// </summary>
-        /// <returns></returns>
+        /// <inheritdoc/>
         public string ToAPIString()
         {
             if (ShouldUseCollectionType)

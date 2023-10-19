@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -138,6 +139,83 @@ namespace GoogleMapsClient
         /// <returns></returns>
         public static string AggregateString<T>(this IEnumerable<T> source, string separator = ", ")
             => source.AggregateString((s1, s2) => s1 + separator + s2);
+
+        /// <summary>
+        /// Returns a string that represents the specified <paramref name="value"/> using the ISO8601 format
+        /// </summary>
+        /// <param name="value">The value</param>
+        /// <returns></returns>
+        public static string ToISO8601String(this DateOnly value)
+            => value.ToString("o", CultureInfo.InvariantCulture);
+
+        /// <summary>
+        /// Returns a string that represents the specified <paramref name="dto"/> using the ISO8601 format
+        /// </summary>
+        /// <param name="dto">The date time offset</param>
+        /// <returns></returns>
+        public static string ToISO8601String(this DateTimeOffset dto) 
+            => dto.LocalDateTime.ToString("o", CultureInfo.InvariantCulture);
+
+        /// <summary>
+        /// Returns a string that represents the specified <paramref name="value"/> using the ISO8601 format
+        /// </summary>
+        /// <param name="value">The value</param>
+        /// <returns></returns>
+        public static string ToISO8601String(this TimeOnly value)
+            => value.ToString("o", CultureInfo.InvariantCulture);
+
+        /// <summary>
+        /// Returns a string that represents the specified <paramref name="dt"/> using the ISO8601 format
+        /// </summary>
+        /// <param name="dt">The date time</param>
+        /// <returns></returns>
+        public static string ToISO8601String(this DateTime dt) 
+            => dt.ToString("o", CultureInfo.InvariantCulture);
+
+        /// <summary>
+        /// Returns the specified <paramref name="s"/> with the first char converted to lower case
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
+        public static string FirstCharToLower(this string s) => s.First().ToString().ToLower() + s.Substring(1);
+
+        /// <summary>
+        /// Checks if the specified <paramref name="type"/> is a type that represents a date
+        /// </summary>
+        /// <param name="type">The type</param>
+        /// <returns></returns>
+        public static bool IsDate(this Type type)
+            => type == typeof(DateTime) || type == typeof(DateTimeOffset)
+                || type == typeof(DateTime?) || type == typeof(DateTimeOffset?)
+                || type == typeof(DateOnly) || type == typeof(DateOnly?);
+
+        /// <summary>
+        /// Checks whether the specified <paramref name="type"/> implements the <see cref="IEnumerable"/>
+        /// or it's it self the <see cref="IEnumerable"/>
+        /// </summary>
+        /// <param name="type"></param>
+        /// <returns></returns>
+        public static bool IsEnumerable(this Type type)
+        {
+            if (typeof(IEnumerable).IsAssignableFrom(type))
+                return true;
+
+            return type.GetInterfaces().Any(x => x == typeof(IEnumerable));
+        }
+
+        /// <summary>
+        /// Returns the specified <paramref name="value"/> if it's not null or empty,
+        /// otherwise it throws an <see cref="ArgumentNullException"/>
+        /// </summary>
+        /// <param name="value">The value</param>
+        /// <returns></returns>
+        public static string NotNullOrEmpty(this string? value)
+        {
+            if (value.IsNullOrEmpty())
+                throw new ArgumentNullException(nameof(value));
+
+            return value;
+        }
 
         /// <summary>
         /// Returns a <see cref="WebRequestResult"/> pre-populated with the <see cref="HttpWebResponse"/> information

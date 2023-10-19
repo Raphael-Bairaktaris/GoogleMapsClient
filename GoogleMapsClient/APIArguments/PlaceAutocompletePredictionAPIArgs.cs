@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json;
-
-namespace GoogleMapsClient
+﻿namespace GoogleMapsClient
 {
     /// <summary>
     /// Arguments used for retrieving place auto-complete predictions
@@ -13,7 +11,7 @@ namespace GoogleMapsClient
         /// The text string on which to search. The Place Autocomplete service will return candidate 
         /// matches based on this string and order results based on their perceived relevance.
         /// </summary>
-        [JsonProperty("input")]
+        [ArgumentName("input")]
         public string Input { get; }
 
         /// <summary>
@@ -26,7 +24,7 @@ namespace GoogleMapsClient
         /// For example: components=country:us|country:pr|country:vi|country:gu|country:mp would restrict your results to 
         /// places within the United States and its unincorporated organized territories.
         /// </example>
-        [JsonProperty("components")]
+        [ArgumentName("components")]
         public IEnumerable<string>? Components { get; set; }
 
         /// <summary>
@@ -35,27 +33,27 @@ namespace GoogleMapsClient
         /// <remarks>
         /// https://developers.google.com/maps/faq#languagesupport
         /// </remarks>
-        [JsonProperty("language")]
+        [ArgumentName("language")]
         public SupportedLanguage? Language { get; set; }
 
         /// <summary>
         /// The point around which to retrieve place information. This must be specified as latitude,longitude. The radius parameter
         /// must also be provided when specifying a location. If radius is not provided, the location parameter is ignored.
         /// </summary>
-        [JsonProperty("location")]
+        [ArgumentName("location")]
         public Coordinates? Location { get; set; }
 
         /// <summary>
         /// Prefer results in a specified area, by specifying either a radius plus lat/lng, or two lat/lng pairs representing the 
         /// points of a rectangle. If this parameter is not specified, the API uses IP address biasing by default.
         /// </summary>
-        [JsonProperty("locationbias")]
+        [ArgumentName("locationbias")]
         public Coordinates? LocationBias { get; set; }
 
         /// <summary>
         /// Restrict results to a specified area, by specifying either a radius plus lat/lng, or two lat/lng pairs representing the points of a rectangle.
         /// </summary>
-        [JsonProperty("locationrestriction")]
+        [ArgumentName("locationrestriction")]
         public LocationRestrictionInfo? LocationRestriction { get; set; }
 
         /// <summary>
@@ -67,14 +65,14 @@ namespace GoogleMapsClient
         /// For example, if the input term is Google abc and the offset is 3, the service will attempt to match against Goo abc. 
         /// If no offset is supplied, the service will use the whole term. The offset should generally be set to the position of the text caret.
         /// </example>
-        [JsonProperty("offset")]
+        [ArgumentName("offset")]
         public uint? Offset { get; set; }
 
         /// <summary>
         /// The origin point from which to calculate straight-line distance to the destination (returned as distance_meters). 
         /// If this value is omitted, straight-line distance will not be returned. Must be specified as latitude,longitude.
         /// </summary>
-        [JsonProperty("origin")]
+        [ArgumentName("origin")]
         public string? Origin { get; set; }
 
         /// <summary>
@@ -82,7 +80,7 @@ namespace GoogleMapsClient
         /// to a specified circle by passing a location and a radius parameter. Doing so instructs the 
         /// Places service to prefer showing results within that circle; results outside of the defined area may still be displayed.
         /// </summary>
-        [JsonProperty("radius")]
+        [ArgumentName("radius")]
         public double? Radius { get; set; }
 
         /// <summary>
@@ -92,7 +90,7 @@ namespace GoogleMapsClient
         /// <remarks>
         /// https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains#Country_code_top-level_domains
         /// </remarks>
-        [JsonProperty("region")]
+        [ArgumentName("region")]
         public string? Region { get; set; }
 
         /// <summary>
@@ -101,7 +99,7 @@ namespace GoogleMapsClient
         /// <remarks>
         /// https://developers.google.com/maps/documentation/places/web-service/details#session_tokens
         /// </remarks>
-        [JsonProperty("sessiontoken")]
+        [ArgumentName("sessiontoken")]
         public string? SessionToken { get; set; }
 
         /// <summary>
@@ -109,14 +107,14 @@ namespace GoogleMapsClient
         /// This is a restriction, rather than a bias, meaning that results outside this region will not be returned 
         /// even if they match the user input.
         /// </summary>
-        [JsonProperty("strictbounds")]
+        [ArgumentName("strictbounds")]
         public bool? StrictBounds { get; set; }
 
         /// <summary>
         /// You can restrict results from a Place Autocomplete request to be of a certain type by passing the types parameter.
         /// This parameter specifies a type or a type collection, as listed in Place Types. If nothing is specified, all types are returned.
         /// </summary>
-        [JsonProperty("types")]
+        [ArgumentName("types")]
         public PlaceTypeInfo? Types { get; set; }
 
         #endregion

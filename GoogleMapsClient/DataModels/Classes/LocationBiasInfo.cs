@@ -1,6 +1,4 @@
-﻿using System.Diagnostics.CodeAnalysis;
-
-namespace GoogleMapsClient
+﻿namespace GoogleMapsClient
 {
     /// <summary>
     /// Contains information relating to one of multiple types of search set of rules.
@@ -49,10 +47,7 @@ namespace GoogleMapsClient
 
         #region Public Methods
 
-        /// <summary>
-        /// Returns a string that can be used as API arguments and represents the current <see cref="LocationBiasInfo"/>.
-        /// </summary>
-        /// <returns></returns>
+        /// <inheritdoc/>
         public override string ToAPIString()
         {
             if (ShouldUseIPBias)

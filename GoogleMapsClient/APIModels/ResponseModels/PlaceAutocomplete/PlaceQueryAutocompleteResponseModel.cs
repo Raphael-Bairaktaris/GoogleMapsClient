@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System.Diagnostics.CodeAnalysis;
+using System.Threading.Tasks.Dataflow;
 
 namespace GoogleMapsClient
 {
@@ -8,6 +9,15 @@ namespace GoogleMapsClient
     /// </summary>
     public class PlaceQueryAutocompleteResponseModel
     {
+        #region Private Members
+
+        /// <summary>
+        /// The member of the <see cref="Status"/> property
+        /// </summary>
+        private string? mStatus;
+
+        #endregion
+
         #region Public Property
 
         /// <summary>
@@ -21,7 +31,12 @@ namespace GoogleMapsClient
         /// Contains the status of the request, and may contain debugging information to help you track down why the request failed.
         /// </summary>
         [JsonProperty("status")]
-        public PlaceAutoCompleteStatusResponseModel? Status { get; set; }
+        public string Status
+        {
+            get => mStatus ?? string.Empty;
+
+            set => mStatus = value;
+        }
 
         /// <summary>
         /// When the service returns a status code other than OK, there may be an additional error_message field within the response object. 

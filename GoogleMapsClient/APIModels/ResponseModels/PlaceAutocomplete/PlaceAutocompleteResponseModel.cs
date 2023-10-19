@@ -13,7 +13,6 @@ namespace GoogleMapsClient
     /// </summary>
     public class PlaceAutocompleteResponseModel
     {
-
         #region Private Property
 
         /// <summary>
@@ -33,6 +32,11 @@ namespace GoogleMapsClient
         /// The member of the <see cref="InfoMessages"/> property
         /// </summary>
         private string? mInfoMessages;
+
+        /// <summary>
+        /// The member of the <see cref="Status"/> property
+        /// </summary>
+        private string? mStatus;
 
         #endregion
 
@@ -59,11 +63,11 @@ namespace GoogleMapsClient
         /// </remarks>
         [AllowNull]
         [JsonProperty("status")]
-        public PlaceAutoCompleteStatusResponseModel Status 
-        { 
-            get;
-            
-            set; 
+        public string Status
+        {
+            get => mStatus ?? string.Empty;
+
+            set => mStatus = value;
         }
 
         /// <summary>
