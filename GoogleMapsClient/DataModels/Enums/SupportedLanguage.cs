@@ -86,7 +86,7 @@
         ZHHK = 15,
 
         /// <summary>
-        /// Chines traditional
+        /// Chinese traditional
         /// </summary>
         ZHTW = 16,
 

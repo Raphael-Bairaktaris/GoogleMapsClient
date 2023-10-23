@@ -1,4 +1,4 @@
-﻿namespace GoogleMapsClient.DataModels.Enums
+﻿namespace GoogleMapsClient
 {
     /// <summary>
     /// Provides enumeration for review sort

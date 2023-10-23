@@ -536,7 +536,8 @@
         </member>
         <member name="P:GoogleMapsClient.GoogleResultResponseModel`1.HTMLAttributions">
             <summary>
-            
+            May contain a set of attributions about this listing which must be 
+            displayed to the user (some listings may not have attribution).
             </summary>
         </member>
         <member name="P:GoogleMapsClient.GoogleResultResponseModel`1.Results">
@@ -2014,18 +2015,6 @@
             https://developers.google.com/maps/documentation/places/web-service/supported_types#table2
             </remarks>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.Url">
-            <summary>
-            Contains the URL of the official Google page for this place. This will be the Google-owned page
-            that contains the best available information about the place. Applications must link to or embed 
-            this page on any screen that shows detailed results about the place to the user.
-            </summary>
-        </member>
-        <member name="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.UserRatingTotal">
-            <summary>
-            The total number of reviews, with or without text, for this place.
-            </summary>
-        </member>
         <member name="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.Vicinity">
             <summary>
             For establishment (types:["establishment", ...]) results only, the vicinity field contains a 
@@ -3362,75 +3351,35 @@
             Zoo
             </summary>
         </member>
-        <member name="T:GoogleMapsClient.DataModels.Enums.PriceRangeType">
+        <member name="T:GoogleMapsClient.PriceRangeType">
             <summary>
             Provides a price range enumeration
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.DataModels.Enums.PriceRangeType.Free">
+        <member name="F:GoogleMapsClient.PriceRangeType.Free">
             <summary>
             Usually $10 and under
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.DataModels.Enums.PriceRangeType.Inexpensive">
+        <member name="F:GoogleMapsClient.PriceRangeType.Inexpensive">
             <summary>
             Usually between $10-$25
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.DataModels.Enums.PriceRangeType.ModeratelyExpensive">
+        <member name="F:GoogleMapsClient.PriceRangeType.ModeratelyExpensive">
             <summary>
             Usually between $25-45$
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.DataModels.Enums.PriceRangeType.Expensive">
+        <member name="F:GoogleMapsClient.PriceRangeType.Expensive">
             <summary>
             Usually $50-$100
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.DataModels.Enums.PriceRangeType.VeryExpensive">
+        <member name="F:GoogleMapsClient.PriceRangeType.VeryExpensive">
             <summary>
             Above $100
             </summary>
-        </member>
-        <member name="T:GoogleMapsClient.DataModels.Enums.ReviewSortingType">
-            <summary>
-            Provides enumeration for review sort
-            </summary>
-        </member>
-        <member name="F:GoogleMapsClient.DataModels.Enums.ReviewSortingType.MostRelevant">
-            <summary>
-            For most_relevant (default), reviews are sorted by relevance; the service will bias the 
-            results to return reviews originally written in the preferred language.
-            </summary>
-        </member>
-        <member name="F:GoogleMapsClient.DataModels.Enums.ReviewSortingType.Newest">
-            <summary>
-            For newest, reviews are sorted in chronological order; the preferred
-            language does not affect the sort order.
-            </summary>
-        </member>
-        <member name="F:GoogleMapsClient.DataModels.Enums.ReviewSortingType.HighestRating">
-            <summary>
-            The highest rating reviews.
-            </summary>
-        </member>
-        <member name="F:GoogleMapsClient.DataModels.Enums.ReviewSortingType.LowestRating">
-            <summary>
-            The lowest rating reviews.
-            </summary>
-        </member>
-        <member name="T:GoogleMapsClient.DataModels.Enums.PriceRangeTypeToStringJsonConverter">
-            <summary>
-            The <see cref="T:Newtonsoft.Json.JsonConverter`1"/> that converts a <see cref="T:GoogleMapsClient.DataModels.Enums.PriceRangeType"/> to a <see cref="T:System.String"/>
-            </summary>
-        </member>
-        <member name="M:GoogleMapsClient.DataModels.Enums.PriceRangeTypeToStringJsonConverter.#ctor">
-            <summary>
-            Default Constructor
-            </summary>
-        </member>
-        <member name="M:GoogleMapsClient.DataModels.Enums.PriceRangeTypeToStringJsonConverter.GetMapper">
-            <inheritdoc/>
         </member>
         <member name="T:GoogleMapsClient.RankByType">
             <summary>
@@ -3475,6 +3424,33 @@
         <member name="F:GoogleMapsClient.RatingType.Outstanding">
             <summary>
             Outstanding
+            </summary>
+        </member>
+        <member name="T:GoogleMapsClient.ReviewSortingType">
+            <summary>
+            Provides enumeration for review sort
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.ReviewSortingType.MostRelevant">
+            <summary>
+            For most_relevant (default), reviews are sorted by relevance; the service will bias the 
+            results to return reviews originally written in the preferred language.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.ReviewSortingType.Newest">
+            <summary>
+            For newest, reviews are sorted in chronological order; the preferred
+            language does not affect the sort order.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.ReviewSortingType.HighestRating">
+            <summary>
+            The highest rating reviews.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.ReviewSortingType.LowestRating">
+            <summary>
+            The lowest rating reviews.
             </summary>
         </member>
         <member name="T:GoogleMapsClient.StatusCodeType">
@@ -4692,12 +4668,12 @@
         </member>
         <member name="P:GoogleMapsClient.GoogleMapsClientConstants.ReviewSortingTypeToStringMapper">
             <summary>
-            Maps the <see cref="T:GoogleMapsClient.DataModels.Enums.ReviewSortingType"/> to their related <see cref="T:System.String"/>
+            Maps the <see cref="T:GoogleMapsClient.ReviewSortingType"/> to their related <see cref="T:System.String"/>
             </summary>
         </member>
         <member name="P:GoogleMapsClient.GoogleMapsClientConstants.PriceRangeTypeToStringMapper">
             <summary>
-            Maps the <see cref="T:GoogleMapsClient.DataModels.Enums.PriceRangeType"/> to thei related <see cref="T:System.String"/>
+            Maps the <see cref="T:GoogleMapsClient.PriceRangeType"/> to thei related <see cref="T:System.String"/>
             </summary>
         </member>
         <member name="P:GoogleMapsClient.GoogleMapsClientConstants.RankByTypeToStringMapper">
@@ -5026,6 +5002,19 @@
         <member name="M:GoogleMapsClient.PlaceTypeToStringJsonConverter.GetMapper">
             <inheritdoc/>
         </member>
+        <member name="T:GoogleMapsClient.DataModels.Enums.PriceRangeTypeToStringJsonConverter">
+            <summary>
+            The <see cref="T:Newtonsoft.Json.JsonConverter`1"/> that converts a <see cref="T:GoogleMapsClient.PriceRangeType"/> to a <see cref="T:System.String"/>
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.DataModels.Enums.PriceRangeTypeToStringJsonConverter.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.DataModels.Enums.PriceRangeTypeToStringJsonConverter.GetMapper">
+            <inheritdoc/>
+        </member>
         <member name="T:GoogleMapsClient.StatusCodeTypeToStringJsonConverter">
             <summary>
             The <see cref="T:Newtonsoft.Json.JsonConverter`1"/> that converts a <see cref="T:GoogleMapsClient.StatusCodeType"/> to <see cref="T:System.String"/>
@@ -5078,7 +5067,7 @@
         </member>
         <member name="P:GoogleMapsClient.GoogleMapsClient.APIKey">
             <summary>
-            
+            The API key
             </summary>
         </member>
         <member name="M:GoogleMapsClient.GoogleMapsClient.#ctor(System.String)">

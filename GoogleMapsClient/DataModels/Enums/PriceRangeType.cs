@@ -1,4 +1,4 @@
-﻿namespace GoogleMapsClient.DataModels.Enums
+﻿namespace GoogleMapsClient
 {
     /// <summary>
     /// Provides a price range enumeration

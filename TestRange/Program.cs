@@ -4,6 +4,13 @@ using Newtonsoft.Json;
 
 Console.WriteLine("Hello, World!");
 
+var dict = new Dictionary<SupportedLanguage, string>
+{
+    { SupportedLanguage.AF, "12" },
+    { SupportedLanguage.EL, "12" }
+};
+
+
 //var client = new GoogleMapsClient.GoogleMapsClient("asdfsaghfdghfdgaasdfsadf");
 
 //var bounds = new PlaceFindBoundsResponseModel();
