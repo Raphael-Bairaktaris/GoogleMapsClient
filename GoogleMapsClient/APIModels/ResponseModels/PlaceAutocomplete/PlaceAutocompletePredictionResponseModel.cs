@@ -50,7 +50,7 @@ namespace GoogleMapsClient
         {
             get => mDescription ?? string.Empty;
 
-            set => mDescription = value;    
+            set => mDescription = value;
         }
 
         /// <summary>
@@ -59,10 +59,10 @@ namespace GoogleMapsClient
         /// </summary>
         [AllowNull]
         [JsonProperty("matched_substrings")]
-        public IEnumerable<PlaceAutocompleteMatchedSubstringResponseModel> MatchedSubstrings 
-        { 
+        public IEnumerable<PlaceAutocompleteMatchedSubstringResponseModel> MatchedSubstrings
+        {
             get => mMatchedSubstrings ?? Enumerable.Empty<PlaceAutocompleteMatchedSubstringResponseModel>();
-            
+
             set => mMatchedSubstrings = value;
         }
 
@@ -78,7 +78,7 @@ namespace GoogleMapsClient
         public string StructuredFormat
         {
             get => mStructuredFormat ?? string.Empty;
-            
+
             set => mStructuredFormat = value;
         }
 

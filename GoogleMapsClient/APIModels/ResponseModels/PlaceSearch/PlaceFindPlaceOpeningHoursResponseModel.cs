@@ -47,7 +47,7 @@ namespace GoogleMapsClient
         /// </remarks>
         [AllowNull]
         [JsonProperty("periods")]
-        public IEnumerable<PlaceFindPlaceOpeningHoursPeriodResponseModel> Periods 
+        public IEnumerable<PlaceFindPlaceOpeningHoursPeriodResponseModel> Periods
         {
             get => mPeriods ?? Enumerable.Empty<PlaceFindPlaceOpeningHoursPeriodResponseModel>();
             set => mPeriods = value;
@@ -61,7 +61,7 @@ namespace GoogleMapsClient
         /// </remarks>
         [AllowNull]
         [JsonProperty("special_days")]
-        public IEnumerable<PlaceFindSpecialDayResponseModel> SpecialDays 
+        public IEnumerable<PlaceFindSpecialDayResponseModel> SpecialDays
         {
             get => mSpecialDays ?? Enumerable.Empty<PlaceFindSpecialDayResponseModel>();
             set => mSpecialDays = value;
@@ -72,9 +72,9 @@ namespace GoogleMapsClient
         /// </summary>
         [AllowNull]
         [JsonProperty("type")]
-        public string Type 
+        public string Type
         {
-            get => mType ?? string.Empty; 
+            get => mType ?? string.Empty;
             set => mType = value;
         }
 
@@ -83,8 +83,8 @@ namespace GoogleMapsClient
         /// </summary>
         [AllowNull]
         [JsonProperty("weekday_text")]
-        public IEnumerable<string> WeekdayText 
-        { 
+        public IEnumerable<string> WeekdayText
+        {
             get => mWeekdayText ?? Enumerable.Empty<string>();
             set => mWeekdayText = value;
         }
@@ -97,7 +97,7 @@ namespace GoogleMapsClient
         /// </summary>
         public PlaceFindPlaceOpeningHoursResponseModel()
         {
-            
+
         }
 
         #endregion

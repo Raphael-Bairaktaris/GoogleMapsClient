@@ -1,12 +1,5 @@
 ﻿using Newtonsoft.Json;
 
-using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Net.Http;
-using System.Threading.Tasks;
-
 namespace GoogleMapsClient
 {
     /// <summary>
@@ -37,7 +30,7 @@ namespace GoogleMapsClient
         /// </summary>
         public PlaceAutocompleteMatchedSubstringResponseModel()
         {
-            
+
         }
         #endregion
     }

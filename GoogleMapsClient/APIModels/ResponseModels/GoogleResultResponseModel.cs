@@ -30,7 +30,8 @@ namespace GoogleMapsClient
         #region Public 
 
         /// <summary>
-        /// 
+        /// May contain a set of attributions about this listing which must be 
+        /// displayed to the user (some listings may not have attribution).
         /// </summary>
         [JsonProperty("html_attributions")]
         public IEnumerable<string> HTMLAttributions
@@ -48,7 +49,7 @@ namespace GoogleMapsClient
         {
             get => mResults ?? Enumerable.Empty<T>();
 
-            set => mResults = value;    
+            set => mResults = value;
         }
 
         /// <summary>
@@ -59,7 +60,7 @@ namespace GoogleMapsClient
         {
             get => mStatus ?? string.Empty;
 
-            set => mStatus = value; 
+            set => mStatus = value;
         }
 
         #endregion
@@ -71,7 +72,7 @@ namespace GoogleMapsClient
         /// </summary>
         public GoogleResultResponseModel()
         {
-                
+
         }
 
         #endregion

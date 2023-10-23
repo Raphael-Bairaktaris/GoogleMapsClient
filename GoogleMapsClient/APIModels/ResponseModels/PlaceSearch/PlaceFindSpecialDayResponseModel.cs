@@ -36,7 +36,7 @@ namespace GoogleMapsClient
         /// </summary>
         public PlaceFindSpecialDayResponseModel()
         {
-            
+
         }
 
         #endregion

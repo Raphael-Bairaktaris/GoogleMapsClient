@@ -38,10 +38,10 @@ namespace GoogleMapsClient
         /// https://developers.google.com/maps/documentation/places/web-service/search-find-place#LatLngLiteral
         /// </remarks>
         [JsonProperty("southwest")]
-        public PlaceFindLatitudeLongitudeLiteralResponseModel? Southwest 
-        { 
+        public PlaceFindLatitudeLongitudeLiteralResponseModel? Southwest
+        {
             get => mSouthwest ??= new PlaceFindLatitudeLongitudeLiteralResponseModel();
-            
+
             set => mSouthwest = value;
         }
 
@@ -54,7 +54,7 @@ namespace GoogleMapsClient
         /// </summary>
         public PlaceFindBoundsResponseModel()
         {
-            
+
         }
 
         #endregion

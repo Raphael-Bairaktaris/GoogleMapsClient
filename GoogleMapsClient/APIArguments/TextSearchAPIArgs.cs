@@ -82,7 +82,7 @@ namespace GoogleMapsClient
         /// </summary>
         public TextSearchAPIArgs()
         {
-            
+
         }
 
         #endregion

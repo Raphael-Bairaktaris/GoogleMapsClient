@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json;
-
-namespace GoogleMapsClient
+﻿namespace GoogleMapsClient
 {
     /// <summary>
     /// Provides enumeration over the place types
@@ -180,7 +178,7 @@ namespace GoogleMapsClient
         /// <summary>
         /// Fire station
         /// </summary>
-        FireStation = 34, 
+        FireStation = 34,
 
         /// <summary>
         /// Flower shop
@@ -190,7 +188,7 @@ namespace GoogleMapsClient
         /// <summary>
         /// Funeral office
         /// </summary>
-        FuneralHome = 36, 
+        FuneralHome = 36,
 
         /// <summary>
         /// Furniture store
@@ -275,12 +273,12 @@ namespace GoogleMapsClient
         /// <summary>
         /// Locksmith
         /// </summary>
-        Locksmith =53,
+        Locksmith = 53,
 
         /// <summary>
         /// Lodging
         /// </summary>
-        Lodging =54,
+        Lodging = 54,
 
         /// <summary>
         /// Meal delivery
@@ -325,7 +323,7 @@ namespace GoogleMapsClient
         /// <summary>
         /// Painter
         /// </summary>
-        Painter  = 63,
+        Painter = 63,
 
         /// <summary>
         /// Park
@@ -360,7 +358,7 @@ namespace GoogleMapsClient
         /// <summary>
         /// Police
         /// </summary>
-        Police =70,
+        Police = 70,
 
         /// <summary>
         /// Post office
@@ -481,7 +479,7 @@ namespace GoogleMapsClient
         /// Veterinary care
         /// </summary>
         VeterinaryCare = 94,
-        
+
         /// <summary>
         /// Zoo
         /// </summary>

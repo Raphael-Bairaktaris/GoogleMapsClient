@@ -29,7 +29,7 @@
         /// </summary>
         /// <param name="circularRadius">The radius of the circular that is used when a circular based location search is performed.</param>
         /// <param name="circularCenter">The coordinates for the center of the circle when a circular based location search is performed.</param>
-        public LocationBiasInfo(double circularRadius, Coordinates circularCenter) : base(circularRadius, circularCenter) 
+        public LocationBiasInfo(double circularRadius, Coordinates circularCenter) : base(circularRadius, circularCenter)
         {
 
         }

@@ -32,8 +32,8 @@ namespace GoogleMapsClient
         /// </remarks>
         [AllowNull]
         [JsonProperty("open")]
-        public PlaceFindPlaceOpeningHoursPeriodDetailResponseModel Open 
-        { 
+        public PlaceFindPlaceOpeningHoursPeriodDetailResponseModel Open
+        {
             get => mOpen ??= new PlaceFindPlaceOpeningHoursPeriodDetailResponseModel();
             set => mOpen = value;
         }
@@ -46,7 +46,7 @@ namespace GoogleMapsClient
         /// </summary>
         [AllowNull]
         [JsonProperty("close")]
-        public PlaceFindPlaceOpeningHoursPeriodDetailResponseModel Close 
+        public PlaceFindPlaceOpeningHoursPeriodDetailResponseModel Close
         {
             get => mClose ??= new PlaceFindPlaceOpeningHoursPeriodDetailResponseModel();
             set => mClose = value;
@@ -61,7 +61,7 @@ namespace GoogleMapsClient
         /// </summary>
         public PlaceFindPlaceOpeningHoursPeriodResponseModel()
         {
-            
+
         }
 
         #endregion

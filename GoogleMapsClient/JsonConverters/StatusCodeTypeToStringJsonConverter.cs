@@ -23,7 +23,7 @@ namespace GoogleMapsClient
 
         /// <inheritdoc/>
         protected override IReadOnlyDictionary<StatusCodeType, string> GetMapper() => GoogleMapsClientConstants.StatusCodeTypeToStringMapper;
-        
+
         #endregion
     }
 }

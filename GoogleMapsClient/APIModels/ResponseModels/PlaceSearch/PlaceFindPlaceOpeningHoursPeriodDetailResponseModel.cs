@@ -14,7 +14,7 @@ namespace GoogleMapsClient
         /// starting on Sunday. For example, 2 means Tuesday.
         /// </summary>
         [JsonProperty("day")]
-        public DayOfWeek Day { get; set;}
+        public DayOfWeek Day { get; set; }
 
         /// <summary>
         /// May contain a time of day in 24-hour hhmm format. Values are 
@@ -30,7 +30,7 @@ namespace GoogleMapsClient
         [JsonProperty("date")]
         [JsonConverter(typeof(DateOnlyToStringJsonConverter))]
         public DateOnly? Date { get; set; }
-        
+
         /// <summary>
         /// True if a given period was truncated due to a seven-day cutoff, where the period starts
         /// before midnight on the date of the request and/or ends at or after midnight on the last day. 
@@ -48,7 +48,7 @@ namespace GoogleMapsClient
         /// </summary>
         public PlaceFindPlaceOpeningHoursPeriodDetailResponseModel()
         {
-            
+
         }
 
         #endregion

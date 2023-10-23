@@ -30,10 +30,10 @@ namespace GoogleMapsClient
         /// </summary>
         [AllowNull]
         [JsonProperty("language")]
-        public string Language 
+        public string Language
         {
             get => mLanguage ?? string.Empty;
-            
+
             set => mLanguage = value;
         }
 
@@ -42,11 +42,11 @@ namespace GoogleMapsClient
         /// </summary>
         [AllowNull]
         [JsonProperty("overview")]
-        public string Overview 
+        public string Overview
         {
             get => mOverview ?? string.Empty;
 
-            set => mOverview = value; 
+            set => mOverview = value;
         }
 
         #endregion
@@ -57,7 +57,7 @@ namespace GoogleMapsClient
         /// </summary>
         public PlaceFindEditorialSummaryResponseModel()
         {
-            
+
         }
 
         #endregion

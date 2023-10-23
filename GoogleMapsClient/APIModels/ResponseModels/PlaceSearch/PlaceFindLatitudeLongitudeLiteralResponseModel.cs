@@ -30,7 +30,7 @@ namespace GoogleMapsClient
         /// </summary>
         public PlaceFindLatitudeLongitudeLiteralResponseModel()
         {
-            
+
         }
 
         #endregion

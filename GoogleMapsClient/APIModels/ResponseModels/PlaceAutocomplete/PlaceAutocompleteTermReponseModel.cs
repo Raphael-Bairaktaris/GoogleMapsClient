@@ -46,7 +46,7 @@ namespace GoogleMapsClient
         /// </summary>
         public PlaceAutocompleteTermReponseModel()
         {
-                
+
         }
 
         #endregion

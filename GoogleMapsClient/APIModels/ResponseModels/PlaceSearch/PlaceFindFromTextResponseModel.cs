@@ -35,8 +35,8 @@ namespace GoogleMapsClient
         /// https://developers.google.com/maps/documentation/places/web-service/search-find-place#AddressComponent
         /// </remarks>
         [JsonProperty("candidates")]
-        public IEnumerable<PlaceFindAttributesResponseModel> Candidates 
-        { 
+        public IEnumerable<PlaceFindAttributesResponseModel> Candidates
+        {
             get => mCandidates ?? Enumerable.Empty<PlaceFindAttributesResponseModel>();
 
             set => mCandidates = value;
@@ -48,8 +48,8 @@ namespace GoogleMapsClient
         /// This field is not always returned, and its content is subject to change.
         /// </summary>
         [JsonProperty("error_message")]
-        public string ErrorMessage 
-        { 
+        public string ErrorMessage
+        {
             get => mErrorMessage ?? string.Empty;
 
             set => mErrorMessage = value;
@@ -61,8 +61,8 @@ namespace GoogleMapsClient
         /// and its content is subject to change.
         /// </summary>
         [JsonProperty("info_messages")]
-        public string InfoMessages 
-        { 
+        public string InfoMessages
+        {
             get => mInfoMessages ?? string.Empty;
             set => mInfoMessages = value;
         }

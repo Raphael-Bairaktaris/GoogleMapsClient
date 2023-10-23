@@ -14,7 +14,7 @@ namespace GoogleMapsClient
         /// </summary>
         public TimeOnlyToStringJsonConveter()
         {
-                
+
         }
 
         #endregion
@@ -35,7 +35,7 @@ namespace GoogleMapsClient
         /// <inheritdoc/>
         public override void WriteJson(JsonWriter writer, TimeOnly value, JsonSerializer serializer)
         {
-            writer.WriteValue(value.Hour.ToString() + value.Minute.ToString());  
+            writer.WriteValue(value.Hour.ToString() + value.Minute.ToString());
         }
 
         #endregion

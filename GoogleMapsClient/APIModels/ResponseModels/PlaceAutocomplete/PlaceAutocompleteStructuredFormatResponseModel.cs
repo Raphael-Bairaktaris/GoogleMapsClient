@@ -52,7 +52,7 @@ namespace GoogleMapsClient
         /// </summary>
         [AllowNull]
         [JsonProperty("main_text_matched_substrings")]
-        public IEnumerable<PlaceAutocompleteMatchedSubstringResponseModel> MainTextMatchedSubstrings 
+        public IEnumerable<PlaceAutocompleteMatchedSubstringResponseModel> MainTextMatchedSubstrings
         {
             get => mMainTextMatchedSubstrings ?? Enumerable.Empty<PlaceAutocompleteMatchedSubstringResponseModel>();
 
@@ -64,8 +64,8 @@ namespace GoogleMapsClient
         /// </summary>
         [AllowNull]
         [JsonProperty("secondary_text")]
-        public string SecondaryText 
-        { 
+        public string SecondaryText
+        {
             get => mSecondaryText ?? string.Empty;
 
             set => mSecondaryText = value;
@@ -95,7 +95,7 @@ namespace GoogleMapsClient
         /// </summary>
         public PlaceAutocompleteStructuredFormatResponseModel()
         {
-               
+
         }
 
         #endregion

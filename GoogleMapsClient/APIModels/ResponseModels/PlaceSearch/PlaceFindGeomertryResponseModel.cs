@@ -27,7 +27,7 @@ namespace GoogleMapsClient
         /// https://developers.google.com/maps/documentation/places/web-service/search-find-place#LatLngLiteral
         /// </remarks>
         [JsonProperty("location")]
-        public PlaceFindLatitudeLongitudeLiteralResponseModel? Location 
+        public PlaceFindLatitudeLongitudeLiteralResponseModel? Location
         {
             get => mLocation ??= new PlaceFindLatitudeLongitudeLiteralResponseModel();
 
@@ -38,10 +38,10 @@ namespace GoogleMapsClient
         /// https://developers.google.com/maps/documentation/places/web-service/search-find-place#Bounds
         /// </remarks>
         [JsonProperty("viewport")]
-        public PlaceFindBoundsResponseModel? Viewport 
+        public PlaceFindBoundsResponseModel? Viewport
         {
             get => mViewport ??= new PlaceFindBoundsResponseModel();
-            
+
             set => mViewport = value;
         }
 
@@ -54,7 +54,7 @@ namespace GoogleMapsClient
         /// </summary>
         public PlaceFindGeomertryResponseModel()
         {
-            
+
         }
 
         #endregion
@@ -62,7 +62,7 @@ namespace GoogleMapsClient
         #region Public Methods 
 
         /// <inheritdoc/>
-        public override string ToString() => $"location {Location}, viewport {Viewport}"; 
+        public override string ToString() => $"location {Location}, viewport {Viewport}";
 
         #endregion
     }

@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json;
 using System.Diagnostics.CodeAnalysis;
-using System.Threading.Tasks.Dataflow;
 
 namespace GoogleMapsClient
 {
@@ -62,7 +61,7 @@ namespace GoogleMapsClient
         /// </summary>
         public PlaceQueryAutocompleteResponseModel()
         {
-            
+
         }
 
         #endregion

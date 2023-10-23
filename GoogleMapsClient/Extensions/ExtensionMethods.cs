@@ -149,7 +149,7 @@ namespace GoogleMapsClient
         /// </summary>
         /// <param name="dto">The date time offset</param>
         /// <returns></returns>
-        public static string ToISO8601String(this DateTimeOffset dto) 
+        public static string ToISO8601String(this DateTimeOffset dto)
             => dto.LocalDateTime.ToString("o", CultureInfo.InvariantCulture);
 
         /// <summary>
@@ -165,7 +165,7 @@ namespace GoogleMapsClient
         /// </summary>
         /// <param name="dt">The date time</param>
         /// <returns></returns>
-        public static string ToISO8601String(this DateTime dt) 
+        public static string ToISO8601String(this DateTime dt)
             => dt.ToString("o", CultureInfo.InvariantCulture);
 
         /// <summary>

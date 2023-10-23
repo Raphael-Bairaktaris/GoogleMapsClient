@@ -59,7 +59,7 @@
         /// serves_dinner, serves_lunch, serves_vegetarian_food, serves_wine, takeout, user_ratings_total.
         /// </summary>
         [ArgumentName("atmosphere")]
-        public AtmosphereCategoryType? Atmosphere {  get; set; }
+        public AtmosphereCategoryType? Atmosphere { get; set; }
 
         /// <summary>
         /// List of supported languages
@@ -114,7 +114,7 @@
         /// </param>
         public PlaceFindAPIArgs(string input) : this(input, "textquery")
         {
-                
+
         }
 
         #endregion

@@ -34,7 +34,7 @@ namespace GoogleMapsClient
         /// </summary>
         [JsonProperty("long_name")]
         public string LongName
-        { 
+        {
             get => mLongName ?? string.Empty;
 
             set => mLongName = value;
@@ -48,10 +48,10 @@ namespace GoogleMapsClient
         /// "Alaska" and a short_name of "AK" using the 2-letter postal abbreviation.
         /// </example>
         [JsonProperty("short_name")]
-        public string ShortName 
-        { 
+        public string ShortName
+        {
             get => mShortName ?? string.Empty;
-            
+
             set => mShortName = value;
         }
 
@@ -74,7 +74,7 @@ namespace GoogleMapsClient
         /// </summary>
         public PlaceFindAddressComponentResponseModel()
         {
-      
+
         }
 
         #endregion

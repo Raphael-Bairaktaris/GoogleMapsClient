@@ -27,8 +27,8 @@ namespace GoogleMapsClient
         /// May contain a set of attributions about this listing which must be displayed to the user (some listings may not have attribution).
         /// </summary>
         [JsonProperty("html_attributions")]
-        public IEnumerable<string> HTMLAttributions 
-        { 
+        public IEnumerable<string> HTMLAttributions
+        {
             get => mHTMLAttributions ?? Enumerable.Empty<string>();
             set => mHTMLAttributions = value;
         }
@@ -38,7 +38,7 @@ namespace GoogleMapsClient
         /// </summary>
         /// <remarks>https://developers.google.com/maps/documentation/places/web-service/search-nearby#Place</remarks>
         [JsonProperty("results")]
-        public IEnumerable<PlaceFindNearbySearchAttributesResponseModel> Results 
+        public IEnumerable<PlaceFindNearbySearchAttributesResponseModel> Results
         {
             get => mResults ?? Enumerable.Empty<PlaceFindNearbySearchAttributesResponseModel>();
             set => mResults = value;
@@ -70,7 +70,7 @@ namespace GoogleMapsClient
         /// The maximum number of results that can be returned is 60. There is a short delay between when a next_page_token is issued, and when it will become valid.
         /// </summary>
         [JsonProperty("next_page_token")]
-        public string? NextPageToken { get; set; } 
+        public string? NextPageToken { get; set; }
 
         #endregion
 
@@ -81,7 +81,7 @@ namespace GoogleMapsClient
         /// </summary>
         public PlaceSearchNearbySearchResponseModel()
         {
-            
+
         }
 
         #endregion

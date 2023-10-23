@@ -1,8 +1,7 @@
 ﻿using Newtonsoft.Json;
-using System.Diagnostics.CodeAnalysis;
 
 namespace GoogleMapsClient
-{ 
+{
     /// <summary>
     /// Represents a place review response
     /// </summary>
@@ -34,7 +33,7 @@ namespace GoogleMapsClient
         /// Anonymous reviews are attributed to "A Google user".
         /// </summary>
         [JsonProperty("author_name")]
-        public string? AuthorName 
+        public string? AuthorName
         {
             get => mAuthorName ?? string.Empty;
 
@@ -109,8 +108,8 @@ namespace GoogleMapsClient
         /// For example, the entity reference &amp; may represent an ampersand character.
         /// </example>
         [JsonProperty("text")]
-        public string? Text 
-        { 
+        public string? Text
+        {
             get => mText ?? string.Empty;
 
             set => mText = value;
@@ -135,7 +134,7 @@ namespace GoogleMapsClient
         /// </summary>
         public PlaceFindReviewResponseModel()
         {
-            
+
         }
 
         #endregion

@@ -177,7 +177,7 @@ namespace GoogleMapsClient
                     {
                         var keyValuePairValueProperty = default(PropertyInfo);
                         var keyValuePairKeyProperty = default(PropertyInfo);
-                        foreach(var keyValuePair in argumentInfo.Mapper)
+                        foreach (var keyValuePair in argumentInfo.Mapper)
                         {
                             if (keyValuePairValueProperty is null || keyValuePairKeyProperty is null)
                             {

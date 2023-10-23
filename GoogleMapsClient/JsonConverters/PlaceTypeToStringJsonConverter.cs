@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System.Collections.Immutable;
 
 namespace GoogleMapsClient
 {
@@ -25,7 +24,7 @@ namespace GoogleMapsClient
 
         /// <inheritdoc/>
         protected override IReadOnlyDictionary<PlaceType, string> GetMapper() => GoogleMapsClientConstants.PlaceTypeToStringMapper;
-        
+
         #endregion
     }
 }

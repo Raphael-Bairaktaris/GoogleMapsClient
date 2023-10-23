@@ -1,8 +1,4 @@
 ﻿using Microsoft.AspNetCore.WebUtilities;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
-using System.Net.Http.Headers;
-using System.Reflection;
 
 namespace GoogleMapsClient
 {
@@ -14,7 +10,7 @@ namespace GoogleMapsClient
         #region Public Properties
 
         /// <summary>
-        /// 
+        /// The API key
         /// </summary>
         public string APIKey { get; }
 
@@ -41,7 +37,7 @@ namespace GoogleMapsClient
         /// </summary>
         /// <param name="args"></param>
         /// <returns></returns>
-        public Task<WebRequestResult<GoogleResultResponseModel<PlaceFindAttributesResponseModel>>> TextSearchAsync(TextSearchAPIArgs args) 
+        public Task<WebRequestResult<GoogleResultResponseModel<PlaceFindAttributesResponseModel>>> TextSearchAsync(TextSearchAPIArgs args)
             => WebRequestsClient.Instance.GetAsync<GoogleResultResponseModel<PlaceFindAttributesResponseModel>>(GetRouteWithAPIKey(RouteHelpers.AttachParameters(GoogleMapsAPIRoutes.TextSearchAPIRoute, args)), null);
 
         /// <summary>
@@ -49,7 +45,7 @@ namespace GoogleMapsClient
         /// </summary>
         /// <param name="args"></param>
         /// <returns></returns>
-        public Task<WebRequestResult<PlaceSearchNearbySearchResponseModel>> NearbySearchAsync(NearbySearchAPIArgs args) 
+        public Task<WebRequestResult<PlaceSearchNearbySearchResponseModel>> NearbySearchAsync(NearbySearchAPIArgs args)
             => WebRequestsClient.Instance.GetAsync<PlaceSearchNearbySearchResponseModel>(GetRouteWithAPIKey(RouteHelpers.AttachParameters(GoogleMapsAPIRoutes.NearbySearchAPIRoute, args)), null);
 
         /// <summary>
@@ -57,7 +53,7 @@ namespace GoogleMapsClient
         /// </summary>
         /// <param name="args"></param>
         /// <returns></returns>
-        public Task<WebRequestResult<GoogleResultResponseModel<PlaceAutocompleteResponseModel>>> PlaceAutoCompletePredictionAsync(PlaceAutocompletePredictionAPIArgs args) 
+        public Task<WebRequestResult<GoogleResultResponseModel<PlaceAutocompleteResponseModel>>> PlaceAutoCompletePredictionAsync(PlaceAutocompletePredictionAPIArgs args)
             => WebRequestsClient.Instance.GetAsync<GoogleResultResponseModel<PlaceAutocompleteResponseModel>>(GetRouteWithAPIKey(RouteHelpers.AttachParameters(GoogleMapsAPIRoutes.PlaceAutoCompleteAPIRoute, args)), null);
 
         /// <summary>
@@ -65,7 +61,7 @@ namespace GoogleMapsClient
         /// </summary>
         /// <param name="args"></param>
         /// <returns></returns>
-        public Task<WebRequestResult<PlaceDetailResponseModel>> PlaceDetailAsync(PlaceDetailAPIArgs args) 
+        public Task<WebRequestResult<PlaceDetailResponseModel>> PlaceDetailAsync(PlaceDetailAPIArgs args)
             => WebRequestsClient.Instance.GetAsync<PlaceDetailResponseModel>(GetRouteWithAPIKey(RouteHelpers.AttachParameters(GoogleMapsAPIRoutes.PlaceDetailsAPIRoute, args)), null);
 
         /// <summary>
@@ -73,7 +69,7 @@ namespace GoogleMapsClient
         /// </summary>
         /// <param name="args"></param>
         /// <returns></returns>
-        public Task<WebRequestResult<GoogleResultResponseModel<PlaceQueryAutocompleteResponseModel>>> PlaceQueryAutocompleteAsync(QueryAutocompleteAPIArgs args) 
+        public Task<WebRequestResult<GoogleResultResponseModel<PlaceQueryAutocompleteResponseModel>>> PlaceQueryAutocompleteAsync(QueryAutocompleteAPIArgs args)
             => WebRequestsClient.Instance.GetAsync<GoogleResultResponseModel<PlaceQueryAutocompleteResponseModel>>(GetRouteWithAPIKey(RouteHelpers.AttachParameters(GoogleMapsAPIRoutes.QueryAutocompleteAPIRoute, args)), null);
 
         /// <summary>
@@ -81,7 +77,7 @@ namespace GoogleMapsClient
         /// </summary>
         /// <param name="args"></param>
         /// <returns></returns>
-        public Task<WebRequestResult<GoogleResultResponseModel<PlaceFindAttributesResponseModel>>> PlaceFindAsync(PlaceFindAPIArgs args) 
+        public Task<WebRequestResult<GoogleResultResponseModel<PlaceFindAttributesResponseModel>>> PlaceFindAsync(PlaceFindAPIArgs args)
             => WebRequestsClient.Instance.GetAsync<GoogleResultResponseModel<PlaceFindAttributesResponseModel>>(GetRouteWithAPIKey(RouteHelpers.AttachParameters(GoogleMapsAPIRoutes.FindPlaceAPIRoute, args)), null);
 
         #endregion

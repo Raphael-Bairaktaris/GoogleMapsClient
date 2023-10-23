@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GoogleMapsClient
+﻿namespace GoogleMapsClient
 {
     /// <summary>
     /// Provides enumeration of atmosphere category
@@ -19,7 +13,7 @@ namespace GoogleMapsClient
         /// <summary>
         /// Delivery
         /// </summary>
-        Delivery =1,
+        Delivery = 1,
 
         /// <summary>
         /// Dine in

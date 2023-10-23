@@ -90,7 +90,7 @@ namespace GoogleMapsClient
             else if (ShouldUseAddressType)
                 return GoogleMapsClientConstants.AddressTypeToStringMapper[AddressType.Value];
 
-            return string.Empty ;
+            return string.Empty;
         }
 
         #endregion

@@ -69,7 +69,7 @@ namespace GoogleMapsClient
         /// </summary>
         public PlacePhotoResponseModel()
         {
-            
+
         }
 
         #endregion

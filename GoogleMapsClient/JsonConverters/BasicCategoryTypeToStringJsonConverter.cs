@@ -14,7 +14,7 @@ namespace GoogleMapsClient
         /// </summary>
         public BasicCategoryTypeToStringJsonConverter()
         {
-            
+
         }
 
         #endregion

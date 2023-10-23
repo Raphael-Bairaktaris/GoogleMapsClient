@@ -1,10 +1,5 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GoogleMapsClient
 {
@@ -47,7 +42,7 @@ namespace GoogleMapsClient
         /// </summary>
         [AllowNull]
         [JsonProperty("predictions")]
-        public IEnumerable<PlaceAutocompletePredictionResponseModel> Predictions 
+        public IEnumerable<PlaceAutocompletePredictionResponseModel> Predictions
         {
             get => mPredictions ?? Enumerable.Empty<PlaceAutocompletePredictionResponseModel>();
 
@@ -77,10 +72,10 @@ namespace GoogleMapsClient
         /// </summary>
         [AllowNull]
         [JsonProperty("error_message")]
-        public string ErrorMessage 
-        { 
+        public string ErrorMessage
+        {
             get => mErrorMessage ?? string.Empty;
-            
+
             set => mErrorMessage = value;
         }
 
@@ -91,10 +86,10 @@ namespace GoogleMapsClient
         /// </summary>
         [AllowNull]
         [JsonProperty("info_messages")]
-        public string InfoMessages 
-        { 
+        public string InfoMessages
+        {
             get => mInfoMessages ?? string.Empty;
-            
+
             set => mInfoMessages = value;
         }
 
@@ -107,7 +102,7 @@ namespace GoogleMapsClient
         /// </summary>
         public PlaceAutocompleteResponseModel()
         {
-            
+
         }
 
         #endregion

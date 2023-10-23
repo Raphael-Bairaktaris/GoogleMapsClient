@@ -23,7 +23,7 @@ namespace GoogleMapsClient
         /// </summary>
         public DateOnlyToStringJsonConverter()
         {
-            
+
         }
 
         #endregion
@@ -31,11 +31,11 @@ namespace GoogleMapsClient
         #region Public Methods
 
         /// <inheritdoc/>
-        public override DateOnly ReadJson(JsonReader reader, Type objectType, DateOnly existingValue, bool hasExistingValue, JsonSerializer serializer) 
+        public override DateOnly ReadJson(JsonReader reader, Type objectType, DateOnly existingValue, bool hasExistingValue, JsonSerializer serializer)
             => DateOnly.ParseExact(serializer.Deserialize<string>(reader)!, DateFormat);
 
         /// <inheritdoc/>
-        public override void WriteJson(JsonWriter writer, DateOnly value, JsonSerializer serializer) 
+        public override void WriteJson(JsonWriter writer, DateOnly value, JsonSerializer serializer)
             => writer.WriteValue(value.ToString(DateFormat));
 
         #endregion

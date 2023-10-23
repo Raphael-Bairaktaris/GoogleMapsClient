@@ -15,7 +15,7 @@ namespace GoogleMapsClient
         /// </summary>
         public BaseEnumJsonConverter()
         {
-                
+
         }
 
         #endregion

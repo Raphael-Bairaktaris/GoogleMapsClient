@@ -46,8 +46,8 @@ namespace GoogleMapsClient
         /// is not available.
         /// </summary>
         [JsonProperty("compounde_code")]
-        public string CompoundCode 
-        { 
+        public string CompoundCode
+        {
             get => mCompoundCode ?? string.Empty;
 
             set => mCompoundCode = value;
@@ -62,7 +62,7 @@ namespace GoogleMapsClient
         /// </summary>
         public PlaceFindPlusCodeResponseModel()
         {
-            
+
         }
 
         #endregion

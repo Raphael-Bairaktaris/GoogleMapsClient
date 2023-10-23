@@ -33,7 +33,7 @@ namespace GoogleMapsClient
         /// displayed to the user (some listings may not have attribution).
         /// </summary>
         [JsonProperty("html_attributions")]
-        public IEnumerable<string> HtmlAtributions 
+        public IEnumerable<string> HtmlAtributions
         {
             get => mHtmlAttributions ?? Enumerable.Empty<string>();
 
@@ -66,7 +66,7 @@ namespace GoogleMapsClient
         /// is subject to change.
         /// </summary>
         [JsonProperty("info_messages")]
-        public string? InfoMessages 
+        public string? InfoMessages
         {
             get => mInfoMessages ?? string.Empty;
 
@@ -82,7 +82,7 @@ namespace GoogleMapsClient
         /// </summary>
         public PlaceDetailResponseModel()
         {
-            
+
         }
 
         #endregion

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GoogleMapsClient
+﻿namespace GoogleMapsClient
 {
     /// <summary>
     /// Provides enumeration of contact category
@@ -20,7 +14,7 @@ namespace GoogleMapsClient
         /// Formatted phone number
         /// </summary>
         FormattedPhoneNumber = 1,
-        
+
         /// <summary>
         /// Internationa phone number
         /// </summary>

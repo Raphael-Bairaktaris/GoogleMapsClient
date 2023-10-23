@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GoogleMapsClient
-{ 
+﻿namespace GoogleMapsClient
+{
     /// <summary>
     /// Provides enumeration of status code type
     /// </summary>
@@ -63,6 +57,6 @@ namespace GoogleMapsClient
         /// <summary>
         /// Indicating an unknown error.
         /// </summary>
-        UnknownError =5,
+        UnknownError = 5,
     }
 }
