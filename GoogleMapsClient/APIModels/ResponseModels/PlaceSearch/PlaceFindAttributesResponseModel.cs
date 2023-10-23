@@ -165,8 +165,8 @@ namespace GoogleMapsClient
         /// https://developers.google.com/maps/documentation/places/web-service/search-find-place#PlaceOpeningHours
         /// </remarks>
         [JsonProperty("current_opening_hours")]
-        public PlaceFindPlaceOpeningHoursResponseModel? CurrentOpeningHours 
-        { 
+        public PlaceFindPlaceOpeningHoursResponseModel? CurrentOpeningHours
+        {
             get => mCurrentOpeningHours ??= new PlaceFindPlaceOpeningHoursResponseModel();
             set => mCurrentOpeningHours = value;
         }
@@ -192,8 +192,8 @@ namespace GoogleMapsClient
         /// https://developers.google.com/maps/documentation/places/web-service/search-find-place#PlaceEditorialSummary
         /// </remarks>
         [JsonProperty("editorial_summary")]
-        public PlaceFindEditorialSummaryResponseModel? EditorialSummary 
-        { 
+        public PlaceFindEditorialSummaryResponseModel? EditorialSummary
+        {
             get => mEditorialSummary ??= new PlaceFindEditorialSummaryResponseModel();
             set => mEditorialSummary = value;
         }
@@ -301,8 +301,8 @@ namespace GoogleMapsClient
         /// </remarks>
         [AllowNull]
         [JsonProperty("opening_hours")]
-        public PlaceFindPlaceOpeningHoursResponseModel OpeningHours 
-        { 
+        public PlaceFindPlaceOpeningHoursResponseModel OpeningHours
+        {
             get => mOpeningHours ??= new PlaceFindPlaceOpeningHoursResponseModel();
             set => mOpeningHours = value;
         }
@@ -343,9 +343,9 @@ namespace GoogleMapsClient
         /// https://developers.google.com/maps/documentation/places/web-service/search-find-place#PlusCode
         /// </remarks>
         [JsonProperty("plus_code")]
-        public PlaceFindPlusCodeResponseModel? PlusCode 
+        public PlaceFindPlusCodeResponseModel? PlusCode
         {
-            get => mPlusCode ??= new PlaceFindPlusCodeResponseModel(); 
+            get => mPlusCode ??= new PlaceFindPlusCodeResponseModel();
             set => mPlusCode = value;
         }
 
@@ -390,7 +390,7 @@ namespace GoogleMapsClient
         ///</remarks>
         [AllowNull]
         [JsonProperty("reviews")]
-        public IEnumerable<PlaceFindReviewResponseModel> Reviews 
+        public IEnumerable<PlaceFindReviewResponseModel> Reviews
         {
             get => mReviews ?? Enumerable.Empty<PlaceFindReviewResponseModel>();
             set => mReviews = value;
@@ -408,7 +408,7 @@ namespace GoogleMapsClient
         /// https://developers.google.com/maps/documentation/places/web-service/search-find-place#PlaceOpeningHours
         /// </remarks>
         [JsonProperty("secondary_opening_hours")]
-        public IEnumerable<PlaceFindPlaceOpeningHoursResponseModel>? SecondaryOpeningHours 
+        public IEnumerable<PlaceFindPlaceOpeningHoursResponseModel>? SecondaryOpeningHours
         {
             get => mSecondaryOpeningHours ?? Enumerable.Empty<PlaceFindPlaceOpeningHoursResponseModel>();
             set => mSecondaryOpeningHours = value;
@@ -429,6 +429,7 @@ namespace GoogleMapsClient
         /// <summary>
         /// Specifies if the place serves brunch.
         /// </summary>
+        [JsonProperty("serves_brunch")]
         public bool? ServesBrunch { get; set; }
 
         /// <summary>
@@ -523,7 +524,7 @@ namespace GoogleMapsClient
         /// </summary>
         [JsonProperty("wheelchair_accessible_entrance")]
         public bool? WheelchairAccessibleEntrance { get; set; }
-        
+
         #endregion
 
         #region Constructors
@@ -533,7 +534,7 @@ namespace GoogleMapsClient
         /// </summary>
         public PlaceFindAttributesResponseModel()
         {
-            
+
         }
 
         #endregion

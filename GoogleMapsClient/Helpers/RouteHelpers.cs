@@ -1,12 +1,6 @@
 ﻿using Microsoft.AspNetCore.WebUtilities;
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Data.SqlTypes;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GoogleMapsClient
 {

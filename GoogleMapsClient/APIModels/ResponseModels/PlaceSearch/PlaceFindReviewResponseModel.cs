@@ -81,7 +81,7 @@ namespace GoogleMapsClient
         /// and so on.This field is empty if there is only a rating with no review text.
         /// </example>
         [JsonProperty("language")]
-        public SupportedLanguage? Language { get; set; }
+        public string? Language { get; set; }
 
         /// <summary>
         /// An IETF language code indicating the original language of the review. If the review 
@@ -93,7 +93,7 @@ namespace GoogleMapsClient
         /// and so on.This field is empty if there is only a rating with no review text.
         /// </example>
         [JsonProperty("original_language")]
-        public SupportedLanguage? OriginalLanguage { get; set; }
+        public string? OriginalLanguage { get; set; }
 
         /// <summary>
         /// The URL to the user's photo, if available

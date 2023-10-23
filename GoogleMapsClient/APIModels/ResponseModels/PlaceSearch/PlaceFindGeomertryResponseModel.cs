@@ -58,5 +58,12 @@ namespace GoogleMapsClient
         }
 
         #endregion
+
+        #region Public Methods 
+
+        /// <inheritdoc/>
+        public override string ToString() => $"location {Location}, viewport {Viewport}"; 
+
+        #endregion
     }
 }

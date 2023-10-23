@@ -49,8 +49,8 @@ namespace GoogleMapsClient
         /// </summary>
         /// <param name="args"></param>
         /// <returns></returns>
-        public Task<WebRequestResult<GoogleResultResponseModel<PlaceSearchNearbySearchResponseModel>>> NearbySearchAsync(NearbySearchAPIArgs args) 
-            => WebRequestsClient.Instance.GetAsync<GoogleResultResponseModel<PlaceSearchNearbySearchResponseModel>>(GetRouteWithAPIKey(RouteHelpers.AttachParameters(GoogleMapsAPIRoutes.NearbySearchAPIRoute, args)), null);
+        public Task<WebRequestResult<PlaceSearchNearbySearchResponseModel>> NearbySearchAsync(NearbySearchAPIArgs args) 
+            => WebRequestsClient.Instance.GetAsync<PlaceSearchNearbySearchResponseModel>(GetRouteWithAPIKey(RouteHelpers.AttachParameters(GoogleMapsAPIRoutes.NearbySearchAPIRoute, args)), null);
 
         /// <summary>
         /// 

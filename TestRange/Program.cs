@@ -31,12 +31,17 @@ var apiKey = File.ReadAllText(Path.Combine(Environment.GetFolderPath(Environment
 
 var client = new GoogleMapsClient.GoogleMapsClient(apiKey);
 
-var placesResult = await client.TextSearchAsync(new TextSearchAPIArgs() 
+var placesResult = await client.NearbySearchAsync(new NearbySearchAPIArgs(new Coordinates(40.629269, 22.947412), 1500)
 {
-    Query = "εργον αγορα θεσσαλονικη"
+
+    Keyword = "Kitchen bar"
+
 });
 
-var detailedResult = await client.PlaceDetailAsync(new PlaceDetailAPIArgs(placesResult.Result.Results.First().PlaceId));
+//var placesTextResult = await client.NearbySearchAsync(new NearbySearchAPIArgs()
+//{
+//    Query = "Kitchen bar thessaloniki"
+//});
 
 var h = new PlacePhotoAPIArgs("asdasd", false, 10);
 

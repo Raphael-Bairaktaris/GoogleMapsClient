@@ -1331,7 +1331,7 @@
         </member>
         <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.UserRatingTotal">
             <summary>
-            The total numver  of reviews, with or without text, for this place.
+            The total number of reviews, with or without text, for this place.
             </summary>
         </member>
         <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.UTCOffset">
@@ -1510,6 +1510,9 @@
             <summary>
             Default Constructor
             </summary>
+        </member>
+        <member name="M:GoogleMapsClient.PlaceFindGeomertryResponseModel.ToString">
+            <inheritdoc/>
         </member>
         <member name="T:GoogleMapsClient.PlaceFindLatitudeLongitudeLiteralResponseModel">
             <summary>
@@ -1833,6 +1836,204 @@
             </summary>
         </member>
         <member name="M:GoogleMapsClient.PlaceFindSpecialDayResponseModel.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="T:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel">
+            <summary>
+            Attributes describing a place. Not all attributes will be available for all place types.
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.mBusinessStatus">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.BusinessStatus"/> property
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.mGeometry">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.Geometry"/> property
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.mIcon">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.Icon"/> property
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.mIconBackgroundColor">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.IconBackgroundColor"/> property
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.mName">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.Name"/> property
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.mPlaceId">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.PlaceId"/> property
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.mPlusCode">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.PlusCode"/> property
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.mReviews">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.Reviews"/> property
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.mVicinity">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.Vicinity"/> property
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.mTypes">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.Types"/> property
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.BusinessStatus">
+             <summary>
+             Indicates the operational status of the place, 
+             if it is a business. If no data exists, business_status is not returned.
+            The allowed values include: OPERATIONAL, CLOSED_TEMPORARILY, and CLOSED_PERMANENTLY
+             </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.Geometry">
+            <summary>
+            Contains the location and viewport for the location
+            </summary>
+            <remarks>
+            https://developers.google.com/maps/documentation/places/web-service/search-find-place#Geometry
+            </remarks>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.Icon">
+            <summary>
+            Contains the URL of a suggested icon which may be displayed to the user when
+            indicating this result on a map.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.IconBackgroundColor">
+            <summary>
+            Contains the default HEX color colde for the place's category.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.IconMaskBaseUri">
+            <summary>
+            Contains the URL of a recommended icon, minus the .svg or .png file type extension.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.Name">
+            <summary>
+            Contains the human-readable name for the returned result. For establishment results,
+            this is usually the canonicalized business name
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.OpenNow">
+            <summary>
+            Indicates if the shop is open now.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.Photo">
+            <summary>
+            An array of photo objects, each containing a reference to an image. 
+            A request may return up to ten photos.
+            </summary>
+            <remarks>
+            https://developers.google.com/maps/documentation/places/web-service/search-find-place#PlacePhoto
+            </remarks>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.PlaceId">
+            <summary>
+            A textual identifier that uniquely identifies a place. To retrieve information
+            about the place, pass this identifier in the place_id field of a Places API request.
+            </summary>
+            <remarks>
+            https://developers.google.com/maps/documentation/places/web-service/place-id
+            </remarks>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.PlusCode">
+            <summary>
+            An encoded location reference, derived from latitude and longitude coordinates, 
+            that represents an area: 1/8000th of a degree by 1/8000th of a degree 
+            (about 14m x 14m at the equator) or smaller. Plus codes can be used as a replacement 
+            for street addresses in places where they do not exist (where buildings are not numbered 
+            or streets are not named)
+            </summary>
+            <remarks>
+            https://en.wikipedia.org/wiki/Open_Location_Code
+            https://developers.google.com/maps/documentation/places/web-service/search-find-place#PlusCode
+            </remarks>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.PriceLevel">
+            <summary>
+            The price level of the place, on a scale of 0 to 4. The exact amount indicated by a specific value 
+            will vary from region to region. Price levels are interpreted as follows:
+            <list type="bullet|number|table">
+            <item>
+                <descriptionm>Free</descriptionm>    
+            </item>
+            <item>
+                <description>Inexpensive</description>
+            </item>
+            <item>
+                <description>Expensive</description>
+            </item>
+            <item>
+                <description>Very expensive</description>
+            </item>
+            </list>
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.Rating">
+            <summary>
+            Contains the place's rating from 1.0 to 5.0 based on user reviews.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.Reservable">
+            <summary>
+            Specifies if the place supports reservations.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.Reviews">
+             <summary>
+             An array of up to five reviews. By default the reviews are sorted in order of relevance.
+             </summary>
+            <remarks>
+             https://developers.google.com/maps/documentation/places/web-service/search-find-place#PlaceReview
+            </remarks>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.Types">
+            <summary>
+            Contains an array of feature types describing the given result.
+            </summary>
+            <remarks>
+            https://developers.google.com/maps/documentation/places/web-service/supported_types#table2
+            </remarks>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.Url">
+            <summary>
+            Contains the URL of the official Google page for this place. This will be the Google-owned page
+            that contains the best available information about the place. Applications must link to or embed 
+            this page on any screen that shows detailed results about the place to the user.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.UserRatingTotal">
+            <summary>
+            The total number of reviews, with or without text, for this place.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.Vicinity">
+            <summary>
+            For establishment (types:["establishment", ...]) results only, the vicinity field contains a 
+            simplified address for the place, including the street name, street number, and locality, 
+            but not the province/state, postal code, or country
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.#ctor">
             <summary>
             Default Constructor
             </summary>
@@ -3218,6 +3419,19 @@
             The lowest rating reviews.
             </summary>
         </member>
+        <member name="T:GoogleMapsClient.DataModels.Enums.PriceRangeTypeToStringJsonConverter">
+            <summary>
+            The <see cref="T:Newtonsoft.Json.JsonConverter`1"/> that converts a <see cref="T:GoogleMapsClient.DataModels.Enums.PriceRangeType"/> to a <see cref="T:System.String"/>
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.DataModels.Enums.PriceRangeTypeToStringJsonConverter.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.DataModels.Enums.PriceRangeTypeToStringJsonConverter.GetMapper">
+            <inheritdoc/>
+        </member>
         <member name="T:GoogleMapsClient.RankByType">
             <summary>
             Provides a rank by enumeration
@@ -3755,6 +3969,9 @@
             <param name="longitude">Longitude in decimal degrees</param>
         </member>
         <member name="M:GoogleMapsClient.Coordinates.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:GoogleMapsClient.Coordinates.ToAPIString">
             <inheritdoc/>
         </member>
         <member name="T:GoogleMapsClient.ExtensionMethods">
