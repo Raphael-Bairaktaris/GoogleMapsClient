@@ -42,6 +42,7 @@
         /// must also be provided when specifying a location. If radius is not provided, the location parameter is ignored.
         /// </summary>
         [ArgumentName("location")]
+        [QueryArgumentConverter<CoordinatesQueryArgumentConverter>]
         public Coordinates? Location { get; set; }
 
         /// <summary>
@@ -49,6 +50,7 @@
         /// points of a rectangle. If this parameter is not specified, the API uses IP address biasing by default.
         /// </summary>
         [ArgumentName("locationbias")]
+        [QueryArgumentConverter<CoordinatesQueryArgumentConverter>]
         public Coordinates? LocationBias { get; set; }
 
         /// <summary>

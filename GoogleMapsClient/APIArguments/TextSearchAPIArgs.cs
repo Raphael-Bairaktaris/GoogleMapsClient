@@ -37,6 +37,7 @@ namespace GoogleMapsClient
         /// The point around which to retrieve place information. This must be specified as latitude,longitude.
         /// </summary>
         [ArgumentName("location")]
+        [QueryArgumentConverter<CoordinatesQueryArgumentConverter>]
         public Coordinates? Location { get; set; }
 
         /// <summary>
