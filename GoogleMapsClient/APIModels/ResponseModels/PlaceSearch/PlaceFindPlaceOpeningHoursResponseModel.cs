@@ -37,7 +37,7 @@ namespace GoogleMapsClient
         /// A boolean value indicating if the place is open at the current time.
         /// </summary>
         [JsonProperty("open_now")]
-        public bool OpenNow { get; set; }
+        public bool IsOpenNow { get; set; }
 
         /// <summary>
         /// An array of opening periods covering seven days, starting from Sunday, in chronological order.

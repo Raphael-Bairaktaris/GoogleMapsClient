@@ -18,6 +18,7 @@
         /// The language in which to return results.
         /// </summary>
         [ArgumentName("language")]
+        [QueryArgumentConverter<SupportedLanguageQueryArgumentConverter>]
         public SupportedLanguage? Language { get; set; }
 
         /// <summary>

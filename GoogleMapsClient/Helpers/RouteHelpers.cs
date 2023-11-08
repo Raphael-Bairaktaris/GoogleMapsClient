@@ -86,11 +86,11 @@ namespace GoogleMapsClient
                     // Continue
                     continue;
 
-                // If the value implements the IAPIStringFormattable interface...
-                if (value is IAPIStringFormattable apiStringFormattable)
+                // If the argument info has a converter...
+                if (argumentInfo.Converter is not null)
                 {
-                    // Use the ToAPIString method to retrieve the query argument value
-                    url = QueryHelpers.AddQueryString(url, argumentInfo.Name, apiStringFormattable.ToAPIString());
+                    // Use the converter to convert the value
+                    url = QueryHelpers.AddQueryString(url, argumentInfo.Name, argumentInfo.Converter.Convert(argumentInfo.PropertyInfo.PropertyType, value));
 
                     // Continue
                     continue;
@@ -173,30 +173,6 @@ namespace GoogleMapsClient
                 // If the property type is an enum and there is a value
                 if (propertyType.IsEnum && value is not null)
                 {
-                    if (argumentInfo.Mapper is not null)
-                    {
-                        var keyValuePairValueProperty = default(PropertyInfo);
-                        var keyValuePairKeyProperty = default(PropertyInfo);
-                        foreach (var keyValuePair in argumentInfo.Mapper)
-                        {
-                            if (keyValuePairValueProperty is null || keyValuePairKeyProperty is null)
-                            {
-                                var keyValuePairType = keyValuePair.GetType();
-                                keyValuePairValueProperty = keyValuePairType.GetProperty(nameof(KeyValuePair<object, object>.Value))!;
-                                keyValuePairKeyProperty = keyValuePairType.GetProperty(nameof(KeyValuePair<object, object>.Key))!;
-                            }
-
-                            if (Equals(value, keyValuePairKeyProperty.GetValue(keyValuePair)))
-                            {
-                                url = QueryHelpers.AddQueryString(url, argumentInfo.Name, keyValuePairValueProperty.GetValue(keyValuePair)?.ToString() ?? string.Empty);
-
-                                break;
-                            }
-                        }
-
-                        continue;
-                    }
-
                     url = QueryHelpers.AddQueryString(url, argumentInfo.Name, argumentValue);
 
                     // Continue
@@ -261,9 +237,9 @@ namespace GoogleMapsClient
             public bool IsEnumerable { get; }
 
             /// <summary>
-            /// 
+            /// The converter
             /// </summary>
-            public IEnumerable? Mapper { get; }
+            public IQueryArgumentConverter? Converter { get; }
 
             #endregion
 
@@ -282,11 +258,7 @@ namespace GoogleMapsClient
                 IsDate = propertyInfo.PropertyType.IsDate();
                 IsEnumerable = propertyInfo.PropertyType != typeof(string) && propertyInfo.PropertyType.IsEnumerable();
 
-                var nonNullableType = GetNonNullableType(propertyInfo.PropertyType);
-                if (nonNullableType.IsEnum)
-                {
-                    Mapper = (IEnumerable?)mMapperProperties.FirstOrDefault(x => x.PropertyType.IsGenericType && x.PropertyType.GetGenericArguments()[0] == nonNullableType)?.GetValue(null);
-                }
+                Converter = propertyInfo.GetCustomAttribute<QueryArgumentConverterAttribute>()?.CreateConverter();
             }
 
             #endregion

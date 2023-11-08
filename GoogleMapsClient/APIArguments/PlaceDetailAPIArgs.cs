@@ -35,6 +35,7 @@ namespace GoogleMapsClient
         /// vicinity, wheelchair_accessible_entrance.
         /// </summary>
         [ArgumentName("basic")]
+        [QueryArgumentConverter<BasicCategoryTypeQueryArgumentConverter>]
         public BasicCategoryType? Basic { get; set; }
 
         /// <summary>
@@ -42,6 +43,7 @@ namespace GoogleMapsClient
         /// international_phone_number, opening_hours, secondary_opening_hours, website
         /// </summary>
         [ArgumentName("contact")]
+        [QueryArgumentConverter<ContactCategoryTypeQueryArgumentConverter>]
         public ContactCategoryType? Contact { get; set; }
 
         /// <summary>
@@ -50,12 +52,14 @@ namespace GoogleMapsClient
         /// serves_dinner, serves_lunch, serves_vegetarian_food, serves_wine, takeout, user_ratings_total.
         /// </summary>
         [ArgumentName("atmosphere")]
+        [QueryArgumentConverter<AtmosphereCategoryTypeQueryArgumentConverter>]
         public AtmosphereCategoryType? Atmosphere { get; set; }
 
         /// <summary>
         /// List of supported languages
         /// </summary>
         [ArgumentName("language")]
+        [QueryArgumentConverter<SupportedLanguageQueryArgumentConverter>]
         public SupportedLanguage? Language { get; set; }
 
         /// <summary>
@@ -73,12 +77,13 @@ namespace GoogleMapsClient
         /// to enable translation of reviews. Reviews are returned in their original language.
         /// </summary>
         [ArgumentName("reviews_no_translations")]
-        public bool? ReviewsNoTranslations { get; set; }
+        public bool? HasReviewsWithNoTranslations { get; set; }
 
         /// <summary>
         /// The sorting method to use when returning reviews. Can be set to most_relevant (default) or newest.
         /// </summary>
         [ArgumentName("reviews_sort")]
+        [QueryArgumentConverter<ReviewSortingTypeQueryArgumentConverter>]
         public ReviewSortingType? ReviewsSort { get; set; }
 
         /// <summary>

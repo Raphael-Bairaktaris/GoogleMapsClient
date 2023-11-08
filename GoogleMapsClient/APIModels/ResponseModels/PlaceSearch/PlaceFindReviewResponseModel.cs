@@ -121,10 +121,10 @@ namespace GoogleMapsClient
         /// this to your users.
         /// </summary>
         /// <example>
-        /// For example, you can add the following string, “Translated by Google”, to the review.
+        /// For example, you can add the following string, “IsTranslated by Google”, to the review.
         /// </example>
         [JsonProperty("translated")]
-        public bool? Translated { get; set; }
+        public bool? IsTranslated { get; set; }
 
         #endregion
 

@@ -3,7 +3,7 @@
 namespace GoogleMapsClient
 {
     /// <summary>
-    /// Arguements used for receiving a nearby search result
+    /// Arguments used for receiving a nearby search result
     /// </summary>
     public class NearbySearchAPIArgs
     {
@@ -40,6 +40,7 @@ namespace GoogleMapsClient
         /// </summary>
         /// <remarks>https://developers.google.com/maps/faq#languagesupport</remarks>
         [ArgumentName("language")]
+        [QueryArgumentConverter<SupportedLanguageQueryArgumentConverter>]
         public SupportedLanguage? Language { get; set; }
 
         /// <summary>
@@ -47,6 +48,7 @@ namespace GoogleMapsClient
         /// inclusive. The exact amount indicated by a specific value will vary from region to region.
         /// </summary>
         [ArgumentName("maxprice")]
+        [QueryArgumentConverter<PriceRangeTypeQueryArgumentConverter>]
         public PriceRangeType? MaxPrice { get; set; }
 
         /// <summary>
@@ -54,6 +56,7 @@ namespace GoogleMapsClient
         /// inclusive. The exact amount indicated by a specific value will vary from region to region.
         /// </summary>
         [ArgumentName("minprice")]
+        [QueryArgumentConverter<PriceRangeTypeQueryArgumentConverter>]
         public PriceRangeType? MinPrice { get; set; }
 
         /// <summary>
@@ -61,7 +64,7 @@ namespace GoogleMapsClient
         /// in the Google Places database will not be returned if you include this parameter in your query.
         /// </summary>
         [ArgumentName("opennow")]
-        public bool? OpenNow { get; set; }
+        public bool? IsOpenNow { get; set; }
 
         /// <summary>
         /// Returns up to 20 results from a previously run search. Setting a pagetoken parameter will execute a search with 
@@ -74,6 +77,7 @@ namespace GoogleMapsClient
         /// Specifies the order in which results are listed.
         /// </summary>
         [ArgumentName("rankby")]
+        [QueryArgumentConverter<RankByTypeQueryArgumentConverter>]
         public RankByType RankBy { get; set; } = RankByType.Prominence;
 
         /// <summary>
@@ -81,6 +85,7 @@ namespace GoogleMapsClient
         /// If more than one type is provided, all types following the first entry are ignored.
         /// </summary>
         [ArgumentName("type")]
+        [QueryArgumentConverter<PlaceTypeQueryArgumentConverter>]
         public PlaceType? Type { get; set; }
 
         #endregion

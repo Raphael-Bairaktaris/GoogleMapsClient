@@ -3599,7 +3599,7 @@
         </member>
         <member name="F:GoogleMapsClient.SupportedLanguage.ZHTW">
             <summary>
-            Chines traditional
+            Chinese traditional
             </summary>
         </member>
         <member name="F:GoogleMapsClient.SupportedLanguage.HR">
@@ -4686,6 +4686,11 @@
             Maps the <see cref="T:GoogleMapsClient.RatingType"/> to their related <see cref="T:System.Int32"/>
             </summary>
         </member>
+        <member name="P:GoogleMapsClient.GoogleMapsClientConstants.SupportedLanguageToStringMapper">
+            <summary>
+            Maps the <see cref="T:GoogleMapsClient.SupportedLanguage"/> to their related <see cref="T:System.String"/>
+            </summary>
+        </member>
         <member name="T:GoogleMapsClient.IFailableHelpers">
             <summary>
             Helper methods for <see cref="T:GoogleMapsClient.IFailable"/>
@@ -5028,21 +5033,18 @@
         <member name="M:GoogleMapsClient.StatusCodeTypeToStringJsonConverter.GetMapper">
             <inheritdoc/>
         </member>
-        <member name="T:GoogleMapsClient.SupportedLanguageToStringJsonConverter">
+        <member name="T:GoogleMapsClient.SupportedLanguageEnummerableToStringJsonConverter">
             <summary>
             The <see cref="T:Newtonsoft.Json.JsonConverter`1"/> that converts a <see cref="T:GoogleMapsClient.SupportedLanguage"/> to <see cref="T:System.String"/>
             </summary>
         </member>
-        <member name="M:GoogleMapsClient.SupportedLanguageToStringJsonConverter.#ctor">
+        <member name="M:GoogleMapsClient.SupportedLanguageEnummerableToStringJsonConverter.#ctor">
             <summary>
             Default constructor
             </summary>
         </member>
-        <member name="M:GoogleMapsClient.SupportedLanguageToStringJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,GoogleMapsClient.SupportedLanguage,System.Boolean,Newtonsoft.Json.JsonSerializer)">
+        <member name="M:GoogleMapsClient.SupportedLanguageEnummerableToStringJsonConverter.GetMapper">
             <inheritdoc/>
-        </member>
-        <member name="M:GoogleMapsClient.SupportedLanguageToStringJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter,GoogleMapsClient.SupportedLanguage,Newtonsoft.Json.JsonSerializer)">
-            <inheritdoc/> 
         </member>
         <member name="T:GoogleMapsClient.TimeOnlyToStringJsonConveter">
             <summary>

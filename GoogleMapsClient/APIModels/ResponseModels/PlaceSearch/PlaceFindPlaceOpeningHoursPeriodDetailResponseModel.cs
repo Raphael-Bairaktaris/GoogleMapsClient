@@ -37,7 +37,7 @@ namespace GoogleMapsClient
         /// This property indicates that the period for open or close can extend past this seven-day cutoff.
         /// </summary>
         [JsonProperty("truncated")]
-        public bool? Truncated { get; set; }
+        public bool? IsTruncated { get; set; }
 
         #endregion
 

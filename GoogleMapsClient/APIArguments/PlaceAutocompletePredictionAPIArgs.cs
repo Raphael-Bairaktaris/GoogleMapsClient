@@ -34,6 +34,7 @@
         /// https://developers.google.com/maps/faq#languagesupport
         /// </remarks>
         [ArgumentName("language")]
+        [QueryArgumentConverter<SupportedLanguageQueryArgumentConverter>]
         public SupportedLanguage? Language { get; set; }
 
         /// <summary>
@@ -108,7 +109,7 @@
         /// even if they match the user input.
         /// </summary>
         [ArgumentName("strictbounds")]
-        public bool? StrictBounds { get; set; }
+        public bool? IsStrictBounds { get; set; }
 
         /// <summary>
         /// You can restrict results from a Place Autocomplete request to be of a certain type by passing the types parameter.

@@ -1,6 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using GoogleMapsClient;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.Reflection;
 
 Console.WriteLine("Hello, World!");
 
@@ -51,6 +53,7 @@ var placesResult = await client.NearbySearchAsync(new NearbySearchAPIArgs(new Co
 //});
 
 var h = new PlacePhotoAPIArgs("asdasd", false, 10);
+
 
 var coordinates1 = new Coordinates(69, 420);
 
@@ -326,6 +329,29 @@ var json = $$"""
       "status": "OK",
     }
     """;
+
+GetMissingJsonProperties<PlaceFindAttributesResponseModel>(json);
+
+IEnumerable<string> GetMissingJsonProperties<T>(string json)
+{
+    var propertiesOfType = typeof(T).GetProperties()
+        .Select(x => x.GetCustomAttribute<JsonPropertyAttribute>()?.PropertyName)
+        .Distinct()
+        .Where(x => x is not null)
+        .ToList();
+
+    var missingProperties = new List<string>();
+
+    foreach (var child in (JObject)JsonConvert.DeserializeObject(json)!)
+    {
+        if (!propertiesOfType.Contains(child.Key))
+        {
+            missingProperties.Add(child.Key);
+        }
+    }
+
+    return missingProperties;
+}
 
 var result = JsonConvert.DeserializeObject<PlaceDetailResponseModel>(json);
 

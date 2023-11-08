@@ -30,6 +30,7 @@ namespace GoogleMapsClient
         /// The language in which to return results.
         /// </summary>
         [ArgumentName("language")]
+        [QueryArgumentConverter<SupportedLanguageQueryArgumentConverter>]
         public SupportedLanguage? Language { get; set; }
 
         /// <summary>
@@ -43,6 +44,7 @@ namespace GoogleMapsClient
         /// to 4 (most expensive), inclusive. The exact amount indicated by a specific value will vary from region to region.
         /// </summary>
         [ArgumentName("maxprice")]
+        [QueryArgumentConverter<PriceRangeTypeQueryArgumentConverter>]
         public PriceRangeType? MaxPrice { get; set; }
 
         /// <summary>
@@ -50,6 +52,7 @@ namespace GoogleMapsClient
         /// to 4 (most expensive), inclusive. The exact amount indicated by a specific value will vary from region to region.
         /// </summary>
         [ArgumentName("minprice")]
+        [QueryArgumentConverter<PriceRangeTypeQueryArgumentConverter>]
         public PriceRangeType? MinPrice { get; set; }
 
         /// <summary>
@@ -57,7 +60,7 @@ namespace GoogleMapsClient
         /// opening hours in the Google Places database will not be returned if you include this parameter in your query.
         /// </summary>
         [ArgumentName("opennow")]
-        public bool? OpenNow { get; set; }
+        public bool? IsOpenNow { get; set; }
 
         /// <summary>
         /// Returns up to 20 results from a previously run search. Setting a pagetoken parameter will execute a search 
@@ -71,6 +74,7 @@ namespace GoogleMapsClient
         /// If more than one type is provided, all types following the first entry are ignored.
         /// </summary>
         [ArgumentName("type")]
+        [QueryArgumentConverter<PlaceTypeQueryArgumentConverter>]
         public PlaceType? Type { get; set; }
 
         #endregion

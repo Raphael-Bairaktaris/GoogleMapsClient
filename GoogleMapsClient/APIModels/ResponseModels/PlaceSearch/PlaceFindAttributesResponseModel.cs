@@ -1,5 +1,4 @@
-﻿using GoogleMapsClient.DataModels.Enums;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System.Diagnostics.CodeAnalysis;
 
 namespace GoogleMapsClient
@@ -153,7 +152,7 @@ namespace GoogleMapsClient
         /// Specifies if the business supports curbside pickup.
         /// </summary>
         [JsonProperty("curbside_pickup")]
-        public bool? CurbsidePickup { get; set; }
+        public bool? HasCurbsidePickup { get; set; }
 
         /// <summary>
         /// Contains the hours of operation for the next seven days (including today). 
@@ -175,13 +174,13 @@ namespace GoogleMapsClient
         /// Specifies if the business supports delivery.
         /// </summary>
         [JsonProperty("delivery")]
-        public bool? Delivery { get; set; }
+        public bool? IsDeliveryActive { get; set; }
 
         /// <summary>
         /// Specifies if the business supports indoor or outdoor seaing options.
         /// </summary>
         [JsonProperty("dine_in")]
-        public bool? DineIn { get; set; }
+        public bool? IsDineIn { get; set; }
 
         /// <summary>
         /// Contains a summary of the place. A summary is comprised of a textual overview, 
@@ -380,7 +379,7 @@ namespace GoogleMapsClient
         /// Specifies if the place supports reservations.
         /// </summary>
         [JsonProperty("reservable")]
-        public bool? Reservable { get; set; }
+        public bool? IsReservable { get; set; }
 
         /// <summary>
         /// An array of up to five reviews. By default the reviews are sorted in order of relevance.
@@ -418,49 +417,49 @@ namespace GoogleMapsClient
         /// Specifies if the place serves beer.
         /// </summary>
         [JsonProperty("serves_beer")]
-        public bool? ServesBeer { get; set; }
+        public bool? IsServingBeer { get; set; }
 
         /// <summary>
         /// Specifies if the place serves breakfast.
         /// </summary>
         [JsonProperty("serves_breakfast")]
-        public bool? ServesBreakfast { get; set; }
+        public bool? IsServingBreakfast { get; set; }
 
         /// <summary>
         /// Specifies if the place serves brunch.
         /// </summary>
         [JsonProperty("serves_brunch")]
-        public bool? ServesBrunch { get; set; }
+        public bool? IsServingBrunch { get; set; }
 
         /// <summary>
         /// Specifies if the place serves dinner.
         /// </summary>
         [JsonProperty("serves_dinner")]
-        public bool? ServesDinner { get; set; }
+        public bool? IsServingDinner { get; set; }
 
         /// <summary>
         ///Specifies if the place serves lunch. 
         /// </summary>
         [JsonProperty("serves_lunch")]
-        public bool? ServesLunch { get; set; }
+        public bool? IsServingLunch { get; set; }
 
         /// <summary>
         /// Specifies if the place serves vegetarian food.
         /// </summary>
         [JsonProperty("serves_vegetarian_food")]
-        public bool? ServesVegetarianFood { get; set; }
+        public bool? IsServingVegetarianFood { get; set; }
 
         /// <summary>
         /// Specifies if the place serves wine.
         /// </summary>
         [JsonProperty("serves_wine")]
-        public bool? ServesWine { get; set; }
+        public bool? IsServingWine { get; set; }
 
         /// <summary>
         /// Specifies if the business supports takeout.
         /// </summary>
         [JsonProperty("takeout")]
-        public bool? Takeout { get; set; }
+        public bool? IsTakeoutActive { get; set; }
 
         /// <summary>
         /// Contains an array of feature types describing the given result.
@@ -523,7 +522,7 @@ namespace GoogleMapsClient
         /// Specifies if the place has an entrance that is wheelchair accessible
         /// </summary>
         [JsonProperty("wheelchair_accessible_entrance")]
-        public bool? WheelchairAccessibleEntrance { get; set; }
+        public bool? IsWheelchairAccessibleEntrance { get; set; }
 
         #endregion
 

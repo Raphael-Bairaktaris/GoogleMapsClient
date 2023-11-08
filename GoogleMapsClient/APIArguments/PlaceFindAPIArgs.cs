@@ -44,6 +44,7 @@
         /// vicinity, wheelchair_accessible_entrance.
         /// </summary>
         [ArgumentName("basic")]
+        [QueryArgumentConverter<BasicCategoryTypeQueryArgumentConverter>]
         public BasicCategoryType? Basic { get; set; }
 
         /// <summary>
@@ -51,6 +52,7 @@
         /// international_phone_number, opening_hours, secondary_opening_hours, website
         /// </summary>
         [ArgumentName("contact")]
+        [QueryArgumentConverter<ContactCategoryTypeQueryArgumentConverter>]
         public ContactCategoryType? Contact { get; set; }
 
         /// <summary>
@@ -59,12 +61,14 @@
         /// serves_dinner, serves_lunch, serves_vegetarian_food, serves_wine, takeout, user_ratings_total.
         /// </summary>
         [ArgumentName("atmosphere")]
+        [QueryArgumentConverter<AtmosphereCategoryTypeQueryArgumentConverter>]
         public AtmosphereCategoryType? Atmosphere { get; set; }
 
         /// <summary>
         /// List of supported languages
         /// </summary>
         [ArgumentName("language")]
+        [QueryArgumentConverter<SupportedLanguageQueryArgumentConverter>]
         public SupportedLanguage? Language { get; set; }
 
         /// <summary>

@@ -25,7 +25,7 @@ namespace GoogleMapsClient
         /// The exceptions apply to the hours, and the hours are used to generate the other fields.
         /// </summary>
         [JsonProperty("exceptional_hours")]
-        public bool? ExceptionalHours { get; set; }
+        public bool? HasExceptionalHours { get; set; }
 
         #endregion
 
