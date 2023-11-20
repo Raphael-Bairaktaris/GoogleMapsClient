@@ -11,7 +11,7 @@
         CurbsidePickup = 0,
 
         /// <summary>
-        /// IsDeliveryActive
+        /// HasDelivery
         /// </summary>
         Delivery = 1,
 
@@ -81,7 +81,7 @@
         ServesWine = 14,
 
         /// <summary>
-        /// IsTakeoutActive
+        /// HasTakeoutActive
         /// </summary>
         Takeout = 15,
 

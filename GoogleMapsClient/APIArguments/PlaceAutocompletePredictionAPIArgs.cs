@@ -111,7 +111,7 @@
         /// even if they match the user input.
         /// </summary>
         [ArgumentName("strictbounds")]
-        public bool? IsStrictBounds { get; set; }
+        public bool? IsWithinStrictBounds { get; set; }
 
         /// <summary>
         /// You can restrict results from a Place Autocomplete request to be of a certain type by passing the types parameter.

@@ -174,7 +174,7 @@ namespace GoogleMapsClient
         /// Specifies if the business supports delivery.
         /// </summary>
         [JsonProperty("delivery")]
-        public bool? IsDeliveryActive { get; set; }
+        public bool? HasDelivery { get; set; }
 
         /// <summary>
         /// Specifies if the business supports indoor or outdoor seaing options.
@@ -459,7 +459,7 @@ namespace GoogleMapsClient
         /// Specifies if the business supports takeout.
         /// </summary>
         [JsonProperty("takeout")]
-        public bool? IsTakeoutActive { get; set; }
+        public bool? HasTakeoutActive { get; set; }
 
         /// <summary>
         /// Contains an array of feature types describing the given result.
@@ -522,7 +522,7 @@ namespace GoogleMapsClient
         /// Specifies if the place has an entrance that is wheelchair accessible
         /// </summary>
         [JsonProperty("wheelchair_accessible_entrance")]
-        public bool? IsWheelchairAccessibleEntrance { get; set; }
+        public bool? HasWheelchairAccessibleEntrance { get; set; }
 
         #endregion
 

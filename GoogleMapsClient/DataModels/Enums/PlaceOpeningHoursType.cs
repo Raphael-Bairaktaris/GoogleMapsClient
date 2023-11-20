@@ -16,12 +16,12 @@
         HappyHour = 1,
 
         /// <summary>
-        /// IsDeliveryActive
+        /// HasDelivery
         /// </summary>
         Delivery = 2,
 
         /// <summary>
-        /// IsTakeoutActive
+        /// HasTakeoutActive
         /// </summary>
         Takeout = 3,
 
