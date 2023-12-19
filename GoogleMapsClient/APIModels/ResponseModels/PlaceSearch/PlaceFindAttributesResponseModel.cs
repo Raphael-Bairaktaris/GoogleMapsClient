@@ -513,7 +513,7 @@ namespace GoogleMapsClient
         }
 
         /// <summary>
-        /// The authoriative website for this [;ace, such ass a business's homepage.
+        /// The authoriative website for this place, such ass a business's homepage.
         /// </summary>
         [JsonProperty("website")]
         public Uri? Website { get; set; }
