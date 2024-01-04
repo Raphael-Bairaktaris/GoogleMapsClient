@@ -1,6 +1,4 @@
-﻿using GoogleMapsClient.DataModels.Enums;
-
-namespace GoogleMapsClient
+﻿namespace GoogleMapsClient
 {
     /// <summary>
     /// Arguments used for receiving a nearby search result

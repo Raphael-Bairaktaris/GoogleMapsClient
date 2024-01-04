@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GoogleMapsClient
+﻿namespace GoogleMapsClient
 {
     /// <summary>
     /// The base for all the query argument converters.

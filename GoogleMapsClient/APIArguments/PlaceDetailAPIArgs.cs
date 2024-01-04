@@ -1,6 +1,4 @@
-﻿using GoogleMapsClient.DataModels.Enums;
-
-namespace GoogleMapsClient
+﻿namespace GoogleMapsClient
 {
     /// <summary>
     /// Arguements used for receiving a place detail 

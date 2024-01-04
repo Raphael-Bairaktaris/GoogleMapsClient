@@ -1,5 +1,4 @@
-﻿using GoogleMapsClient.DataModels.Enums;
-using System.Collections.Immutable;
+﻿using System.Collections.Immutable;
 
 namespace GoogleMapsClient
 {
