@@ -3,8 +3,7 @@
 namespace GoogleMapsClient
 {
     /// <summary>
-    /// The <see cref="JsonConverter{T}"/> that converts a <see cref="DateOnly"/> to an <see cref="int"/> that represents the
-    /// unix timestamp
+    /// The <see cref="JsonConverter{T}"/> that converts a <see cref="DateOnly"/> to an <see cref="int"/> that represents the unix timestamp
     /// </summary>
     public class DateTimeOffsetToUnixTimeStampJsonConverter : JsonConverter<DateTimeOffset>
     {
@@ -20,6 +19,9 @@ namespace GoogleMapsClient
 
         #endregion
 
+
+        #region Public Methods
+
         /// <inheritdoc/>
         public override DateTimeOffset ReadJson(JsonReader reader, Type objectType, DateTimeOffset existingValue, bool hasExistingValue, JsonSerializer serializer)
         {
@@ -29,6 +31,8 @@ namespace GoogleMapsClient
         }
 
         /// <inheritdoc/>
-        public override void WriteJson(JsonWriter writer, DateTimeOffset value, JsonSerializer serializer) => writer.WriteValue(value.ToUnixTimeSeconds());
+        public override void WriteJson(JsonWriter writer, DateTimeOffset value, JsonSerializer serializer) => writer.WriteValue(value.ToUnixTimeSeconds()); 
+
+        #endregion
     }
 }

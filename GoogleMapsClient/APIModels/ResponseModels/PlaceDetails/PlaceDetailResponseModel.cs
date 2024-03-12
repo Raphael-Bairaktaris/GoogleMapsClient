@@ -8,14 +8,9 @@ namespace GoogleMapsClient
     public class PlaceDetailResponseModel
     {
         #region Private Members
-
+        
         /// <summary>
-        /// The member of the <see cref="InfoMessages"/> property
-        /// </summary>
-        private string? mInfoMessages;
-
-        /// <summary>
-        /// The member of the <see cref="HtmlAtributions"/> property
+        /// The member of the <see cref="HtmlAttributions"/> property
         /// </summary>
         private IEnumerable<string>? mHtmlAttributions;
 
@@ -23,6 +18,11 @@ namespace GoogleMapsClient
         /// The member of the <see cref="Result"/> property
         /// </summary>
         private PlaceFindAttributesResponseModel? mResult;
+
+        /// <summary>
+        /// The member of the <see cref="InfoMessages"/> property
+        /// </summary>
+        private string? mInfoMessages;
 
         #endregion
 
@@ -33,7 +33,7 @@ namespace GoogleMapsClient
         /// displayed to the user (some listings may not have attribution).
         /// </summary>
         [JsonProperty("html_attributions")]
-        public IEnumerable<string> HtmlAtributions
+        public IEnumerable<string> HtmlAttributions
         {
             get => mHtmlAttributions ?? Enumerable.Empty<string>();
 
@@ -66,7 +66,7 @@ namespace GoogleMapsClient
         /// is subject to change.
         /// </summary>
         [JsonProperty("info_messages")]
-        public string? InfoMessages
+        public string InfoMessages
         {
             get => mInfoMessages ?? string.Empty;
 

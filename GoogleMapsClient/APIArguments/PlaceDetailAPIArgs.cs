@@ -1,7 +1,7 @@
 ﻿namespace GoogleMapsClient
 {
     /// <summary>
-    /// Arguements used for receiving a place detail 
+    /// Arguments used for receiving a place detail 
     /// </summary>
     public class PlaceDetailAPIArgs
     {

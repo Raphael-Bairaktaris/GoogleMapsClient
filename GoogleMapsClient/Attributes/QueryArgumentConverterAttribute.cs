@@ -1,5 +1,4 @@
-﻿
-namespace GoogleMapsClient
+﻿namespace GoogleMapsClient
 {
     /// <summary>
     /// Attribute that is used for specifying query argument converter meta data.
