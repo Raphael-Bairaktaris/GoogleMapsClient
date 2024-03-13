@@ -8,7 +8,7 @@ namespace GoogleMapsClient
     public class PlaceDetailResponseModel
     {
         #region Private Members
-        
+
         /// <summary>
         /// The member of the <see cref="HtmlAttributions"/> property
         /// </summary>
