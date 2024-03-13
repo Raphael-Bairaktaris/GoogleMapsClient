@@ -56,8 +56,8 @@ namespace GoogleMapsClient
         public async void NearbySearchAsync()
         {
             // Input data
-            var location = new Coordinates(latitude: 40.6212232, longitude: 22.9254278);
-            var radius = 1000;
+            var location = new Coordinates(latitude: 0, longitude: 0);
+            var radius = 100;
             var args = new NearbySearchAPIArgs(location, radius);
 
             // Get the response
