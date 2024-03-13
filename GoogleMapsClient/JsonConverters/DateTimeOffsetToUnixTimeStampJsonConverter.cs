@@ -31,7 +31,7 @@ namespace GoogleMapsClient
         }
 
         /// <inheritdoc/>
-        public override void WriteJson(JsonWriter writer, DateTimeOffset value, JsonSerializer serializer) => writer.WriteValue(value.ToUnixTimeSeconds()); 
+        public override void WriteJson(JsonWriter writer, DateTimeOffset value, JsonSerializer serializer) => writer.WriteValue(value.ToUnixTimeSeconds());
 
         #endregion
     }

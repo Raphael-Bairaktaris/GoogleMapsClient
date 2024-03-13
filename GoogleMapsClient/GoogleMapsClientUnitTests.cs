@@ -1,5 +1,4 @@
-﻿using System.Net.WebSockets;
-using Xunit;
+﻿using Xunit;
 
 namespace GoogleMapsClient
 {
@@ -24,7 +23,7 @@ namespace GoogleMapsClient
         /// </summary>
         public GoogleMapsClientUnitTests() : base()
         {
-            mClient = GoogleMapsClient.CreateTestClient();
+
         }
 
         #endregion
@@ -57,8 +56,8 @@ namespace GoogleMapsClient
         public async void NearbySearchAsync()
         {
             // Input data
-            var location = new Coordinates(latitude: 0, longitude: 0);
-            var radius = 100;
+            var location = new Coordinates(latitude: 40.6211851, longitude: 22.9047419);
+            var radius = 1000;
             var args = new NearbySearchAPIArgs(location, radius);
 
             // Get the response
@@ -96,7 +95,41 @@ namespace GoogleMapsClient
         public async void PlaceDetailAsync()
         {
             // Get the response
-            var response = await mClient.PlaceDetailAsync(new PlaceDetailAPIArgs(""));
+            var response = await mClient.PlaceDetailAsync(new PlaceDetailAPIArgs("ChIJN1t_tDeuEmsRUsoyG83frY4"));
+
+            // Checks whether the response is successful
+            Assert.True(response.IsSuccessful);
+        }
+
+        #endregion
+
+        #region Place Query Autocomplete
+
+        /// <summary>
+        /// Checks whether the place query can be retrieved
+        /// </summary>
+        [Fact]
+        public async void PlaceQueryAutocompleteAsync()
+        {
+            // Get the response
+            var response = await mClient.PlaceQueryAutocompleteAsync(new QueryAutocompleteAPIArgs("point_of_interest"));
+
+            // Checks whether the response is successful
+            Assert.True(response.IsSuccessful);
+        }
+
+        #endregion
+
+        #region Place Find
+
+        /// <summary>
+        /// Checks whether the place can be retrieved
+        /// </summary>
+        [Fact]
+        public async void PlaceFindAsync()
+        {
+            // Get the response
+            var response = await mClient.PlaceFindAsync(new PlaceFindAPIArgs("point_of_interest", "establishment"));
 
             // Checks whether the response is successful
             Assert.True(response.IsSuccessful);

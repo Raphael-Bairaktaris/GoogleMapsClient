@@ -6,7 +6,7 @@
     <members>
         <member name="T:GoogleMapsClient.NearbySearchAPIArgs">
             <summary>
-            Arguements used for receiving a nearby search result
+            Arguments used for receiving a nearby search result
             </summary>
         </member>
         <member name="P:GoogleMapsClient.NearbySearchAPIArgs.Location">
@@ -50,7 +50,7 @@
             inclusive. The exact amount indicated by a specific value will vary from region to region.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.NearbySearchAPIArgs.OpenNow">
+        <member name="P:GoogleMapsClient.NearbySearchAPIArgs.IsOpenNow">
             <summary>
             Returns only those places that are open for business at the time the query is sent. Places that do not specify opening hours
             in the Google Places database will not be returned if you include this parameter in your query.
@@ -167,7 +167,7 @@
             https://developers.google.com/maps/documentation/places/web-service/details#session_tokens
             </remarks>
         </member>
-        <member name="P:GoogleMapsClient.PlaceAutocompletePredictionAPIArgs.StrictBounds">
+        <member name="P:GoogleMapsClient.PlaceAutocompletePredictionAPIArgs.IsWithinStrictBounds">
             <summary>
             Returns only those places that are strictly within the region defined by location and radius. 
             This is a restriction, rather than a bias, meaning that results outside this region will not be returned 
@@ -187,7 +187,7 @@
         </member>
         <member name="T:GoogleMapsClient.PlaceDetailAPIArgs">
             <summary>
-            Arguements used for receiving a place detail 
+            Arguments used for receiving a place detail 
             </summary>
         </member>
         <member name="P:GoogleMapsClient.PlaceDetailAPIArgs.PlaceId">
@@ -242,7 +242,7 @@
             https://en.wikipedia.org/wiki/List_of_Internet_top-level_domains#Country_code_top-level_domains
             </remarks>
         </member>
-        <member name="P:GoogleMapsClient.PlaceDetailAPIArgs.ReviewsNoTranslations">
+        <member name="P:GoogleMapsClient.PlaceDetailAPIArgs.HasReviewsWithNoTranslations">
             <summary>
             Specify reviews_no_translations=true to disable translation of reviews; specify reviews_no_translations=false
             to enable translation of reviews. Reviews are returned in their original language.
@@ -490,7 +490,7 @@
             to 4 (most expensive), inclusive. The exact amount indicated by a specific value will vary from region to region.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.TextSearchAPIArgs.OpenNow">
+        <member name="P:GoogleMapsClient.TextSearchAPIArgs.IsOpenNow">
             <summary>
             Returns only those places that are open for business at the time the query is sent. Places that do not specify
             opening hours in the Google Places database will not be returned if you include this parameter in your query.
@@ -843,14 +843,9 @@
             Represents a place detail response
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.PlaceDetailResponseModel.mInfoMessages">
-            <summary>
-            The member of the <see cref="P:GoogleMapsClient.PlaceDetailResponseModel.InfoMessages"/> property
-            </summary>
-        </member>
         <member name="F:GoogleMapsClient.PlaceDetailResponseModel.mHtmlAttributions">
             <summary>
-            The member of the <see cref="P:GoogleMapsClient.PlaceDetailResponseModel.HtmlAtributions"/> property
+            The member of the <see cref="P:GoogleMapsClient.PlaceDetailResponseModel.HtmlAttributions"/> property
             </summary>
         </member>
         <member name="F:GoogleMapsClient.PlaceDetailResponseModel.mResult">
@@ -858,7 +853,12 @@
             The member of the <see cref="P:GoogleMapsClient.PlaceDetailResponseModel.Result"/> property
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceDetailResponseModel.HtmlAtributions">
+        <member name="F:GoogleMapsClient.PlaceDetailResponseModel.mInfoMessages">
+            <summary>
+            The member of the <see cref="P:GoogleMapsClient.PlaceDetailResponseModel.InfoMessages"/> property
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.PlaceDetailResponseModel.HtmlAttributions">
             <summary>
             May contain a set of attributions about this listing which must be 
             displayed to the user (some listings may not have attribution).
@@ -1095,7 +1095,7 @@
             The allowed values include: OPERATIONAL, CLOSED_TEMPORARILY, and CLOSED_PERMANENTLY
              </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.CurbsidePickup">
+        <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.HasCurbsidePickup">
             <summary>
             Specifies if the business supports curbside pickup.
             </summary>
@@ -1111,12 +1111,12 @@
             https://developers.google.com/maps/documentation/places/web-service/search-find-place#PlaceOpeningHours
             </remarks>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.Delivery">
+        <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.HasDelivery">
             <summary>
             Specifies if the business supports delivery.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.DineIn">
+        <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.IsDineIn">
             <summary>
             Specifies if the business supports indoor or outdoor seaing options.
             </summary>
@@ -1249,7 +1249,7 @@
             Contains the place's rating from 1.0 to 5.0 based on user reviews.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.Reservable">
+        <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.IsReservable">
             <summary>
             Specifies if the place supports reservations.
             </summary>
@@ -1275,42 +1275,42 @@
             https://developers.google.com/maps/documentation/places/web-service/search-find-place#PlaceOpeningHours
             </remarks>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.ServesBeer">
+        <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.IsServingBeer">
             <summary>
             Specifies if the place serves beer.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.ServesBreakfast">
+        <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.IsServingBreakfast">
             <summary>
             Specifies if the place serves breakfast.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.ServesBrunch">
+        <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.IsServingBrunch">
             <summary>
             Specifies if the place serves brunch.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.ServesDinner">
+        <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.IsServingDinner">
             <summary>
             Specifies if the place serves dinner.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.ServesLunch">
+        <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.IsServingLunch">
              <summary>
             Specifies if the place serves lunch. 
              </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.ServesVegetarianFood">
+        <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.IsServingVegetarianFood">
             <summary>
             Specifies if the place serves vegetarian food.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.ServesWine">
+        <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.IsServingWine">
             <summary>
             Specifies if the place serves wine.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.Takeout">
+        <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.HasTakeoutActive">
             <summary>
             Specifies if the business supports takeout.
             </summary>
@@ -1354,10 +1354,10 @@
         </member>
         <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.Website">
             <summary>
-            The authoriative website for this [;ace, such ass a business's homepage.
+            The authoriative website for this place, such ass a business's homepage.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.WheelchairAccessibleEntrance">
+        <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.HasWheelchairAccessibleEntrance">
             <summary>
             Specifies if the place has an entrance that is wheelchair accessible
             </summary>
@@ -1560,7 +1560,7 @@
             A date expressed in RFC3339 format in the local timezone for the place, for example 2010-12-31.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceOpeningHoursPeriodDetailResponseModel.Truncated">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceOpeningHoursPeriodDetailResponseModel.IsTruncated">
             <summary>
             True if a given period was truncated due to a seven-day cutoff, where the period starts
             before midnight on the date of the request and/or ends at or after midnight on the last day. 
@@ -1639,7 +1639,7 @@
             The member of the <see cref="P:GoogleMapsClient.PlaceFindPlaceOpeningHoursResponseModel.WeekdayText"/> property
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindPlaceOpeningHoursResponseModel.OpenNow">
+        <member name="P:GoogleMapsClient.PlaceFindPlaceOpeningHoursResponseModel.IsOpenNow">
             <summary>
             A boolean value indicating if the place is open at the current time.
             </summary>
@@ -1798,14 +1798,14 @@
             For example, the entity reference &amp; may represent an ampersand character.
             </example>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindReviewResponseModel.Translated">
+        <member name="P:GoogleMapsClient.PlaceFindReviewResponseModel.IsTranslated">
             <summary>
             A boolean value indicating if the review was translated from the original language it was written in. 
             If a review has been translated, corresponding to a value of true, Google recommends that you indicate 
             this to your users.
             </summary>
             <example>
-            For example, you can add the following string, “Translated by Google”, to the review.
+            For example, you can add the following string, “IsTranslated by Google”, to the review.
             </example>
         </member>
         <member name="M:GoogleMapsClient.PlaceFindReviewResponseModel.#ctor">
@@ -1827,7 +1827,7 @@
             timezone for the place, for example 2010-12-31.
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindSpecialDayResponseModel.ExceptionalHours">
+        <member name="P:GoogleMapsClient.PlaceFindSpecialDayResponseModel.HasExceptionalHours">
             <summary>
             True if there are exceptional hours for this day. If true, 
             this means that there is at least one exception for this day. 
@@ -2097,6 +2097,39 @@
             Default constructor
             </summary>
             <param name="name">The name</param>
+        </member>
+        <member name="T:GoogleMapsClient.QueryArgumentConverterAttribute">
+            <summary>
+            Attribute that is used for specifying query argument converter meta data.
+            </summary>
+        </member>
+        <member name="P:GoogleMapsClient.QueryArgumentConverterAttribute.ConverterType">
+            <summary>
+            The type of the converter
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.QueryArgumentConverterAttribute.#ctor(System.Type)">
+            <summary>
+            Default constructor
+            </summary>
+            <param name="converterType">The type of the converter</param>
+        </member>
+        <member name="M:GoogleMapsClient.QueryArgumentConverterAttribute.CreateConverter">
+            <summary>
+            Creates and returns a converter.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:GoogleMapsClient.QueryArgumentConverterAttribute`1">
+            <summary>
+            Attribute that is used for specifying query argument converter meta data.
+            </summary>
+            <typeparam name="T">The type of the converter.</typeparam>
+        </member>
+        <member name="M:GoogleMapsClient.QueryArgumentConverterAttribute`1.#ctor">
+            <summary>
+            Default constructor
+            </summary>
         </member>
         <member name="T:GoogleMapsClient.LocationBiasInfo">
             <summary>
@@ -2514,7 +2547,7 @@
         </member>
         <member name="F:GoogleMapsClient.AtmosphereCategoryType.Delivery">
             <summary>
-            Delivery
+            HasDelivery
             </summary>
         </member>
         <member name="F:GoogleMapsClient.AtmosphereCategoryType.DineIn">
@@ -2584,7 +2617,7 @@
         </member>
         <member name="F:GoogleMapsClient.AtmosphereCategoryType.Takeout">
             <summary>
-            Takeout
+            HasTakeoutActive
             </summary>
         </member>
         <member name="F:GoogleMapsClient.AtmosphereCategoryType.UserRatingsTotal">
@@ -2823,12 +2856,12 @@
         </member>
         <member name="F:GoogleMapsClient.PlaceOpeningHoursType.Delivery">
             <summary>
-            Delivery
+            HasDelivery
             </summary>
         </member>
         <member name="F:GoogleMapsClient.PlaceOpeningHoursType.Takeout">
             <summary>
-            Takeout
+            HasTakeoutActive
             </summary>
         </member>
         <member name="F:GoogleMapsClient.PlaceOpeningHoursType.Kitchen">
@@ -4691,6 +4724,51 @@
             Maps the <see cref="T:GoogleMapsClient.SupportedLanguage"/> to their related <see cref="T:System.String"/>
             </summary>
         </member>
+        <member name="T:GoogleMapsClient.GoogleMapsClientUnitTests">
+            <summary>
+            The tests for the <see cref="T:GoogleMapsClient.GoogleMapsClient"/>
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.GoogleMapsClientUnitTests.mClient">
+            <summary>
+            The client
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.GoogleMapsClientUnitTests.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.GoogleMapsClientUnitTests.TextSearchAsync">
+            <summary>
+            Checks whether the text search can be retrieved
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.GoogleMapsClientUnitTests.NearbySearchAsync">
+            <summary>
+            Checks whether the nearby search can be retrieved
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.GoogleMapsClientUnitTests.PlaceAutoCompletePredictionAsync">
+            <summary>
+            Checks whether the place auto complete prediction can be retrieved
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.GoogleMapsClientUnitTests.PlaceDetailAsync">
+            <summary>
+            Checks whether the place detail can be retrieved
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.GoogleMapsClientUnitTests.PlaceQueryAutocompleteAsync">
+            <summary>
+            Checks whether the place query can be retrieved
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.GoogleMapsClientUnitTests.PlaceFindAsync">
+            <summary>
+            Checks whether the place can be retrieved
+            </summary>
+        </member>
         <member name="T:GoogleMapsClient.IFailableHelpers">
             <summary>
             Helper methods for <see cref="T:GoogleMapsClient.IFailable"/>
@@ -4774,9 +4852,9 @@
             A flag indicating whether the <see cref="P:GoogleMapsClient.RouteHelpers.PropertyQueryArgumentInfo.PropertyInfo"/> is an enumerable property
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.RouteHelpers.PropertyQueryArgumentInfo.Mapper">
+        <member name="P:GoogleMapsClient.RouteHelpers.PropertyQueryArgumentInfo.Converter">
             <summary>
-            
+            The converter
             </summary>
         </member>
         <member name="M:GoogleMapsClient.RouteHelpers.PropertyQueryArgumentInfo.#ctor(System.Reflection.PropertyInfo,System.String)">
@@ -4801,6 +4879,19 @@
             <summary>
             Returns a string suitable to be placed in a URL.
             </summary>
+            <returns></returns>
+        </member>
+        <member name="T:GoogleMapsClient.IQueryArgumentConverter">
+            <summary>
+            Provides abstractions for a query argument converter
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.IQueryArgumentConverter.Convert(System.Type,System.Object)">
+            <summary>
+            Converts the specified <paramref name="value"/> 
+            </summary>
+            <param name="valueType">The type of the value.</param>
+            <param name="value">The value.</param>
             <returns></returns>
         </member>
         <member name="T:GoogleMapsClient.AddressTypeEnumerableToStringJsonConverter">
@@ -4950,8 +5041,7 @@
         </member>
         <member name="T:GoogleMapsClient.DateTimeOffsetToUnixTimeStampJsonConverter">
             <summary>
-            The <see cref="T:Newtonsoft.Json.JsonConverter`1"/> that converts a <see cref="T:System.DateOnly"/> to an <see cref="T:System.Int32"/> that represents the
-            unix timestamp
+            The <see cref="T:Newtonsoft.Json.JsonConverter`1"/> that converts a <see cref="T:System.DateOnly"/> to an <see cref="T:System.Int32"/> that represents the unix timestamp
             </summary>
         </member>
         <member name="M:GoogleMapsClient.DateTimeOffsetToUnixTimeStampJsonConverter.#ctor">
@@ -5060,6 +5150,183 @@
             <inheritdoc/>
         </member>
         <member name="M:GoogleMapsClient.TimeOnlyToStringJsonConveter.WriteJson(Newtonsoft.Json.JsonWriter,System.TimeOnly,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc/>
+        </member>
+        <member name="T:GoogleMapsClient.AtmosphereCategoryTypeQueryArgumentConverter">
+            <summary>
+            A <see cref="T:GoogleMapsClient.BaseQueryArgumentConverter`1"/> that is used for converting a <see cref="T:GoogleMapsClient.AtmosphereCategoryType"/> to a <see cref="T:System.String"/>.
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.AtmosphereCategoryTypeQueryArgumentConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.AtmosphereCategoryTypeQueryArgumentConverter.Convert(GoogleMapsClient.AtmosphereCategoryType)">
+            <inheritdoc/>
+        </member>
+        <member name="T:GoogleMapsClient.BaseQueryArgumentConverter`1">
+            <summary>
+            The base for all the query argument converters.
+            </summary>
+            <typeparam name="TValue">The type of the value.</typeparam>
+        </member>
+        <member name="M:GoogleMapsClient.BaseQueryArgumentConverter`1.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.BaseQueryArgumentConverter`1.Convert(System.Type,System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:GoogleMapsClient.BaseQueryArgumentConverter`1.Convert(`0)">
+            <summary>
+            Converts the specified <paramref name="value"/> 
+            </summary>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="T:GoogleMapsClient.BasicCategoryTypeQueryArgumentConverter">
+            <summary>
+            A <see cref="T:GoogleMapsClient.BaseQueryArgumentConverter`1"/> that is used for converting a <see cref="T:GoogleMapsClient.BasicCategoryType"/> to a <see cref="T:System.String"/>.
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.BasicCategoryTypeQueryArgumentConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.BasicCategoryTypeQueryArgumentConverter.Convert(GoogleMapsClient.BasicCategoryType)">
+            <inheritdoc/>
+        </member>
+        <member name="T:GoogleMapsClient.ContactCategoryTypeQueryArgumentConverter">
+            <summary>
+            A <see cref="T:GoogleMapsClient.BaseQueryArgumentConverter`1"/> that is used for converting a <see cref="T:GoogleMapsClient.ContactCategoryType"/> to a <see cref="T:System.String"/>.
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.ContactCategoryTypeQueryArgumentConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.ContactCategoryTypeQueryArgumentConverter.Convert(GoogleMapsClient.ContactCategoryType)">
+            <inheritdoc/>
+        </member>
+        <member name="T:GoogleMapsClient.CoordinatesQueryArgumentConverter">
+            <summary>
+            A <see cref="T:GoogleMapsClient.BaseQueryArgumentConverter`1"/> that is used for converting a <see cref="T:GoogleMapsClient.Coordinates"/> to a <see cref="T:System.String"/>.
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.CoordinatesQueryArgumentConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.CoordinatesQueryArgumentConverter.Convert(GoogleMapsClient.Coordinates)">
+            <inheritdoc/>
+        </member>
+        <member name="T:GoogleMapsClient.LocationBiasInfoQueryArgumentConverter">
+            <summary>
+            A <see cref="T:GoogleMapsClient.BaseQueryArgumentConverter`1"/> that is used for converting a <see cref="T:GoogleMapsClient.LocationBiasInfo"/> to a <see cref="T:System.String"/>.
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.LocationBiasInfoQueryArgumentConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.LocationBiasInfoQueryArgumentConverter.Convert(GoogleMapsClient.LocationBiasInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:GoogleMapsClient.LocationRestrictionInfoQueryArgumentConverter">
+            <summary>
+            A <see cref="T:GoogleMapsClient.BaseQueryArgumentConverter`1"/> that is used for converting a <see cref="T:GoogleMapsClient.LocationRestrictionInfo"/> to a <see cref="T:System.String"/>.
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.LocationRestrictionInfoQueryArgumentConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.LocationRestrictionInfoQueryArgumentConverter.Convert(GoogleMapsClient.LocationRestrictionInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:GoogleMapsClient.PlaceTypeInfoQueryArgumentConverter">
+            <summary>
+            A <see cref="T:GoogleMapsClient.BaseQueryArgumentConverter`1"/> that is used for converting a <see cref="T:GoogleMapsClient.PlaceTypeInfo"/> to a <see cref="T:System.String"/>.
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.PlaceTypeInfoQueryArgumentConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.PlaceTypeInfoQueryArgumentConverter.Convert(GoogleMapsClient.PlaceTypeInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:GoogleMapsClient.PlaceTypeQueryArgumentConverter">
+            <summary>
+            A <see cref="T:GoogleMapsClient.BaseQueryArgumentConverter`1"/> that is used for converting a <see cref="T:GoogleMapsClient.PlaceType"/> to a <see cref="T:System.String"/>.
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.PlaceTypeQueryArgumentConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.PlaceTypeQueryArgumentConverter.Convert(GoogleMapsClient.PlaceType)">
+            <inheritdoc/>
+        </member>
+        <member name="T:GoogleMapsClient.PriceRangeTypeQueryArgumentConverter">
+            <summary>
+            A <see cref="T:GoogleMapsClient.BaseQueryArgumentConverter`1"/> that is used for converting a <see cref="T:GoogleMapsClient.PriceRangeType"/> to a <see cref="T:System.String"/>.
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.PriceRangeTypeQueryArgumentConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.PriceRangeTypeQueryArgumentConverter.Convert(GoogleMapsClient.PriceRangeType)">
+            <inheritdoc/>
+        </member>
+        <member name="T:GoogleMapsClient.RankByTypeQueryArgumentConverter">
+            <summary>
+            A <see cref="T:GoogleMapsClient.BaseQueryArgumentConverter`1"/> that is used for converting a <see cref="T:GoogleMapsClient.RankByType"/> to a <see cref="T:System.String"/>.
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.RankByTypeQueryArgumentConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.RankByTypeQueryArgumentConverter.Convert(GoogleMapsClient.RankByType)">
+            <inheritdoc/>
+        </member>
+        <member name="T:GoogleMapsClient.ReviewSortingTypeQueryArgumentConverter">
+            <summary>
+            A <see cref="T:GoogleMapsClient.BaseQueryArgumentConverter`1"/> that is used for converting a <see cref="T:GoogleMapsClient.ReviewSortingType"/> to a <see cref="T:System.String"/>.
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.ReviewSortingTypeQueryArgumentConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.ReviewSortingTypeQueryArgumentConverter.Convert(GoogleMapsClient.ReviewSortingType)">
+            <inheritdoc/>
+        </member>
+        <member name="T:GoogleMapsClient.SupportedLanguageQueryArgumentConverter">
+            <summary>
+            A <see cref="T:GoogleMapsClient.BaseQueryArgumentConverter`1"/> that is used for converting a <see cref="T:GoogleMapsClient.SupportedLanguage"/> to a <see cref="T:System.String"/>.
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.SupportedLanguageQueryArgumentConverter.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:GoogleMapsClient.SupportedLanguageQueryArgumentConverter.Convert(GoogleMapsClient.SupportedLanguage)">
             <inheritdoc/>
         </member>
         <member name="T:GoogleMapsClient.GoogleMapsClient">
