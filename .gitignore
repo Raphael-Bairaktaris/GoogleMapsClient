@@ -361,4 +361,4 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
-/GoogleMapsClient/Class1.cs
+GoogleMapsClientTests/Credentials.txt

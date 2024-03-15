@@ -1,6 +1,8 @@
-﻿using Xunit;
+﻿using GoogleMapsClient;
+using System.Reflection;
+using Xunit;
 
-namespace GoogleMapsClient
+namespace GoogleMapsClientTests
 {
     /// <summary>
     /// The tests for the <see cref="GoogleMapsClient"/>
@@ -12,7 +14,7 @@ namespace GoogleMapsClient
         /// <summary>
         /// The client
         /// </summary>
-        private readonly GoogleMapsClient mClient;
+        private readonly GoogleMapsClient.GoogleMapsClient mClient;
 
         #endregion
 
@@ -23,7 +25,17 @@ namespace GoogleMapsClient
         /// </summary>
         public GoogleMapsClientUnitTests() : base()
         {
-            mClient = new GoogleMapsClient("");
+            var assemblyPath = Assembly.GetExecutingAssembly().Location;
+
+            var parts = assemblyPath.Split("\\");
+
+            var testsProjectPath = Path.Combine(parts.Take(parts.Count() - 4).ToArray());
+
+            var credentialsFilePath = Path.Combine(testsProjectPath, "Credentials.txt");
+
+            var apiKey = File.ReadAllText(credentialsFilePath);
+
+            mClient = new GoogleMapsClient.GoogleMapsClient(apiKey);
         }
 
         #endregion
@@ -39,7 +51,13 @@ namespace GoogleMapsClient
         public async void TextSearchAsync()
         {
             // Get the response
-            var response = await mClient.TextSearchAsync(new TextSearchAPIArgs() { Query = ""});
+            var response = await mClient.TextSearchAsync(new TextSearchAPIArgs()
+            {
+                Query = "Thessaloniki",
+                Language = SupportedLanguage.EL,
+                Radius = 100,
+                Type = PlaceType.Atm,
+            });
 
             // Checks whether the response is successful
             Assert.True(response.IsSuccessful);
@@ -103,7 +121,7 @@ namespace GoogleMapsClient
 
         #endregion
 
-        #region Place Query Autocomplete
+        #region Place Query AutoComplete
 
         /// <summary>
         /// Checks whether the place query can be retrieved

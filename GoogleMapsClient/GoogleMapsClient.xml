@@ -4724,51 +4724,6 @@
             Maps the <see cref="T:GoogleMapsClient.SupportedLanguage"/> to their related <see cref="T:System.String"/>
             </summary>
         </member>
-        <member name="T:GoogleMapsClient.GoogleMapsClientUnitTests">
-            <summary>
-            The tests for the <see cref="T:GoogleMapsClient.GoogleMapsClient"/>
-            </summary>
-        </member>
-        <member name="F:GoogleMapsClient.GoogleMapsClientUnitTests.mClient">
-            <summary>
-            The client
-            </summary>
-        </member>
-        <member name="M:GoogleMapsClient.GoogleMapsClientUnitTests.#ctor">
-            <summary>
-            Default constructor
-            </summary>
-        </member>
-        <member name="M:GoogleMapsClient.GoogleMapsClientUnitTests.TextSearchAsync">
-            <summary>
-            Checks whether the text search can be retrieved
-            </summary>
-        </member>
-        <member name="M:GoogleMapsClient.GoogleMapsClientUnitTests.NearbySearchAsync">
-            <summary>
-            Checks whether the nearby search can be retrieved
-            </summary>
-        </member>
-        <member name="M:GoogleMapsClient.GoogleMapsClientUnitTests.PlaceAutoCompletePredictionAsync">
-            <summary>
-            Checks whether the place auto complete prediction can be retrieved
-            </summary>
-        </member>
-        <member name="M:GoogleMapsClient.GoogleMapsClientUnitTests.PlaceDetailAsync">
-            <summary>
-            Checks whether the place detail can be retrieved
-            </summary>
-        </member>
-        <member name="M:GoogleMapsClient.GoogleMapsClientUnitTests.PlaceQueryAutocompleteAsync">
-            <summary>
-            Checks whether the place query can be retrieved
-            </summary>
-        </member>
-        <member name="M:GoogleMapsClient.GoogleMapsClientUnitTests.PlaceFindAsync">
-            <summary>
-            Checks whether the place can be retrieved
-            </summary>
-        </member>
         <member name="T:GoogleMapsClient.IFailableHelpers">
             <summary>
             Helper methods for <see cref="T:GoogleMapsClient.IFailable"/>
