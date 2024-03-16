@@ -1,22 +1,24 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <PackageId>GoogleMapsIntegration</PackageId>
+    <PackageId>Simple.GoogleMaps</PackageId>
     <Version>1.0.0</Version>
     <Authors>Raphael_Bairaktaris</Authors>
     <Company>Raphael_Bairaktaris</Company>
-    <Product>Google Maps Client</Product>
-    <Description>GoogleMapsWrapper is a lightweight NuGet package that simplifies the integration of Google Maps functionality into your .NET applications. 
-Easily add interactive maps, markers, and geolocation services to enhance your location-based features.</Description>
-    <PackageIcon>googlemaps.jpg</PackageIcon>
+    <Product>Simple.GoogleMaps</Product>
+    <Description>Simlpe.GoogleMaps is a lightweight NuGet package that simplifies the integration of Google Maps functionality into your .NET applications. 
+Easily add geolocation services to enhance your location-based features.</Description>
+    <PackageIcon>googlemaps.png</PackageIcon>
     <RepositoryUrl>https://github.com/Raphael-Bairaktaris/GoogleMapsClient</RepositoryUrl>
     <Copyright>Raphael_Bairaktaris</Copyright>
-    <PackageTags>Mapping;API Integration;Location Based Services;</PackageTags>
+    <PackageTags>Google;Maps;Geolocation;</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/Raphael-Bairaktaris/GoogleMapsClient</PackageProjectUrl>
+    <Title>Simple integration with the GoogleMaps geolocation API</Title>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -31,7 +33,7 @@ Easily add interactive maps, markers, and geolocation services to enhance your l
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\..\googlemaps.jpg">
+    <None Include="..\..\..\googlemaps.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
@@ -42,8 +44,8 @@ Easily add interactive maps, markers, and geolocation services to enhance your l
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.2.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
 </Project>
