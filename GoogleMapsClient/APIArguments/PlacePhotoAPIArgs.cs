@@ -1,7 +1,7 @@
 ﻿namespace GoogleMapsClient
 {
     /// <summary>
-    /// Arguements used for receiving a place photo
+    /// Arguments used for receiving a place photo
     /// </summary>
     public class PlacePhotoAPIArgs
     {

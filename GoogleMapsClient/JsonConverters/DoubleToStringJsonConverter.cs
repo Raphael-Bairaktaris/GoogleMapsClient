@@ -3,7 +3,7 @@
 namespace GoogleMapsClient
 {
     /// <summary>
-    /// A <see cref="JsonConverter{T}"/> that is used for converting a <see cref="double?"/> to a string <see cref="string"/>
+    /// A <see cref="JsonConverter{T}"/> that is used for converting a <see cref="double"/> to a string <see cref="string"/>
     /// </summary>
     public class DoubleToStringJsonConverter : JsonConverter<double?>
     {
@@ -18,6 +18,8 @@ namespace GoogleMapsClient
         }
 
         #endregion
+
+        #region Public Methods
 
         /// <inheritdoc/>
         public override double? ReadJson(JsonReader reader, Type objectType, double? existingValue, bool hasExistingValue, JsonSerializer serializer)
@@ -39,6 +41,8 @@ namespace GoogleMapsClient
                 writer.WriteNull();
             else
                 writer.WriteValue(value);
-        }
+        } 
+
+        #endregion
     }
 }

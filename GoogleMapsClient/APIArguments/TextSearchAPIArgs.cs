@@ -1,7 +1,7 @@
 ﻿namespace GoogleMapsClient
 {
     /// <summary>
-    /// Arguements used for receiving a search result from text
+    /// Arguments used for receiving a search result from text
     /// </summary>
     public class TextSearchAPIArgs
     {
@@ -81,7 +81,7 @@
         #region Constructors
 
         /// <summary>
-        /// Default contructor
+        /// Default constructor
         /// </summary>
         public TextSearchAPIArgs()
         {

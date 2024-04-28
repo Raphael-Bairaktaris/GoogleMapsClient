@@ -37,7 +37,7 @@ namespace GoogleMapsClient
         public Coordinates? RectangularSouthwest { get; }
 
         /// <summary>
-        /// The coordinates for the northseast part of the rectangle.
+        /// The coordinates for the northeast part of the rectangle.
         /// </summary>
         public Coordinates? RectangularNortheast { get; }
 
@@ -69,7 +69,7 @@ namespace GoogleMapsClient
         /// Rectangular based constructor
         /// </summary>
         /// <param name="rectangularSouthwest">The coordinates for the southwest part of the rectangle.</param>
-        /// <param name="rectangularNortheast">The coordinates for the northseast part of the rectangle.</param>
+        /// <param name="rectangularNortheast">The coordinates for the northeast part of the rectangle.</param>
         public LocationRestrictionInfo(Coordinates rectangularSouthwest, Coordinates rectangularNortheast)
         {
             ShouldUseRectangular = true;

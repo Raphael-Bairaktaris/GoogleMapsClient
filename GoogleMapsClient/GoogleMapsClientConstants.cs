@@ -61,7 +61,7 @@ namespace GoogleMapsClient
         }.ToImmutableDictionary();
 
         /// <summary>
-        /// Maps the <see cref="AtmosphereCategoryType"/> to theis related <see cref="string"/>s
+        /// Maps the <see cref="AtmosphereCategoryType"/>s to their related <see cref="string"/>s
         /// </summary>
         public static IReadOnlyDictionary<AtmosphereCategoryType, string> AtmosphereCategoryTypeToStringMapper { get; } = new Dictionary<AtmosphereCategoryType, string>()
         {
@@ -85,7 +85,7 @@ namespace GoogleMapsClient
         }.ToImmutableDictionary();
 
         /// <summary>
-        /// Maps the <see cref="BasicCategoryType"/> to their related <see cref="string"/>s
+        /// Maps the <see cref="BasicCategoryType"/>s to their related <see cref="string"/>s
         /// </summary>
         public static IReadOnlyDictionary<BasicCategoryType, string> BasicCategoryTypeToStringMapper { get; } = new Dictionary<BasicCategoryType, string>()
         {
@@ -121,7 +121,7 @@ namespace GoogleMapsClient
         }.ToImmutableDictionary();
 
         /// <summary>
-        /// Maps the <see cref="ContactCategoryType"/> to their related <see cref="string"/>s
+        /// Maps the <see cref="ContactCategoryType"/>s to their related <see cref="string"/>s
         /// </summary>
         public static IReadOnlyDictionary<ContactCategoryType, string> ContactCategoryTypeToStringMapper { get; } = new Dictionary<ContactCategoryType, string>()
         {
@@ -134,7 +134,7 @@ namespace GoogleMapsClient
         }.ToImmutableDictionary();
 
         /// <summary>
-        /// Maps the <see cref="PlaceOpeningHoursType"/> to their related <see cref="string"/>s
+        /// Maps the <see cref="PlaceOpeningHoursType"/>s to their related <see cref="string"/>s
         /// </summary>
         public static IReadOnlyDictionary<PlaceOpeningHoursType, string> PlaceOpeningHoursTypeToStringMapper { get; } = new Dictionary<PlaceOpeningHoursType, string>()
         {
@@ -255,7 +255,7 @@ namespace GoogleMapsClient
         }.ToImmutableDictionary();
 
         /// <summary>
-        /// Maps the <see cref="StatusCodeType"/> to ther related <see cref="string"/>
+        /// Maps the <see cref="StatusCodeType"/>s to their related <see cref="string"/>s
         /// </summary>
         public static IReadOnlyDictionary<StatusCodeType, string> StatusCodeTypeToStringMapper { get; } = new Dictionary<StatusCodeType, string>()
         {
@@ -268,7 +268,7 @@ namespace GoogleMapsClient
         }.ToImmutableDictionary();
 
         /// <summary>
-        /// Maps the <see cref="ReviewSortingType"/> to their related <see cref="string"/>
+        /// Maps the <see cref="ReviewSortingType"/>s to their related <see cref="string"/>s
         /// </summary>
         public static IReadOnlyDictionary<ReviewSortingType, string> ReviewSortingTypeToStringMapper { get; } = new Dictionary<ReviewSortingType, string>()
         {
@@ -279,7 +279,7 @@ namespace GoogleMapsClient
         }.ToImmutableDictionary();
 
         /// <summary>
-        /// Maps the <see cref="PriceRangeType"/> to thei related <see cref="string"/>
+        /// Maps the <see cref="PriceRangeType"/>s to their related <see cref="string"/>s
         /// </summary>
         public static IReadOnlyDictionary<PriceRangeType, string> PriceRangeTypeToStringMapper { get; } = new Dictionary<PriceRangeType, string>()
         {
@@ -291,7 +291,7 @@ namespace GoogleMapsClient
         }.ToImmutableDictionary();
 
         /// <summary>
-        /// Maps the <see cref="RankByType"/> to their related <see cref="string"/>
+        /// Maps the <see cref="RankByType"/>s to their related <see cref="string"/>
         /// </summary>
         public static IReadOnlyDictionary<RankByType, string> RankByTypeToStringMapper { get; } = new Dictionary<RankByType, string>()
         {
@@ -300,7 +300,7 @@ namespace GoogleMapsClient
         }.ToImmutableDictionary();
 
         /// <summary>
-        /// Maps the <see cref="RatingType"/> to their related <see cref="int"/>
+        /// Maps the <see cref="RatingType"/>s to their related <see cref="int"/>s
         /// </summary>
         public static IReadOnlyDictionary<RatingType, int> RatingTypeToIntMapper { get; } = new Dictionary<RatingType, int>()
         {
@@ -313,7 +313,7 @@ namespace GoogleMapsClient
         }.ToImmutableDictionary();
 
         /// <summary>
-        /// Maps the <see cref="SupportedLanguage"/> to their related <see cref="string"/>
+        /// Maps the <see cref="SupportedLanguage"/>s to their related <see cref="string"/>s
         /// </summary>
         public static IReadOnlyDictionary<SupportedLanguage, string> SupportedLanguageToStringMapper { get; } = new Dictionary<SupportedLanguage, string>()
         {

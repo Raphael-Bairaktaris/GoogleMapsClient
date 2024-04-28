@@ -1,7 +1,7 @@
 ﻿namespace GoogleMapsClient
 {
     /// <summary>
-    /// User instead of searching for a specific location can type in a categorical search.
+    /// Arguments used for receiving a query autocomplete
     /// </summary>
     public class QueryAutocompleteAPIArgs
     {

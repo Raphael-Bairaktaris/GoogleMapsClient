@@ -5,14 +5,14 @@ namespace GoogleMapsClient
     /// <summary>
     /// The <see cref="JsonConverter{T}"/> that converts a <see cref="TimeOnly"/> to <see cref="string"/>
     /// </summary>
-    public class TimeOnlyToStringJsonConveter : JsonConverter<TimeOnly>
+    public class TimeOnlyToStringJsonConverter : JsonConverter<TimeOnly>
     {
         #region Constructors
 
         /// <summary>
         /// Default constructor
         /// </summary>
-        public TimeOnlyToStringJsonConveter()
+        public TimeOnlyToStringJsonConverter()
         {
 
         }

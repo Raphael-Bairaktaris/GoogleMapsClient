@@ -3,7 +3,7 @@
 namespace GoogleMapsClient
 {
     /// <summary>
-    /// Represents a place opening hourse period detail response
+    /// Represents a place opening hours period detail
     /// </summary>
     public class PlaceFindPlaceOpeningHoursPeriodDetailResponseModel
     {
@@ -21,7 +21,7 @@ namespace GoogleMapsClient
         /// in the range 0000–2359. The time will be reported in the place’s time zone.
         /// </summary>
         [JsonProperty("time")]
-        [JsonConverter(typeof(TimeOnlyToStringJsonConveter))]
+        [JsonConverter(typeof(TimeOnlyToStringJsonConverter))]
         public TimeOnly Time { get; set; }
 
         /// <summary>

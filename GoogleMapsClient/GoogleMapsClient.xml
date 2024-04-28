@@ -265,7 +265,7 @@
         </member>
         <member name="T:GoogleMapsClient.PlaceFindAPIArgs">
             <summary>
-            Arguements used for receiving a place search 
+            Arguments used for receiving a place search 
             </summary>
         </member>
         <member name="P:GoogleMapsClient.PlaceFindAPIArgs.Input">
@@ -450,7 +450,7 @@
         </member>
         <member name="T:GoogleMapsClient.TextSearchAPIArgs">
             <summary>
-            Arguements used for receiving a search result from text
+            Arguments used for receiving a search result from text
             </summary>
         </member>
         <member name="P:GoogleMapsClient.TextSearchAPIArgs.Query">
@@ -510,7 +510,7 @@
         </member>
         <member name="M:GoogleMapsClient.TextSearchAPIArgs.#ctor">
             <summary>
-            Default contructor
+            Default constructor
             </summary>
         </member>
         <member name="T:GoogleMapsClient.GoogleResultResponseModel`1">
@@ -706,7 +706,7 @@
         <member name="P:GoogleMapsClient.PlaceAutocompleteResponseModel.ErrorMessage">
             <summary>
             When the service returns a status code other than OK, there may be an additional error_message 
-            field within the response object. This field contains more detailed information about thereasons behind 
+            field within the response object. This field contains more detailed information about the reasons behind 
             the given status code. This field is not always returned, and its content is subject to change.
             </summary>
         </member>
@@ -823,7 +823,7 @@
         <member name="P:GoogleMapsClient.PlaceQueryAutocompleteResponseModel.ErrorMessage">
             <summary>
             When the service returns a status code other than OK, there may be an additional error_message field within the response object. 
-            This field contains more detailed information about thereasons behind the given status code. This field is not always returned, 
+            This field contains more detailed information about the reasons behind the given status code. This field is not always returned, 
             and its content is subject to change.
             </summary>
         </member>
@@ -930,7 +930,7 @@
         </member>
         <member name="T:GoogleMapsClient.PlaceFindAddressComponentResponseModel">
             <summary>
-            Represents a place find address component respone
+            Represents a place find address component
             </summary>
         </member>
         <member name="F:GoogleMapsClient.PlaceFindAddressComponentResponseModel.mLongName">
@@ -1118,7 +1118,7 @@
         </member>
         <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.IsDineIn">
             <summary>
-            Specifies if the business supports indoor or outdoor seaing options.
+            Specifies if the business supports indoor or outdoor searching options.
             </summary>
         </member>
         <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.EditorialSummary">
@@ -1161,7 +1161,7 @@
         </member>
         <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.IconBackgroundColor">
             <summary>
-            Contains the default HEX color colde for the place's category.
+            Contains the default HEX color code for the place's category.
             </summary>
         </member>
         <member name="P:GoogleMapsClient.PlaceFindAttributesResponseModel.IconMaskBaseUri">
@@ -1466,7 +1466,7 @@
         <member name="P:GoogleMapsClient.PlaceFindFromTextResponseModel.ErrorMessage">
             <summary>
             When the service returns a status code other than OK, there may be an additional error_message field within the response
-            object. This field contains more detailed information about thereasons behind the given status code. 
+            object. This field contains more detailed information about the reasons behind the given status code. 
             This field is not always returned, and its content is subject to change.
             </summary>
         </member>
@@ -1540,7 +1540,7 @@
         </member>
         <member name="T:GoogleMapsClient.PlaceFindPlaceOpeningHoursPeriodDetailResponseModel">
             <summary>
-            Represents a place opening hourse period detail response
+            Represents a place opening hours period detail response
             </summary>
         </member>
         <member name="P:GoogleMapsClient.PlaceFindPlaceOpeningHoursPeriodDetailResponseModel.Day">
@@ -1654,7 +1654,7 @@
         </member>
         <member name="P:GoogleMapsClient.PlaceFindPlaceOpeningHoursResponseModel.SpecialDays">
             <summary>
-            An array of up to seven entries sorresponding to the next seven days.
+            An array of up to seven entries corresponding to the next seven days.
             </summary>
             <remarks>
             https://developers.google.com/maps/documentation/places/web-service/search-find-place#PlaceSpecialDay
@@ -1755,7 +1755,7 @@
         <member name="P:GoogleMapsClient.PlaceFindReviewResponseModel.Time">
             <summary>
             The time that the review was submitted, measured in the number of seconds 
-            since since midnight, January 1, 1970 UTC.
+            since midnight, January 1, 1970 UTC.
             </summary>
         </member>
         <member name="P:GoogleMapsClient.PlaceFindReviewResponseModel.AuthorUrl">
@@ -1919,7 +1919,7 @@
         </member>
         <member name="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.IconBackgroundColor">
             <summary>
-            Contains the default HEX color colde for the place's category.
+            Contains the default HEX color code for the place's category.
             </summary>
         </member>
         <member name="P:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.IconMaskBaseUri">
@@ -2061,7 +2061,7 @@
         <member name="P:GoogleMapsClient.PlaceSearchNearbySearchResponseModel.ErrorMessage">
             <summary>
             When the service returns a status code other than OK, there may be an additional error_message field within the response object.
-            This field contains more detailed information about thereasons behind the given status code. This field is not always returned,
+            This field contains more detailed information about the reasons behind the given status code. This field is not always returned,
             and its content is subject to change.
             </summary>
         </member>
@@ -2158,7 +2158,7 @@
             Rectangular based constructor
             </summary>
             <param name="rectangularSouthwest">The coordinates for the southwest part of the rectangle.</param>
-            <param name="rectangularNortheast">The coordinates for the northseast part of the rectangle.</param>
+            <param name="rectangularNortheast">The coordinates for the northeast part of the rectangle.</param>
         </member>
         <member name="M:GoogleMapsClient.LocationBiasInfo.ToAPIString">
             <inheritdoc/>
@@ -2195,7 +2195,7 @@
         </member>
         <member name="P:GoogleMapsClient.LocationRestrictionInfo.RectangularNortheast">
             <summary>
-            The coordinates for the northseast part of the rectangle.
+            The coordinates for the northeast part of the rectangle.
             </summary>
         </member>
         <member name="M:GoogleMapsClient.LocationRestrictionInfo.#ctor">
@@ -2215,7 +2215,7 @@
             Rectangular based constructor
             </summary>
             <param name="rectangularSouthwest">The coordinates for the southwest part of the rectangle.</param>
-            <param name="rectangularNortheast">The coordinates for the northseast part of the rectangle.</param>
+            <param name="rectangularNortheast">The coordinates for the northeast part of the rectangle.</param>
         </member>
         <member name="M:GoogleMapsClient.LocationRestrictionInfo.ToAPIString">
             <inheritdoc/>
@@ -3493,12 +3493,12 @@
         </member>
         <member name="F:GoogleMapsClient.StatusCodeType.OK">
             <summary>
-            Indicating the API request was succesful
+            Indicating the API request was successful
             </summary>
         </member>
         <member name="F:GoogleMapsClient.StatusCodeType.ZeroResults">
             <summary>
-            Indicating that the search was succesful but returned no results.
+            Indicating that the search was successful but returned no results.
             This may occur if the search was passed a latlng in a remote location.
             </summary>
         </member>
@@ -3519,7 +3519,7 @@
                 <description>Billing has not been enabled on your account.</description>
             </item>
             <item>
-                <description>The monthly 200$ credit, or self imposed usage cap has ben exceeded</description>
+                <description>The monthly 200$ credit, or self imposed usage cap has been exceeded</description>
             </item>
             <item>
                 <description>The provided method of payment is no longer valid.(i.e expired credit)</description>
@@ -3529,7 +3529,7 @@
         </member>
         <member name="F:GoogleMapsClient.StatusCodeType.RequestDenied">
             <summary>
-            Idicates that your erquest was denied, generally because:
+            Indicates that your request was denied, generally because:
             <list type="bullet|number|table">
             <item>
                 <description>The request is missing an API key.</description>
@@ -4654,6 +4654,51 @@
             </summary>
             <param name="result">The result</param>
         </member>
+        <member name="T:GoogleMapsClient.GoogleMapsAPIRoutes">
+            <summary>
+            The API routes of Google Maps API
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.GoogleMapsAPIRoutes.BaseRoute">
+            <summary>
+            The base route
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.GoogleMapsAPIRoutes.FindPlaceAPIRoute">
+            <summary>
+            The find place route
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.GoogleMapsAPIRoutes.NearbySearchAPIRoute">
+            <summary>
+            The nearby search route
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.GoogleMapsAPIRoutes.TextSearchAPIRoute">
+            <summary>
+            The text search route
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.GoogleMapsAPIRoutes.PlaceDetailsAPIRoute">
+            <summary>
+            The place details route
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.GoogleMapsAPIRoutes.PlacePhotoAPIRoute">
+            <summary>
+            The place photo route
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.GoogleMapsAPIRoutes.PlaceAutoCompleteAPIRoute">
+            <summary>
+            The place autocomplete route
+            </summary>
+        </member>
+        <member name="F:GoogleMapsClient.GoogleMapsAPIRoutes.QueryAutocompleteAPIRoute">
+            <summary>
+            The query autocomplete route
+            </summary>
+        </member>
         <member name="T:GoogleMapsClient.GoogleMapsClientConstants">
             <summary>
             Constants related to the Google maps client
@@ -4666,12 +4711,12 @@
         </member>
         <member name="P:GoogleMapsClient.GoogleMapsClientConstants.AtmosphereCategoryTypeToStringMapper">
             <summary>
-            Maps the <see cref="T:GoogleMapsClient.AtmosphereCategoryType"/> to theis related <see cref="T:System.String"/>s
+            Maps the <see cref="T:GoogleMapsClient.AtmosphereCategoryType"/>s to their related <see cref="T:System.String"/>s
             </summary>
         </member>
         <member name="P:GoogleMapsClient.GoogleMapsClientConstants.BasicCategoryTypeToStringMapper">
             <summary>
-            Maps the <see cref="T:GoogleMapsClient.BasicCategoryType"/> to their related <see cref="T:System.String"/>s
+            Maps the <see cref="T:GoogleMapsClient.BasicCategoryType"/>s to their related <see cref="T:System.String"/>s
             </summary>
         </member>
         <member name="P:GoogleMapsClient.GoogleMapsClientConstants.CollectionTypeToStringMapper">
@@ -4681,12 +4726,12 @@
         </member>
         <member name="P:GoogleMapsClient.GoogleMapsClientConstants.ContactCategoryTypeToStringMapper">
             <summary>
-            Maps the <see cref="T:GoogleMapsClient.ContactCategoryType"/> to their related <see cref="T:System.String"/>s
+            Maps the <see cref="T:GoogleMapsClient.ContactCategoryType"/>s to their related <see cref="T:System.String"/>s
             </summary>
         </member>
         <member name="P:GoogleMapsClient.GoogleMapsClientConstants.PlaceOpeningHoursTypeToStringMapper">
             <summary>
-            Maps the <see cref="T:GoogleMapsClient.PlaceOpeningHoursType"/> to their related <see cref="T:System.String"/>s
+            Maps the <see cref="T:GoogleMapsClient.PlaceOpeningHoursType"/>s to their related <see cref="T:System.String"/>s
             </summary>
         </member>
         <member name="P:GoogleMapsClient.GoogleMapsClientConstants.PlaceTypeToStringMapper">
@@ -4696,32 +4741,32 @@
         </member>
         <member name="P:GoogleMapsClient.GoogleMapsClientConstants.StatusCodeTypeToStringMapper">
             <summary>
-            Maps the <see cref="T:GoogleMapsClient.StatusCodeType"/> to ther related <see cref="T:System.String"/>
+            Maps the <see cref="T:GoogleMapsClient.StatusCodeType"/>s to their related <see cref="T:System.String"/>s
             </summary>
         </member>
         <member name="P:GoogleMapsClient.GoogleMapsClientConstants.ReviewSortingTypeToStringMapper">
             <summary>
-            Maps the <see cref="T:GoogleMapsClient.ReviewSortingType"/> to their related <see cref="T:System.String"/>
+            Maps the <see cref="T:GoogleMapsClient.ReviewSortingType"/>s to their related <see cref="T:System.String"/>s
             </summary>
         </member>
         <member name="P:GoogleMapsClient.GoogleMapsClientConstants.PriceRangeTypeToStringMapper">
             <summary>
-            Maps the <see cref="T:GoogleMapsClient.PriceRangeType"/> to thei related <see cref="T:System.String"/>
+            Maps the <see cref="T:GoogleMapsClient.PriceRangeType"/>s to their related <see cref="T:System.String"/>s
             </summary>
         </member>
         <member name="P:GoogleMapsClient.GoogleMapsClientConstants.RankByTypeToStringMapper">
             <summary>
-            Maps the <see cref="T:GoogleMapsClient.RankByType"/> to their related <see cref="T:System.String"/>
+            Maps the <see cref="T:GoogleMapsClient.RankByType"/>s to their related <see cref="T:System.String"/>
             </summary>
         </member>
         <member name="P:GoogleMapsClient.GoogleMapsClientConstants.RatingTypeToIntMapper">
             <summary>
-            Maps the <see cref="T:GoogleMapsClient.RatingType"/> to their related <see cref="T:System.Int32"/>
+            Maps the <see cref="T:GoogleMapsClient.RatingType"/>s to their related <see cref="T:System.Int32"/>s
             </summary>
         </member>
         <member name="P:GoogleMapsClient.GoogleMapsClientConstants.SupportedLanguageToStringMapper">
             <summary>
-            Maps the <see cref="T:GoogleMapsClient.SupportedLanguage"/> to their related <see cref="T:System.String"/>
+            Maps the <see cref="T:GoogleMapsClient.SupportedLanguage"/>s to their related <see cref="T:System.String"/>s
             </summary>
         </member>
         <member name="T:GoogleMapsClient.IFailableHelpers">
@@ -4954,7 +4999,7 @@
         </member>
         <member name="M:GoogleMapsClient.CollectionTypeToStringJsonConverter.#ctor">
             <summary>
-            Defualt constructor
+            Default constructor
             </summary>
         </member>
         <member name="M:GoogleMapsClient.CollectionTypeToStringJsonConverter.GetMapper">
@@ -4967,7 +5012,7 @@
         </member>
         <member name="M:GoogleMapsClient.ContactCategoryTypeToStringJsonConverter.#ctor">
             <summary>
-            Defualt constructor
+            Default constructor
             </summary>
         </member>
         <member name="M:GoogleMapsClient.ContactCategoryTypeToStringJsonConverter.GetMapper">
@@ -5012,7 +5057,7 @@
         </member>
         <member name="T:GoogleMapsClient.DoubleToStringJsonConverter">
             <summary>
-            A <see cref="T:Newtonsoft.Json.JsonConverter`1"/> that is used for converting a <see cref="!:double?"/> to a string <see cref="T:System.String"/>
+            A <see cref="T:Newtonsoft.Json.JsonConverter`1"/> that is used for converting a <see cref="T:System.Double"/> to a string <see cref="T:System.String"/>
             </summary>
         </member>
         <member name="M:GoogleMapsClient.DoubleToStringJsonConverter.#ctor">
@@ -5033,7 +5078,7 @@
         </member>
         <member name="M:GoogleMapsClient.PlaceOpeningHoursTypeToStringJsonConverter.#ctor">
             <summary>
-            Defualt constructor
+            Default constructor
             </summary>
         </member>
         <member name="M:GoogleMapsClient.PlaceOpeningHoursTypeToStringJsonConverter.GetMapper">
@@ -5046,7 +5091,7 @@
         </member>
         <member name="M:GoogleMapsClient.PlaceTypeToStringJsonConverter.#ctor">
             <summary>
-            Defualt constructor
+            Default constructor
             </summary>
         </member>
         <member name="M:GoogleMapsClient.PlaceTypeToStringJsonConverter.GetMapper">
@@ -5286,7 +5331,7 @@
         </member>
         <member name="T:GoogleMapsClient.GoogleMapsClient">
             <summary>
-            
+            An agent hat is capable of making requests to the Google Maps API
             </summary>
         </member>
         <member name="P:GoogleMapsClient.GoogleMapsClient.APIKey">
@@ -5296,51 +5341,51 @@
         </member>
         <member name="M:GoogleMapsClient.GoogleMapsClient.#ctor(System.String)">
             <summary>
-            
+            Default constructor
             </summary>
-            <param name="apiKey"></param>
+            <param name="apiKey">The API key</param>
             <exception cref="T:System.ArgumentNullException"></exception>
         </member>
         <member name="M:GoogleMapsClient.GoogleMapsClient.TextSearchAsync(GoogleMapsClient.TextSearchAPIArgs)">
             <summary>
-            
+            Get a text search result
             </summary>
-            <param name="args"></param>
+            <param name="args">The arguments</param>
             <returns></returns>
         </member>
         <member name="M:GoogleMapsClient.GoogleMapsClient.NearbySearchAsync(GoogleMapsClient.NearbySearchAPIArgs)">
             <summary>
-            
+            Get a nearby search result
             </summary>
-            <param name="args"></param>
+            <param name="args">The arguments</param>
             <returns></returns>
         </member>
         <member name="M:GoogleMapsClient.GoogleMapsClient.PlaceAutoCompletePredictionAsync(GoogleMapsClient.PlaceAutocompletePredictionAPIArgs)">
             <summary>
-            
+            Get a place autocomplete prediction result
             </summary>
-            <param name="args"></param>
+            <param name="args">The arguments</param>
             <returns></returns>
         </member>
         <member name="M:GoogleMapsClient.GoogleMapsClient.PlaceDetailAsync(GoogleMapsClient.PlaceDetailAPIArgs)">
             <summary>
-            
+            Gets a place detail result
             </summary>
             <param name="args"></param>
             <returns></returns>
         </member>
         <member name="M:GoogleMapsClient.GoogleMapsClient.PlaceQueryAutocompleteAsync(GoogleMapsClient.QueryAutocompleteAPIArgs)">
             <summary>
-            
+            Get a place query autocomplete result
             </summary>
-            <param name="args"></param>
+            <param name="args">The arguments</param>
             <returns></returns>
         </member>
         <member name="M:GoogleMapsClient.GoogleMapsClient.PlaceFindAsync(GoogleMapsClient.PlaceFindAPIArgs)">
             <summary>
-            
+            Get a place find result
             </summary>
-            <param name="args"></param>
+            <param name="args">The arguments</param>
             <returns></returns>
         </member>
         <member name="M:GoogleMapsClient.GoogleMapsClient.GetRouteWithAPIKey(System.String)">
@@ -5383,7 +5428,7 @@
             <summary>
             The HTTP client that is used for sending the HTTP requests
             NOTE: HTTP client is recommended to be injected as a Singleton in DI
-                  https://stackoverflow.com/questions/4015324/how-to-make-http-post-web-request
+            https://stackoverflow.com/questions/4015324/how-to-make-http-post-web-request
             </summary>
         </member>
         <member name="M:GoogleMapsClient.WebRequestsClient`1.#ctor">

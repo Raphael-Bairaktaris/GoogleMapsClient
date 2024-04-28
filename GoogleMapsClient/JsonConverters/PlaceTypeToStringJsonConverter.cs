@@ -11,7 +11,7 @@ namespace GoogleMapsClient
         #region Constructors
 
         /// <summary>
-        /// Defualt constructor
+        /// Default constructor
         /// </summary>
         public PlaceTypeToStringJsonConverter()
         {

@@ -54,7 +54,7 @@ namespace GoogleMapsClient
         }
 
         /// <summary>
-        /// An array of up to seven entries sorresponding to the next seven days.
+        /// An array of up to seven entries corresponding to the next seven days.
         /// </summary>
         /// <remarks>
         /// https://developers.google.com/maps/documentation/places/web-service/search-find-place#PlaceSpecialDay

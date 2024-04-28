@@ -49,7 +49,7 @@ namespace GoogleMapsClient
         /// <summary>
         /// The HTTP client that is used for sending the HTTP requests
         /// NOTE: HTTP client is recommended to be injected as a Singleton in DI
-        ///       https://stackoverflow.com/questions/4015324/how-to-make-http-post-web-request
+        /// https://stackoverflow.com/questions/4015324/how-to-make-http-post-web-request
         /// </summary>
         protected HttpClient Client
         {

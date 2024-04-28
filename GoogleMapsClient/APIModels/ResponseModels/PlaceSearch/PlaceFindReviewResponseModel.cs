@@ -59,7 +59,7 @@ namespace GoogleMapsClient
 
         /// <summary>
         /// The time that the review was submitted, measured in the number of seconds 
-        /// since since midnight, January 1, 1970 UTC.
+        /// since midnight, January 1, 1970 UTC.
         /// </summary>
         [JsonProperty("time")]
         [JsonConverter(typeof(DateTimeOffsetToUnixTimeStampJsonConverter))]

@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace GoogleMapsClient.DataModels.Enums
+namespace GoogleMapsClient
 {
     /// <summary>
     /// The <see cref="JsonConverter{T}"/> that converts a <see cref="PriceRangeType"/> to a <see cref="string"/>

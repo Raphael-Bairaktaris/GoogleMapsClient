@@ -9,7 +9,7 @@
     <Authors>Raphael_Bairaktaris</Authors>
     <Company>Raphael_Bairaktaris</Company>
     <Product>Simple.GoogleMaps</Product>
-    <Description>Simlpe.GoogleMaps is a lightweight NuGet package that simplifies the integration of Google Maps functionality into your .NET applications. 
+    <Description>Simple.GoogleMaps is a lightweight NuGet package that simplifies the integration of Google Maps functionality into your .NET applications. 
 Easily add geolocation services to enhance your location-based features.</Description>
     <PackageIcon>googlemaps.png</PackageIcon>
     <RepositoryUrl>https://github.com/Raphael-Bairaktaris/GoogleMapsClient</RepositoryUrl>

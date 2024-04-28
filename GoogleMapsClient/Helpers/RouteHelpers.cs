@@ -4,6 +4,9 @@ using System.Reflection;
 
 namespace GoogleMapsClient
 {
+    /// <summary>
+    /// The GoogleMapsClient route helpers
+    /// </summary>
     public static class RouteHelpers
     {
         #region Private Members

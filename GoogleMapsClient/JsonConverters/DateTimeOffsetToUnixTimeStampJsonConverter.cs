@@ -19,7 +19,6 @@ namespace GoogleMapsClient
 
         #endregion
 
-
         #region Public Methods
 
         /// <inheritdoc/>

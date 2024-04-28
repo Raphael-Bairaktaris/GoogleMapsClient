@@ -39,7 +39,7 @@ namespace GoogleMapsClient
 
         /// <summary>
         /// When the service returns a status code other than OK, there may be an additional error_message field within the response object. 
-        /// This field contains more detailed information about thereasons behind the given status code. This field is not always returned, 
+        /// This field contains more detailed information about the reasons behind the given status code. This field is not always returned, 
         /// and its content is subject to change.
         /// </summary>
         [JsonProperty("error_message")]

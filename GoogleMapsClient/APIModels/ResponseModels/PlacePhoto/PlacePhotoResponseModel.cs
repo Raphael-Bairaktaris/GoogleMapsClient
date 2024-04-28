@@ -4,7 +4,7 @@ using System.Diagnostics.CodeAnalysis;
 namespace GoogleMapsClient
 {
     /// <summary>
-    /// Represents a place photo response
+    /// Represents a place photo
     /// </summary>
     public class PlacePhotoResponseModel
     {

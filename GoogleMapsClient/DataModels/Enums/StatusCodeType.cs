@@ -6,13 +6,13 @@
     public enum StatusCodeType
     {
         /// <summary>
-        /// Indicating the API request was succesful
+        /// Indicating the API request was successful
         /// </summary>
         OK = 0,
 
         /// <summary>
-        /// Indicating that the search was succesful but returned no results.
-        /// This may occur if the search was passed a latlng in a remote location.
+        /// Indicating that the search was successful but returned no results.
+        /// This may occur if the search was passed a latlng (latitude longitude) in a remote location.
         /// </summary>
         ZeroResults = 1,
 
@@ -23,7 +23,7 @@
         InvalidRequest = 2,
 
         /// <summary>
-        /// indicated the following
+        /// Indicated the following
         /// <list type="bullet|number|table">
         /// <item>
         ///     <description>You have exceeded the QPS limits.</description>
@@ -32,7 +32,7 @@
         ///     <description>Billing has not been enabled on your account.</description>
         /// </item>
         /// <item>
-        ///     <description>The monthly 200$ credit, or self imposed usage cap has ben exceeded</description>
+        ///     <description>The monthly 200$ credit, or self imposed usage cap has been exceeded</description>
         /// </item>
         /// <item>
         ///     <description>The provided method of payment is no longer valid.(i.e expired credit)</description>
@@ -42,7 +42,7 @@
         OverQueryLimit = 3,
 
         /// <summary>
-        /// Idicates that your erquest was denied, generally because:
+        /// Indicates that your request was denied, generally because:
         /// <list type="bullet|number|table">
         /// <item>
         ///     <description>The request is missing an API key.</description>

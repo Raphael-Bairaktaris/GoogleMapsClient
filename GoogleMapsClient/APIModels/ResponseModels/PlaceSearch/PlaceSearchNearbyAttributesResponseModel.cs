@@ -18,7 +18,7 @@ namespace GoogleMapsClient
         /// <summary>
         /// The member of the <see cref="Geometry"/> property
         /// </summary>
-        private PlaceFindGeomertryResponseModel? mGeometry;
+        private PlaceFindGeometryResponseModel? mGeometry;
 
         /// <summary>
         /// The member of the <see cref="Icon"/> property
@@ -85,9 +85,9 @@ namespace GoogleMapsClient
         /// </remarks>
         [AllowNull]
         [JsonProperty("geometry")]
-        public PlaceFindGeomertryResponseModel Geometry
+        public PlaceFindGeometryResponseModel Geometry
         {
-            get => mGeometry ??= new PlaceFindGeomertryResponseModel();
+            get => mGeometry ??= new PlaceFindGeometryResponseModel();
             set => mGeometry = value;
         }
 
@@ -104,7 +104,7 @@ namespace GoogleMapsClient
         }
 
         /// <summary>
-        /// Contains the default HEX color colde for the place's category.
+        /// Contains the default HEX color code for the place's category.
         /// </summary>
         [AllowNull]
         [JsonProperty("icon_background_color")]
@@ -270,7 +270,7 @@ namespace GoogleMapsClient
         #region Public Methods
 
         /// <inheritdoc/>
-        //public override string ToString() =>;
+        public override string ToString() => $"Business Status: {BusinessStatus}, Geometry: {Geometry}, Name: {Name}, Place Id: {PlaceId}, Type {Types}";
 
         #endregion
     }

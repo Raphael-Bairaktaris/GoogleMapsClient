@@ -5,7 +5,7 @@ namespace GoogleMapsClient
     /// <summary>
     /// Contains the location and viewport for the location.
     /// </summary>
-    public class PlaceFindGeomertryResponseModel
+    public class PlaceFindGeometryResponseModel
     {
         #region Private Members
 
@@ -52,7 +52,7 @@ namespace GoogleMapsClient
         /// <summary>
         /// Default Constructor
         /// </summary>
-        public PlaceFindGeomertryResponseModel()
+        public PlaceFindGeometryResponseModel()
         {
 
         }

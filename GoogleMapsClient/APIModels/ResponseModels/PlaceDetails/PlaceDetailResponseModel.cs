@@ -3,7 +3,7 @@
 namespace GoogleMapsClient
 {
     /// <summary>
-    /// Represents a place detail response
+    /// Represents a place detail
     /// </summary>
     public class PlaceDetailResponseModel
     {

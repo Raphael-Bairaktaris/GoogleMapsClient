@@ -5,14 +5,14 @@ namespace GoogleMapsClient
     /// <summary>
     /// The <see cref="JsonConverter{T}"/> that converts a <see cref="SupportedLanguage"/> to <see cref="string"/>
     /// </summary>
-    public class SupportedLanguageEnummerableToStringJsonConverter : BaseEnumEnumerableJsonConverter<SupportedLanguage>
+    public class SupportedLanguageEnumerableToStringJsonConverter : BaseEnumEnumerableJsonConverter<SupportedLanguage>
     {
         #region Constructors
 
         /// <summary>
         /// Default constructor
         /// </summary>
-        public SupportedLanguageEnummerableToStringJsonConverter()
+        public SupportedLanguageEnumerableToStringJsonConverter()
         {
 
         }

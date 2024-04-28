@@ -1,7 +1,7 @@
 ﻿namespace GoogleMapsClient
 {
     /// <summary>
-    /// Arguements used for receiving a place search 
+    /// Arguments used for receiving a place search 
     /// </summary>
     public class PlaceFindAPIArgs
     {

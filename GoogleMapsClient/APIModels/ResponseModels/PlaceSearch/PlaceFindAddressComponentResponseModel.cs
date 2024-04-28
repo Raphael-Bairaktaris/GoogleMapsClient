@@ -3,7 +3,7 @@
 namespace GoogleMapsClient
 {
     /// <summary>
-    /// Represents a place find address component respone
+    /// Represents a place find address component
     /// </summary>
     public class PlaceFindAddressComponentResponseModel
     {

@@ -4,7 +4,7 @@ using System.Diagnostics.CodeAnalysis;
 namespace GoogleMapsClient
 {
     /// <summary>
-    /// Represents a place autocomple prediction response
+    /// Represents a place autocomple prediction
     /// </summary>
     public class PlaceAutocompletePredictionResponseModel
     {
