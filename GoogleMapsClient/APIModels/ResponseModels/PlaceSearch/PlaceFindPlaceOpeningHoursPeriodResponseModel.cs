@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json;
 using System.Diagnostics.CodeAnalysis;
-using System.Text.Json;
 
 namespace GoogleMapsClient
 {

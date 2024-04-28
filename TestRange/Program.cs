@@ -24,10 +24,10 @@ if (!locationsResponse.IsSuccessful)
 }
 
 // For every location...
-foreach(var location in locationsResponse.Result.Results)
+foreach(var place in locationsResponse.Result.Results)
 {
     // Get details for that location
-    var detailsResponse = await client.PlaceDetailAsync(new PlaceDetailAPIArgs(location.PlaceId));
+    var detailsResponse = await client.PlaceDetailAsync(new PlaceDetailAPIArgs(place.PlaceId));
 
     // If there was an error...
     if (!detailsResponse.IsSuccessful)

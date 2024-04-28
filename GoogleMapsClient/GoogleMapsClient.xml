@@ -351,7 +351,7 @@
         </member>
         <member name="T:GoogleMapsClient.PlacePhotoAPIArgs">
             <summary>
-            Arguements used for receiving a place photo
+            Arguments used for receiving a place photo
             </summary>
         </member>
         <member name="P:GoogleMapsClient.PlacePhotoAPIArgs.PhotoReference">
@@ -405,7 +405,7 @@
         </member>
         <member name="T:GoogleMapsClient.QueryAutocompleteAPIArgs">
             <summary>
-            User instead of searching for a specific location can type in a categorical search.
+            Arguments used for receiving a query autocomplete
             </summary>
         </member>
         <member name="P:GoogleMapsClient.QueryAutocompleteAPIArgs.Input">
@@ -577,7 +577,7 @@
         </member>
         <member name="T:GoogleMapsClient.PlaceAutocompletePredictionResponseModel">
             <summary>
-            Represents a place autocomple prediction response
+            Represents a place autocomple prediction
             </summary>
         </member>
         <member name="F:GoogleMapsClient.PlaceAutocompletePredictionResponseModel.mDescription">
@@ -663,7 +663,7 @@
         </member>
         <member name="T:GoogleMapsClient.PlaceAutocompleteResponseModel">
             <summary>
-            Represents an autocomplete response
+            Represents an autocomplete
             </summary>
         </member>
         <member name="F:GoogleMapsClient.PlaceAutocompleteResponseModel.mPredictions">
@@ -840,7 +840,7 @@
         </member>
         <member name="T:GoogleMapsClient.PlaceDetailResponseModel">
             <summary>
-            Represents a place detail response
+            Represents a place detail
             </summary>
         </member>
         <member name="F:GoogleMapsClient.PlaceDetailResponseModel.mHtmlAttributions">
@@ -890,7 +890,7 @@
         </member>
         <member name="T:GoogleMapsClient.PlacePhotoResponseModel">
             <summary>
-            Represents a place photo response
+            Represents a place photo
             </summary>
         </member>
         <member name="F:GoogleMapsClient.PlacePhotoResponseModel.mHTMLAttributions">
@@ -1482,37 +1482,37 @@
             Default constructor
             </summary>
         </member>
-        <member name="T:GoogleMapsClient.PlaceFindGeomertryResponseModel">
+        <member name="T:GoogleMapsClient.PlaceFindGeometryResponseModel">
             <summary>
             Contains the location and viewport for the location.
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.PlaceFindGeomertryResponseModel.mLocation">
+        <member name="F:GoogleMapsClient.PlaceFindGeometryResponseModel.mLocation">
             <summary>
-            The member of the <see cref="P:GoogleMapsClient.PlaceFindGeomertryResponseModel.Location"/> property
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindGeometryResponseModel.Location"/> property
             </summary>
         </member>
-        <member name="F:GoogleMapsClient.PlaceFindGeomertryResponseModel.mViewport">
+        <member name="F:GoogleMapsClient.PlaceFindGeometryResponseModel.mViewport">
             <summary>
-            The member of the <see cref="P:GoogleMapsClient.PlaceFindGeomertryResponseModel.Viewport"/> property
+            The member of the <see cref="P:GoogleMapsClient.PlaceFindGeometryResponseModel.Viewport"/> property
             </summary>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindGeomertryResponseModel.Location">
+        <member name="P:GoogleMapsClient.PlaceFindGeometryResponseModel.Location">
             <remarks>
             https://developers.google.com/maps/documentation/places/web-service/search-find-place#LatLngLiteral
             </remarks>
         </member>
-        <member name="P:GoogleMapsClient.PlaceFindGeomertryResponseModel.Viewport">
+        <member name="P:GoogleMapsClient.PlaceFindGeometryResponseModel.Viewport">
             <remarks>
             https://developers.google.com/maps/documentation/places/web-service/search-find-place#Bounds
             </remarks>
         </member>
-        <member name="M:GoogleMapsClient.PlaceFindGeomertryResponseModel.#ctor">
+        <member name="M:GoogleMapsClient.PlaceFindGeometryResponseModel.#ctor">
             <summary>
             Default Constructor
             </summary>
         </member>
-        <member name="M:GoogleMapsClient.PlaceFindGeomertryResponseModel.ToString">
+        <member name="M:GoogleMapsClient.PlaceFindGeometryResponseModel.ToString">
             <inheritdoc/>
         </member>
         <member name="T:GoogleMapsClient.PlaceFindLatitudeLongitudeLiteralResponseModel">
@@ -1540,7 +1540,7 @@
         </member>
         <member name="T:GoogleMapsClient.PlaceFindPlaceOpeningHoursPeriodDetailResponseModel">
             <summary>
-            Represents a place opening hours period detail response
+            Represents a place opening hours period detail
             </summary>
         </member>
         <member name="P:GoogleMapsClient.PlaceFindPlaceOpeningHoursPeriodDetailResponseModel.Day">
@@ -2026,6 +2026,9 @@
             <summary>
             Default Constructor
             </summary>
+        </member>
+        <member name="M:GoogleMapsClient.PlaceFindNearbySearchAttributesResponseModel.ToString">
+            <inheritdoc/>
         </member>
         <member name="T:GoogleMapsClient.PlaceSearchNearbySearchResponseModel">
             <summary>
@@ -3499,7 +3502,7 @@
         <member name="F:GoogleMapsClient.StatusCodeType.ZeroResults">
             <summary>
             Indicating that the search was successful but returned no results.
-            This may occur if the search was passed a latlng in a remote location.
+            This may occur if the search was passed a latlng (latitude longitude) in a remote location.
             </summary>
         </member>
         <member name="F:GoogleMapsClient.StatusCodeType.InvalidRequest">
@@ -3510,7 +3513,7 @@
         </member>
         <member name="F:GoogleMapsClient.StatusCodeType.OverQueryLimit">
             <summary>
-            indicated the following
+            Indicated the following
             <list type="bullet|number|table">
             <item>
                 <description>You have exceeded the QPS limits.</description>
@@ -4788,6 +4791,11 @@
             <param name="failable">The failable</param>
             <returns></returns>
         </member>
+        <member name="T:GoogleMapsClient.RouteHelpers">
+            <summary>
+            The GoogleMapsClient route helpers
+            </summary>
+        </member>
         <member name="F:GoogleMapsClient.RouteHelpers.mTypeToQueryArgumentsMapper">
             <summary>
             Maps a type to its query arguments
@@ -5097,17 +5105,17 @@
         <member name="M:GoogleMapsClient.PlaceTypeToStringJsonConverter.GetMapper">
             <inheritdoc/>
         </member>
-        <member name="T:GoogleMapsClient.DataModels.Enums.PriceRangeTypeToStringJsonConverter">
+        <member name="T:GoogleMapsClient.PriceRangeTypeToStringJsonConverter">
             <summary>
             The <see cref="T:Newtonsoft.Json.JsonConverter`1"/> that converts a <see cref="T:GoogleMapsClient.PriceRangeType"/> to a <see cref="T:System.String"/>
             </summary>
         </member>
-        <member name="M:GoogleMapsClient.DataModels.Enums.PriceRangeTypeToStringJsonConverter.#ctor">
+        <member name="M:GoogleMapsClient.PriceRangeTypeToStringJsonConverter.#ctor">
             <summary>
             Default Constructor
             </summary>
         </member>
-        <member name="M:GoogleMapsClient.DataModels.Enums.PriceRangeTypeToStringJsonConverter.GetMapper">
+        <member name="M:GoogleMapsClient.PriceRangeTypeToStringJsonConverter.GetMapper">
             <inheritdoc/>
         </member>
         <member name="T:GoogleMapsClient.StatusCodeTypeToStringJsonConverter">
@@ -5123,33 +5131,33 @@
         <member name="M:GoogleMapsClient.StatusCodeTypeToStringJsonConverter.GetMapper">
             <inheritdoc/>
         </member>
-        <member name="T:GoogleMapsClient.SupportedLanguageEnummerableToStringJsonConverter">
+        <member name="T:GoogleMapsClient.SupportedLanguageEnumerableToStringJsonConverter">
             <summary>
             The <see cref="T:Newtonsoft.Json.JsonConverter`1"/> that converts a <see cref="T:GoogleMapsClient.SupportedLanguage"/> to <see cref="T:System.String"/>
             </summary>
         </member>
-        <member name="M:GoogleMapsClient.SupportedLanguageEnummerableToStringJsonConverter.#ctor">
+        <member name="M:GoogleMapsClient.SupportedLanguageEnumerableToStringJsonConverter.#ctor">
             <summary>
             Default constructor
             </summary>
         </member>
-        <member name="M:GoogleMapsClient.SupportedLanguageEnummerableToStringJsonConverter.GetMapper">
+        <member name="M:GoogleMapsClient.SupportedLanguageEnumerableToStringJsonConverter.GetMapper">
             <inheritdoc/>
         </member>
-        <member name="T:GoogleMapsClient.TimeOnlyToStringJsonConveter">
+        <member name="T:GoogleMapsClient.TimeOnlyToStringJsonConverter">
             <summary>
             The <see cref="T:Newtonsoft.Json.JsonConverter`1"/> that converts a <see cref="T:System.TimeOnly"/> to <see cref="T:System.String"/>
             </summary>
         </member>
-        <member name="M:GoogleMapsClient.TimeOnlyToStringJsonConveter.#ctor">
+        <member name="M:GoogleMapsClient.TimeOnlyToStringJsonConverter.#ctor">
             <summary>
             Default constructor
             </summary>
         </member>
-        <member name="M:GoogleMapsClient.TimeOnlyToStringJsonConveter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.TimeOnly,System.Boolean,Newtonsoft.Json.JsonSerializer)">
+        <member name="M:GoogleMapsClient.TimeOnlyToStringJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.TimeOnly,System.Boolean,Newtonsoft.Json.JsonSerializer)">
             <inheritdoc/>
         </member>
-        <member name="M:GoogleMapsClient.TimeOnlyToStringJsonConveter.WriteJson(Newtonsoft.Json.JsonWriter,System.TimeOnly,Newtonsoft.Json.JsonSerializer)">
+        <member name="M:GoogleMapsClient.TimeOnlyToStringJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.TimeOnly,Newtonsoft.Json.JsonSerializer)">
             <inheritdoc/>
         </member>
         <member name="T:GoogleMapsClient.AtmosphereCategoryTypeQueryArgumentConverter">
@@ -5369,7 +5377,7 @@
         </member>
         <member name="M:GoogleMapsClient.GoogleMapsClient.PlaceDetailAsync(GoogleMapsClient.PlaceDetailAPIArgs)">
             <summary>
-            Gets a place detail result
+            Geta place detail result
             </summary>
             <param name="args"></param>
             <returns></returns>
