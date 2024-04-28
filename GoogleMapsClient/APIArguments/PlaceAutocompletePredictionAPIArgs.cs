@@ -1,4 +1,4 @@
-﻿namespace GoogleMapsClient
+﻿namespace Simple.GoogleMaps
 {
     /// <summary>
     /// Arguments used for retrieving place auto-complete predictions

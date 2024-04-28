@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Diagnostics.CodeAnalysis;
 
-namespace GoogleMapsClient
+namespace Simple.GoogleMaps
 {
     /// <summary>
     /// Attributes describing a place. Not all attributes will be available for all place types.

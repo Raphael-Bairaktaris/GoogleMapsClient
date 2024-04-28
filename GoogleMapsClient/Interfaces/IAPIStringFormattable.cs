@@ -1,4 +1,4 @@
-﻿namespace GoogleMapsClient
+﻿namespace Simple.GoogleMaps
 {
     /// <summary>
     /// Provides abstractions for an object that can be formatted to a string suitable to be placed in a URL.

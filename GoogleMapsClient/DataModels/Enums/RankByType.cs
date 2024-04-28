@@ -1,4 +1,4 @@
-﻿namespace GoogleMapsClient
+﻿namespace Simple.GoogleMaps
 {
     /// <summary>
     /// Provides a rank by enumeration

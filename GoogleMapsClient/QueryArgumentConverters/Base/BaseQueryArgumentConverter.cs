@@ -1,4 +1,4 @@
-﻿namespace GoogleMapsClient
+﻿namespace Simple.GoogleMaps
 {
     /// <summary>
     /// The base for all the query argument converters.

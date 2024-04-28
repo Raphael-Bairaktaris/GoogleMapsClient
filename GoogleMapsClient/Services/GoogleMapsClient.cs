@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.WebUtilities;
 
-namespace GoogleMapsClient
+namespace Simple.GoogleMaps
 {
     /// <summary>
     /// An agent hat is capable of making requests to the Google Maps API

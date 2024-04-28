@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace GoogleMapsClient
+namespace Simple.GoogleMaps
 {
     /// <summary>
     /// The <see cref="JsonConverter{T}"/> that converts a <see cref="AtmosphereCategoryType"/> to <see cref="string"/>

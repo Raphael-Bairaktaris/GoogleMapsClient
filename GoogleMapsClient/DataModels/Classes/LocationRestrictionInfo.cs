@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace GoogleMapsClient
+namespace Simple.GoogleMaps
 {
     /// <summary>
     /// Contains information relating to one of multiple types of search set of rules.

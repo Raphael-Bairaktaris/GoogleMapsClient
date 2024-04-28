@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace GoogleMapsClient
+namespace Simple.GoogleMaps
 {
     /// <summary>
     /// Contains the location and viewport for the location.

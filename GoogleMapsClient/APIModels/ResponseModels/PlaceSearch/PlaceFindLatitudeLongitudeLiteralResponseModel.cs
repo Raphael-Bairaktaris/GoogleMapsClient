@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace GoogleMapsClient
+namespace Simple.GoogleMaps
 {
     /// <summary>
     /// Represents a specific location with Latitude and Longitude in decimal degrees.

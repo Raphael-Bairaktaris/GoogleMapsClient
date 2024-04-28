@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-namespace GoogleMapsClient
+namespace Simple.GoogleMaps
 {
     /// <summary>
     /// Helper methods for <see cref="IFailable"/>

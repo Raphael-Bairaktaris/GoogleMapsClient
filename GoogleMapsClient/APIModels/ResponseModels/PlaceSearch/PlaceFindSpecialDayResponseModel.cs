@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace GoogleMapsClient
+namespace Simple.GoogleMaps
 {
     /// <summary>
     /// Represents a place special day response

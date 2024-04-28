@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace GoogleMapsClient
+namespace Simple.GoogleMaps
 {
     /// <summary>
     /// Represents a rectangle in geographical coordinates from points at the southwest and northeast corners.

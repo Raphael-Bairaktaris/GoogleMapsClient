@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Diagnostics.CodeAnalysis;
 
-namespace GoogleMapsClient
+namespace Simple.GoogleMaps
 {
     /// <summary>
     /// Represents the opening hours of a place

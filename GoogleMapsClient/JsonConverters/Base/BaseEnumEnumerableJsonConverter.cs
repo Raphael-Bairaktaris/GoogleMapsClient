@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace GoogleMapsClient
+namespace Simple.GoogleMaps
 {
     /// <summary>
     /// The base for all the <see cref="JsonConverter{T}"/>s that are used for converting between an enumerable of <see cref="Enum"/>s and a <see cref="string"/>.

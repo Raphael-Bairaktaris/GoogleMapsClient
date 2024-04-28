@@ -12,7 +12,7 @@ or use the package manager of your IDE.
 You can create a GoogleMapsClient  and use it to make requests using following code:
 
     // Create the client
-	var client = new GoogleMapsClient.GoogleMapsClient("YOUR API KEY");
+	var client = new Simple.GoogleMaps.GoogleMapsClient("YOUR API KEY");
 
 	// Search for a location
 	var locationsResponse = await client.TextSearchAsync(new TextSearchAPIArgs()

@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace GoogleMapsClient
+namespace Simple.GoogleMaps
 {
     /// <summary>
     /// A <see cref="JsonConverter{T}"/> that is used for converting a <see cref="double"/> to a string <see cref="string"/>
@@ -41,7 +41,7 @@ namespace GoogleMapsClient
                 writer.WriteNull();
             else
                 writer.WriteValue(value);
-        } 
+        }
 
         #endregion
     }

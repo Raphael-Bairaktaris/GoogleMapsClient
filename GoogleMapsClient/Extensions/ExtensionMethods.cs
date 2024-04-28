@@ -4,7 +4,7 @@ using System.Globalization;
 using System.Net;
 using System.Text;
 
-namespace GoogleMapsClient
+namespace Simple.GoogleMaps
 {
     /// <summary>
     /// Extension methods

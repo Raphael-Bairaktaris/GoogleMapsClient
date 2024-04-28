@@ -1,8 +1,8 @@
-﻿using GoogleMapsClient;
-using System.Reflection;
+﻿using System.Reflection;
 using Xunit;
+using Simple.GoogleMaps;
 
-namespace GoogleMapsClientTests
+namespace Simple.GoogleMapsTests
 {
     /// <summary>
     /// The tests for the <see cref="GoogleMapsClient"/>
@@ -14,7 +14,7 @@ namespace GoogleMapsClientTests
         /// <summary>
         /// The client
         /// </summary>
-        private readonly GoogleMapsClient.GoogleMapsClient mClient;
+        private readonly Simple.GoogleMaps.GoogleMapsClient mClient;
 
         #endregion
 
@@ -35,7 +35,7 @@ namespace GoogleMapsClientTests
 
             var apiKey = File.ReadAllText(credentialsFilePath);
 
-            mClient = new GoogleMapsClient.GoogleMapsClient(apiKey);
+            mClient = new Simple.GoogleMaps.GoogleMapsClient(apiKey);
         }
 
         #endregion

@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <PackageId>Simple.GoogleMaps</PackageId>
-    <Version>1.0.0</Version>
+    <Version>1.0.2</Version>
     <Authors>Raphael_Bairaktaris</Authors>
     <Company>Raphael_Bairaktaris</Company>
     <Product>Simple.GoogleMaps</Product>
@@ -19,21 +19,14 @@ Easily add geolocation services to enhance your location-based features.</Descri
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageProjectUrl>https://github.com/Raphael-Bairaktaris/GoogleMapsClient</PackageProjectUrl>
     <Title>Simple integration with the GoogleMaps geolocation API</Title>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>.\GoogleMapsClient.xml</DocumentationFile>
-    <LangVersion>preview</LangVersion>
-    <NoWarn>1701;1702</NoWarn>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <LangVersion>preview</LangVersion>
     <NoWarn>1701;1702</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\..\googlemaps.png">
+    <None Include="..\..\..\GoogleMapsLogo.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>

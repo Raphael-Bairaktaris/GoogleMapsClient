@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Diagnostics.CodeAnalysis;
 
-namespace GoogleMapsClient
+namespace Simple.GoogleMaps
 {
     /// <summary>
     /// Contains a summary of the place. A summary is comprised of a textual overview, and also 

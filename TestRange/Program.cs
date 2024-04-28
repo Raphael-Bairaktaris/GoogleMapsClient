@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using GoogleMapsClient;
+using Simple.GoogleMaps;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Reflection;
@@ -7,7 +7,7 @@ using System.Reflection;
 Console.WriteLine("Hello, World!");
 
 // Create the client
-var client = new GoogleMapsClient.GoogleMapsClient("YOUR API KEY");
+var client = new Simple.GoogleMaps.GoogleMapsClient("YOUR API KEY");
 
 // Search for a location
 var locationsResponse = await client.TextSearchAsync(new TextSearchAPIArgs()
@@ -24,10 +24,10 @@ if (!locationsResponse.IsSuccessful)
 }
 
 // For every location...
-foreach(var place in locationsResponse.Result.Results)
+foreach (var location in locationsResponse.Result.Results)
 {
     // Get details for that location
-    var detailsResponse = await client.PlaceDetailAsync(new PlaceDetailAPIArgs(place.PlaceId));
+    var detailsResponse = await client.PlaceDetailAsync(new PlaceDetailAPIArgs(location.PlaceId));
 
     // If there was an error...
     if (!detailsResponse.IsSuccessful)
@@ -385,7 +385,7 @@ IEnumerable<string> GetMissingJsonProperties<T>(string json)
     return missingProperties;
 }
 
-var location = JsonConvert.DeserializeObject<PlaceDetailResponseModel>(json);
+//var location = JsonConvert.DeserializeObject<PlaceDetailResponseModel>(json);
 
 
 Console.ReadLine();

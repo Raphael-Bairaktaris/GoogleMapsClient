@@ -1,4 +1,4 @@
-﻿namespace GoogleMapsClient
+﻿namespace Simple.GoogleMaps
 {
     /// <summary>
     /// A <see cref="BaseQueryArgumentConverter{TValue}"/> that is used for converting a <see cref="ReviewSortingType"/> to a <see cref="string"/>.

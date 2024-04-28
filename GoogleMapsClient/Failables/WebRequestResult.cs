@@ -2,7 +2,7 @@
 using System.Net;
 using System.Net.Http.Headers;
 
-namespace GoogleMapsClient
+namespace Simple.GoogleMaps
 {
     /// <summary>
     /// A web response from a call to get generic object data from a HTTP server

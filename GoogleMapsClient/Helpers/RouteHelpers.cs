@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Reflection;
 
-namespace GoogleMapsClient
+namespace Simple.GoogleMaps
 {
     /// <summary>
     /// The GoogleMapsClient route helpers

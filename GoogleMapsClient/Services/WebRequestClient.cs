@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Net.Http.Headers;
 using System.Text;
 
-namespace GoogleMapsClient
+namespace Simple.GoogleMaps
 {
     /// <summary>
     /// Client that provides HTTP calls for sending and receiving information from a HTTP server

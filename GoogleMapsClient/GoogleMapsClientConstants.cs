@@ -1,6 +1,6 @@
 ﻿using System.Collections.Immutable;
 
-namespace GoogleMapsClient
+namespace Simple.GoogleMaps
 {
     /// <summary>
     /// Constants related to the Google maps client
